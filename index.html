@@ -127,7 +127,7 @@ legend {
               <fieldset class="layer2">
                 <legend>死亡日期</legend>
                 <label for="jp"><input type="radio" id="jp" name="death_period" value="jp" /> 日據時期(民國34年10月24日前死亡)</label> <br/>
-                  <fieldset class="layer3">
+                  <fieldset class="layer3" id="death_period_jp_layer3">
                     <legend>被繼承人身分</legend>
                     <label for="house_owner_yes"><input type="radio" id="house_owner_yes" name="house_owner" value="yes" /> 戶主</label> <br/>
                       <fieldset class="layer4">
@@ -170,7 +170,7 @@ legend {
                       </fieldset>
                   </fieldset>
                 <label for="tw"><input type="radio" id="tw" name="death_period" value="tw" /> 光復後(民國34年10月25日後死亡)</label> <br/>
-                  <fieldset class="layer3">
+                  <fieldset class="layer3" id="death_period_tw_layer3">
                     <legend>確切時間</legend>
                     <label for="tw34_74"><input type="radio" id="tw34_74" name="tw_death_period" value="tw34_74" /> 民法修正前(民國34年10月25日~74年6月4日前)</label> <br/>
                     <label for="after_tw74"><input type="radio" id="after_tw74" name="tw_death_period" value="after_tw74" /> 民法修正後(民國74年6月5日後)</label> <br/>
@@ -328,6 +328,10 @@ legend {
       clearTextFields();
       clearAllRadioBoxes();
       clearAllCheckBoxes();
+      hideAllFieldset();
+    }
+
+    function hideAllFieldset() {
       // hide all fieldset except .fix
       $("fieldset").each(function(){
         if (!$(this).hasClass("fix")) {
@@ -335,7 +339,6 @@ legend {
         }
       });
     }
-
     function disableAllButtons(flag) {
       $("button").each(function(){
         var ele = $(this);
@@ -356,13 +359,25 @@ legend {
     //var form_params = $("#inheritance_form").serializeArray();
     $(document).ready(function(e) {
       clearAll();
-      $("#layer1_select_type input[type='radio']").on("click", function(e){
-        clearAll();
-        $(this).prop("checked", true);
+      // 點選「繼承登記類型」的事件處理
+      $("input[name='heir_reg_type']").on("click", function(e){
+        hideAllFieldset();
+        //$(this).prop("checked", true);
         console.log($(this).val() + " checked!");
         // control the visibility of #layer1_target_check_items
         $("#layer1_target_check_items").removeClass("hide");
         $("#layer1_target_check_items > .layer2").removeClass("hide");
+      });
+      // 點選「死亡日期」的事件處理
+      //console.log($("input[name='death_period']"));
+      $("input[name='death_period']").on("click", function(){
+        if ($(this).val() == "jp") {
+          $("#death_period_jp_layer3").removeClass("hide");
+          $("#death_period_tw_layer3").addClass("hide");
+        } else {
+          $("#death_period_tw_layer3").removeClass("hide");
+          $("#death_period_jp_layer3").addClass("hide");
+        }
       });
     });
   </script>
