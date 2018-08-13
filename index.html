@@ -27,13 +27,45 @@
 .optgrp, #relative_law_result, .left {
   text-align: left;
 }
+
 fieldset {
-  padding: 5px;
-  border: 1px black solid;
-}
+	border:0;
+	padding:10px;
+	margin-bottom:
+	10px;background:#EEE;
+
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+
+	background:-webkit-liner-gradient(top,#EEEEEE,#FFFFFF);
+	background:linear-gradient(top,#EFEFEF,#FFFFFF);
+
+	box-shadow:3px 3px 10px #666;
+	-moz-box-shadow:3px 3px 10px #666;
+	-webkit-box-shadow:3px 3px 10px #666;
+
+	position:relative;
+	}
+
 legend {
-  width:auto;
+	padding:5px 10px;
+	background-color:#4F709F;
+	color:#FFF;
+
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+
+	box-shadow:2px 2px 4px #666;
+	-moz-box-shadow:2px 2px 4px #666;
+	-webkit-box-shadow:2px 2px 4px #666;
+  /*
+	position:absolute;
+	left:10px;top:-11px;
+  */
 }
+
 .layer1 {
   margin-bottom: 15px;
 }
@@ -54,7 +86,7 @@ legend {
   margin: 0 15px 15px 15px;
 }
 .buttons {
-
+  margin-top: 15px;
 }
 #inheritance_form {
   
@@ -97,8 +129,8 @@ legend {
   <section>
     <div class="container-fluid">
       <div class="row">
-        <div class="col bg-info"></div>
-        <div class="col-6 text-center">
+        <div class="col"></div>
+        <div class="col-8 text-center">
           <form id="inheritance_form" name="inheritance_form" action="">
 
             <fieldset class="layer1 fix">
@@ -122,24 +154,24 @@ legend {
               </div>
             </fieldset>
 
-            <fieldset class="layer1 hide" id="layer1_target_check_items">
+            <fieldset class="layer1 fix" id="layer1_target_check_items">
               <legend>被繼承人審查項目</legend>
-              <fieldset class="layer2">
+              <fieldset class="layer2 fix">
                 <legend>死亡日期</legend>
                 <label for="jp"><input type="radio" id="jp" name="death_period" value="jp" /> 日據時期(民國34年10月24日前死亡)</label> <br/>
                   <fieldset class="layer3" id="death_period_jp_layer3">
                     <legend>被繼承人身分</legend>
                     <label for="house_owner_yes"><input type="radio" id="house_owner_yes" name="house_owner" value="yes" /> 戶主</label> <br/>
-                      <fieldset class="layer4">
+                      <fieldset class="layer4" id="house_owner_yes_layer4">
                         <legend>繼承人順位(戶主)</legend>
                         <label for="house_owner_yes_heir_seq_1"><input type="radio" id="house_owner_yes_heir_seq_1" name="house_owner_yes_heir_seq" value="one" /> 1.法定戶主繼承人-同一戶內男子直系卑親屬(親等近者為先)</label> <br/>
-                          <fieldset class="layer5">
+                          <fieldset class="layer5" id="house_owner_yes_heir_seq_one_layer5">
                             <legend></legend>
                             <label for="house_owner_yes_heir_seq_1_children_1"><input type="radio" id="house_owner_yes_heir_seq_1_children_1" name="house_owner_yes_heir_seq_1_children" value="one" /> 婚、私生子</label> <br/>
                             <label for="house_owner_yes_heir_seq_1_children_2"><input type="radio" id="house_owner_yes_heir_seq_1_children_2" name="house_owner_yes_heir_seq_1_children" value="second" /> 養子</label> <br/>
                             <label for="house_owner_yes_heir_seq_1_children_3"><input type="radio" id="house_owner_yes_heir_seq_1_children_3" name="house_owner_yes_heir_seq_1_children" value="third" /> 過房子</label> <br/>
                             <label for="house_owner_yes_heir_seq_1_children_4"><input type="radio" id="house_owner_yes_heir_seq_1_children_4" name="house_owner_yes_heir_seq_1_children" value="fourth" /> 螟蛉子</label> <br/>
-                            <fieldset class="layer6">
+                            <fieldset class="layer6" id="house_owner_yes_heir_seq_1_children_fourth_layer6">
                               <legend>代位或再轉</legend>
                               <label for="house_owner_yes_heir_seq_method_subrogation"><input type="radio" id="house_owner_yes_heir_seq_method_subrogation" name="house_owner_yes_heir_seq_method" value="subrogation" /> 代位</label> <br/>
                               <label for="house_owner_yes_heir_seq_method_transfer"><input type="radio" id="house_owner_yes_heir_seq_method_transfer" name="house_owner_yes_heir_seq_method" value="transfer" /> 再轉</label> <br/>
@@ -149,16 +181,16 @@ legend {
                         <label for="house_owner_yes_heir_seq_3"><input type="radio" id="house_owner_yes_heir_seq_3" name="house_owner_yes_heir_seq" value="third" /> 3.選定戶主繼承人-依當時戶籍登記為準</label> <br/>
                       </fieldset>
                     <label for="house_owner_no"><input type="radio" id="house_owner_no" name="house_owner" value="no" /> 非戶主</label> <br/>
-                      <fieldset class="layer4">
+                      <fieldset class="layer4" id="house_owner_no_layer4">
                         <legend>繼承人順位(非戶主)</legend>
                         <label for="house_owner_no_heir_seq_1"><input type="radio" id="house_owner_no_heir_seq_1" name="house_owner_no_heir_seq" value="one" /> 1.直系卑親屬(親等近者為先)</label> <br/>
-                          <fieldset class="layer5">
+                          <fieldset class="layer5" id="house_owner_no_heir_seq_one_layer5">
                             <legend></legend>
                             <label for="house_owner_no_heir_seq_1_children_1"><input type="radio" id="house_owner_no_heir_seq_1_children_1" name="house_owner_no_heir_seq_1_children" value="one" /> 婚、私生子</label> <br/>
                             <label for="house_owner_no_heir_seq_1_children_2"><input type="radio" id="house_owner_no_heir_seq_1_children_2" name="house_owner_no_heir_seq_1_children" value="second" /> 養子</label> <br/>
                             <label for="house_owner_no_heir_seq_1_children_3"><input type="radio" id="house_owner_no_heir_seq_1_children_3" name="house_owner_no_heir_seq_1_children" value="third" /> 過房子</label> <br/>
                             <label for="house_owner_no_heir_seq_1_children_4"><input type="radio" id="house_owner_no_heir_seq_1_children_4" name="house_owner_no_heir_seq_1_children" value="fourth" /> 螟蛉子</label> <br/>
-                            <fieldset class="layer6">
+                            <fieldset class="layer6" id="house_owner_no_heir_seq_1_children_fourth_layer6">
                               <legend>代位或再轉</legend>
                               <label for="house_owner_no_heir_seq_method_subrogation"><input type="radio" id="house_owner_no_heir_seq_method_subrogation" name="house_owner_no_heir_seq_method" value="subrogation" /> 代位</label> <br/>
                               <label for="house_owner_no_heir_seq_method_transfer"><input type="radio" id="house_owner_no_heir_seq_method_transfer" name="house_owner_no_heir_seq_method" value="transfer" /> 再轉</label> <br/>
@@ -174,21 +206,21 @@ legend {
                     <legend>確切時間</legend>
                     <label for="tw34_74"><input type="radio" id="tw34_74" name="tw_death_period" value="tw34_74" /> 民法修正前(民國34年10月25日~74年6月4日前)</label> <br/>
                     <label for="after_tw74"><input type="radio" id="after_tw74" name="tw_death_period" value="after_tw74" /> 民法修正後(民國74年6月5日後)</label> <br/>
-                    <fieldset class="layer4">
+                    <fieldset class="layer4" id="tw_death_period_layer4">
                       <legend>繼承人順位</legend>
                       <label for="tw_death_period_heir_spouse"><input type="checkbox" id="tw_death_period_heir_spouse" name="tw_death_period_heir_spouse" value="yes" /> 配偶</label> <br/>
-                      <fieldset class="layer5">
+                      <fieldset class="layer5" id="tw_death_period_heir_spouse_yes_layer5">
                         <legend></legend>
                         <label for="tw_death_period_heir_spouse_live_yes"><input type="radio" id="tw_death_period_heir_spouse_live_yes" name="tw_death_period_heir_spouse_live" value="yes" /> 生存</label> <br/>
                         <label for="tw_death_period_heir_spouse_live_no"><input type="radio" id="tw_death_period_heir_spouse_live_no" name="tw_death_period_heir_spouse_live" value="no" /> 亡歿</label> <br/>
                       </fieldset>
                       <label for="tw_death_period_heir_seq_1"><input type="radio" id="tw_death_period_heir_seq_1" name="tw_death_period_heir_seq" value="one" /> 1. 直系血親卑親屬(親等近者為先)</label> <br/>
-                      <fieldset class="layer5">
+                      <fieldset class="layer5" id="tw_death_period_heir_seq_one_layer5">
                         <legend></legend>
                         <label for="tw_death_period_heir_seq_1_option1"><input type="radio" id="tw_death_period_heir_seq_1_option1" name="tw_death_period_heir_seq_1_option" value="one" /> 1. 婚生子女</label> <br/>
                         <label for="tw_death_period_heir_seq_1_option2"><input type="radio" id="tw_death_period_heir_seq_1_option2" name="tw_death_period_heir_seq_1_option" value="second" /> 2. 認領</label> <br/>
                         <label for="tw_death_period_heir_seq_1_option3"><input type="radio" id="tw_death_period_heir_seq_1_option3" name="tw_death_period_heir_seq_1_option" value="third" /> 3. 養子女</label> <br/>
-                        <fieldset class="layer6">
+                        <fieldset class="layer6" id="tw_death_period_heir_seq_1_option_third_layer6">
                           <legend></legend>
                           <label for="tw_death_period_heir_seq_1_option_method_1"><input type="radio" id="tw_death_period_heir_seq_1_option_method_1" name="tw_death_period_heir_seq_1_option_method" value="one" /> 代位</label> <br/>
                           <label for="tw_death_period_heir_seq_1_option_method_2"><input type="radio" id="tw_death_period_heir_seq_1_option_method_2" name="tw_death_period_heir_seq_1_option_method" value="second" /> 再轉</label> <br/>
@@ -196,68 +228,72 @@ legend {
                       </fieldset>
                       <label for="tw_death_period_heir_seq_2"><input type="radio" id="tw_death_period_heir_seq_2" name="tw_death_period_heir_seq" value="second" /> 2. 父母</label> <br/>
                       <label for="tw_death_period_heir_seq_3"><input type="radio" id="tw_death_period_heir_seq_3" name="tw_death_period_heir_seq" value="third" /> 3. 兄弟姊妹</label> <br/>
-                      <fieldset class="layer5">
+                      <fieldset class="layer5" id="tw_death_period_heir_seq_third_layer5">
                         <legend></legend>
                         <label for="tw_death_period_heir_seq_3_method"><input type="radio" id="tw_death_period_heir_seq_3_method" name="tw_death_period_heir_seq_3_method" value="one" /> 再轉</label> <br/>
                       </fieldset>
-                      <label for="tw_death_period_heir_seq_4"><input type="radio" id="tw_death_period_heir_seq_4" name="tw_death_period_heir_seq" value="fourth" /> 2. 祖父母</label> <br/>
+                      <label for="tw_death_period_heir_seq_4"><input type="radio" id="tw_death_period_heir_seq_4" name="tw_death_period_heir_seq" value="fourth" /> 4. 祖父母</label> <br/>
                     </fieldset>
                   </fieldset>
               </fieldset>
             </fieldset>
 
-            <fieldset class="layer1 left" id="layer1_heir_check_items">
+            <div><button id='NEXT_btn' class='btn btn-sm btn-default' title="Heir Review">下一步(繼承人審查)</button></div>
+            
+            <fieldset class="layer1 fix" id="layer1_heir_check_items">
               <legend>繼承人審查項目</legend>
-              <label for="heir_method_abandon"><input type="radio" id="heir_method_abandon" name="heir_method" value="abandon" /> 繼承權拋棄</label> <br/>
-              <fieldset class="layer2">
-                <legend></legend>
-                <label for="heir_method_abandon_yes"><input type="radio" id="heir_method_abandon_yes" name="heir_method_abandon" value="yes" /> 是</label> <br/>
-                <label for="heir_method_abandon_no"><input type="radio" id="heir_method_abandon_no" name="heir_method_abandon" value="no" /> 否</label> <br/>
-              </fieldset>
-              <label for="heir_method_lost"><input type="radio" id="heir_method_lost" name="heir_method" value="lost" /> 繼承權拋棄</label> <br/>
-              <fieldset class="layer2">
-                <legend></legend>
-                <label for="heir_method_lost_yes"><input type="radio" id="heir_method_lost_yes" name="heir_method_lost" value="yes" /> 是</label> <br/>
-                <label for="heir_method_lost_no"><input type="radio" id="heir_method_lost_no" name="heir_method_lost" value="no" /> 否</label> <br/>
-              </fieldset>
-              <label for="heir_method_domestic"><input type="radio" id="heir_method_domestic" name="heir_method" value="domestic" /> 本國人繼承</label> <br/>
-              <fieldset class="layer2">
-                <legend></legend>
-                <label for="heir_method_domestic_opt1"><input type="radio" id="heir_method_domestic_opt1" name="heir_method_domestic_opt" value="one" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
-                <label for="heir_method_domestic_opt2"><input type="radio" id="heir_method_domestic_opt2" name="heir_method_domestic_opt" value="second" /> 限制行為能力(7-20歲)</label> <br/>
-                <label for="heir_method_domestic_opt3"><input type="radio" id="heir_method_domestic_opt3" name="heir_method_domestic_opt" value="third" /> 無行為能力(7歲以下)</label> <br/>
-                <label for="heir_method_domestic_opt4"><input type="radio" id="heir_method_domestic_opt4" name="heir_method_domestic_opt" value="fourth" /> 養子女</label> <br/>
-                <label for="heir_method_domestic_opt5"><input type="radio" id="heir_method_domestic_opt5" name="heir_method_domestic_opt" value="fifth" /> 胎兒</label> <br/>
-              </fieldset>
-              <label for="heir_method_foreign"><input type="radio" id="heir_method_foreign" name="heir_method" value="foreign" /> 外國人繼承</label> <br/>
-              <fieldset class="layer2">
-                <legend></legend>
-                <label for="heir_method_foreign_opt1"><input type="radio" id="heir_method_foreign_opt1" name="heir_method_foreign_opt" value="one" /> 平等互惠(土地法第18條)</label> <br/>
-                <fieldset class="layer3">
+              <div class="left">
+                <label for="heir_method_abandon"><input type="radio" id="heir_method_abandon" name="heir_method" value="abandon" /> 繼承權拋棄</label> <br/>
+                <fieldset class="layer2" id="heir_method_abandon_layer2">
                   <legend></legend>
-                  <label for="heir_method_foreign_opt1_yes"><input type="radio" id="heir_method_foreign_opt1_yes" name="heir_method_foreign_opt1" value="yes" /> 是</label> <br/>
-                  <label for="heir_method_foreign_opt1_no"><input type="radio" id="heir_method_foreign_opt1_no" name="heir_method_foreign_opt1" value="no" /> 否</label> <br/>
+                  <label for="heir_method_abandon_yes"><input type="radio" id="heir_method_abandon_yes" name="heir_method_abandon" value="yes" /> 是</label> <br/>
+                  <label for="heir_method_abandon_no"><input type="radio" id="heir_method_abandon_no" name="heir_method_abandon" value="no" /> 否</label> <br/>
                 </fieldset>
-                <label for="heir_method_foreign_opt2"><input type="radio" id="heir_method_foreign_opt2" name="heir_method_foreign_opt" value="second" /> 繼承土地法第17條第1項土地</label> <br/>
-                <fieldset class="layer3">
+                <label for="heir_method_lost"><input type="radio" id="heir_method_lost" name="heir_method" value="lost" /> 繼承權拋棄</label> <br/>
+                <fieldset class="layer2" id="heir_method_lost_layer2">
                   <legend></legend>
-                  <label for="heir_method_foreign_opt2_yes"><input type="radio" id="heir_method_foreign_opt2_yes" name="heir_method_foreign_opt2" value="yes" /> 是</label> <br/>
-                  <label for="heir_method_foreign_opt2_no"><input type="radio" id="heir_method_foreign_opt2_no" name="heir_method_foreign_opt2" value="no" /> 否</label> <br/>
+                  <label for="heir_method_lost_yes"><input type="radio" id="heir_method_lost_yes" name="heir_method_lost" value="yes" /> 是</label> <br/>
+                  <label for="heir_method_lost_no"><input type="radio" id="heir_method_lost_no" name="heir_method_lost" value="no" /> 否</label> <br/>
                 </fieldset>
-                <label for="heir_method_foreign_opt3"><input type="radio" id="heir_method_foreign_opt3" name="heir_method_foreign_opt" value="third" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
-                <label for="heir_method_foreign_opt4"><input type="radio" id="heir_method_foreign_opt4" name="heir_method_foreign_opt" value="fourth" /> 限制行為能力(7-20歲)</label> <br/>
-                <label for="heir_method_foreign_opt5"><input type="radio" id="heir_method_foreign_opt5" name="heir_method_foreign_opt" value="fifth" /> 無行為能力(7歲以下)</label> <br/>
-                <label for="heir_method_foreign_opt6"><input type="radio" id="heir_method_foreign_opt6" name="heir_method_foreign_opt" value="sixth" /> 養子女</label> <br/>
-                <label for="heir_method_foreign_opt7"><input type="radio" id="heir_method_foreign_opt7" name="heir_method_foreign_opt" value="seventh" /> 胎兒</label> <br/>
-              </fieldset>
-              <label for="heir_method_china"><input type="radio" id="heir_method_china" name="heir_method" value="china" /> 大陸地區人民繼承</label> <br/>
-              <fieldset class="layer2">
-                <legend></legend>
-                <label for="heir_method_china_opt1"><input type="radio" id="heir_method_china_opt1" name="heir_method_china_opt" value="one" /> 依兩岸人民關係條例-不得繼承不動產</label> <br/>
-                <label for="heir_method_china_opt2"><input type="radio" id="heir_method_china_opt2" name="heir_method_china_opt" value="second" /> 配偶(長期居留許可者)</label> <br/>
-                <label for="heir_method_china_opt3"><input type="radio" id="heir_method_china_opt3" name="heir_method_china_opt" value="third" /> 繼承土地法第17條第1項土地</label> <br/>
-                <label for="heir_method_china_opt4"><input type="radio" id="heir_method_china_opt4" name="heir_method_china_opt" value="fourth" /> 台灣地區繼承人賴以居住</label> <br/>
-              </fieldset>
+                <label for="heir_method_domestic"><input type="radio" id="heir_method_domestic" name="heir_method" value="domestic" /> 本國人繼承</label> <br/>
+                <fieldset class="layer2" id="heir_method_domestic_layer2">
+                  <legend></legend>
+                  <label for="heir_method_domestic_opt1"><input type="radio" id="heir_method_domestic_opt1" name="heir_method_domestic_opt" value="one" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
+                  <label for="heir_method_domestic_opt2"><input type="radio" id="heir_method_domestic_opt2" name="heir_method_domestic_opt" value="second" /> 限制行為能力(7-20歲)</label> <br/>
+                  <label for="heir_method_domestic_opt3"><input type="radio" id="heir_method_domestic_opt3" name="heir_method_domestic_opt" value="third" /> 無行為能力(7歲以下)</label> <br/>
+                  <label for="heir_method_domestic_opt4"><input type="radio" id="heir_method_domestic_opt4" name="heir_method_domestic_opt" value="fourth" /> 養子女</label> <br/>
+                  <label for="heir_method_domestic_opt5"><input type="radio" id="heir_method_domestic_opt5" name="heir_method_domestic_opt" value="fifth" /> 胎兒</label> <br/>
+                </fieldset>
+                <label for="heir_method_foreign"><input type="radio" id="heir_method_foreign" name="heir_method" value="foreign" /> 外國人繼承</label> <br/>
+                <fieldset class="layer2" id="heir_method_foreign_layer2">
+                  <legend></legend>
+                  <label for="heir_method_foreign_opt1"><input type="radio" id="heir_method_foreign_opt1" name="heir_method_foreign_opt" value="one" /> 平等互惠(土地法第18條)</label> <br/>
+                  <fieldset class="layer3" id="heir_method_foreign_opt1_layer3">
+                    <legend></legend>
+                    <label for="heir_method_foreign_opt1_yes"><input type="radio" id="heir_method_foreign_opt1_yes" name="heir_method_foreign_opt1" value="yes" /> 是</label> <br/>
+                    <label for="heir_method_foreign_opt1_no"><input type="radio" id="heir_method_foreign_opt1_no" name="heir_method_foreign_opt1" value="no" /> 否</label> <br/>
+                  </fieldset>
+                  <label for="heir_method_foreign_opt2"><input type="radio" id="heir_method_foreign_opt2" name="heir_method_foreign_opt" value="second" /> 繼承土地法第17條第1項土地</label> <br/>
+                  <fieldset class="layer3" id="heir_method_foreign_opt2_layer3">
+                    <legend></legend>
+                    <label for="heir_method_foreign_opt2_yes"><input type="radio" id="heir_method_foreign_opt2_yes" name="heir_method_foreign_opt2" value="yes" /> 是</label> <br/>
+                    <label for="heir_method_foreign_opt2_no"><input type="radio" id="heir_method_foreign_opt2_no" name="heir_method_foreign_opt2" value="no" /> 否</label> <br/>
+                  </fieldset>
+                  <label for="heir_method_foreign_opt3"><input type="radio" id="heir_method_foreign_opt3" name="heir_method_foreign_opt" value="third" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
+                  <label for="heir_method_foreign_opt4"><input type="radio" id="heir_method_foreign_opt4" name="heir_method_foreign_opt" value="fourth" /> 限制行為能力(7-20歲)</label> <br/>
+                  <label for="heir_method_foreign_opt5"><input type="radio" id="heir_method_foreign_opt5" name="heir_method_foreign_opt" value="fifth" /> 無行為能力(7歲以下)</label> <br/>
+                  <label for="heir_method_foreign_opt6"><input type="radio" id="heir_method_foreign_opt6" name="heir_method_foreign_opt" value="sixth" /> 養子女</label> <br/>
+                  <label for="heir_method_foreign_opt7"><input type="radio" id="heir_method_foreign_opt7" name="heir_method_foreign_opt" value="seventh" /> 胎兒</label> <br/>
+                </fieldset>
+                <label for="heir_method_china"><input type="radio" id="heir_method_china" name="heir_method" value="china" /> 大陸地區人民繼承</label> <br/>
+                <fieldset class="layer2" id="heir_method_china_layer2">
+                  <legend></legend>
+                  <label for="heir_method_china_opt1"><input type="radio" id="heir_method_china_opt1" name="heir_method_china_opt" value="one" /> 依兩岸人民關係條例-不得繼承不動產</label> <br/>
+                  <label for="heir_method_china_opt2"><input type="radio" id="heir_method_china_opt2" name="heir_method_china_opt" value="second" /> 配偶(長期居留許可者)</label> <br/>
+                  <label for="heir_method_china_opt3"><input type="radio" id="heir_method_china_opt3" name="heir_method_china_opt" value="third" /> 繼承土地法第17條第1項土地</label> <br/>
+                  <label for="heir_method_china_opt4"><input type="radio" id="heir_method_china_opt4" name="heir_method_china_opt" value="fourth" /> 台灣地區繼承人賴以居住</label> <br/>
+                </fieldset>
+              </div>
             </fieldset>
 
             <fieldset class="layer1" id="layer1_result">
@@ -287,7 +323,7 @@ legend {
             </div>
           </form>
         </div>
-        <div class="col bg-info"></div>
+        <div class="col"></div>
       </div>
     </div>
   </section><!-- /section -->
@@ -324,21 +360,52 @@ legend {
       });
     }
 
+    function clearBoxesByElement(element) {
+      $(element).find("input[type='radio']").each(function(e) {
+        $(this).prop("checked", false);
+      });
+      $(element).find("input[type='checkbox']").each(function(e) {
+        $(this).prop("checked", false);
+      });
+    }
+
     function clearAll() {
       clearTextFields();
       clearAllRadioBoxes();
       clearAllCheckBoxes();
       hideAllFieldset();
+      $("#NEXT_btn").addClass("hide");
     }
 
     function hideAllFieldset() {
       // hide all fieldset except .fix
-      $("fieldset").each(function(){
+      $("fieldset").each(function(e){
         if (!$(this).hasClass("fix")) {
-          $(this).addClass("hide");
+          deactivateElement(this);
         }
+        $(this).removeClass("bg-warning");
       });
     }
+
+    function hideFieldsetsByElement(element) {
+      $(element).find("fieldset").each(function(e){
+        deactivateElement(this);
+      });
+    }
+
+    function activateElement(element) {
+        $(element).removeClass("hide");
+        $(".bg-warning").each(function(e){
+          $(this).removeClass("bg-warning");
+        });
+        $(element).addClass("bg-warning");
+    }
+
+    function deactivateElement(element) {
+        $(element).addClass("hide");
+        $(element).removeClass("bg-warning");
+    }
+
     function disableAllButtons(flag) {
       $("button").each(function(){
         var ele = $(this);
@@ -346,37 +413,222 @@ legend {
       });
     }
 
-    $("#inheritance_form").on("submit", function(e) {
-      e.stopPropagation();
-      return false;
-    });
-    $("#CANCEL_btn").on("click", function() {
-      disableAllButtons(true);
-      clearAll();
-      disableAllButtons(false);
-    });
-
     //var form_params = $("#inheritance_form").serializeArray();
     $(document).ready(function(e) {
+
+      $("#inheritance_form").on("submit", function(e) {
+        e.stopPropagation();
+        return false;
+      });
+
+      $("#CANCEL_btn").on("click", function() {
+        disableAllButtons(true);
+        clearAll();
+        disableAllButtons(false);
+      });
+
+      $("#NEXT_btn").on("click", function() {
+        disableAllButtons(true);
+        $("#layer1_heir_check_items").removeClass("hide");
+        disableAllButtons(false);
+      });
+
+      $("#OK_btn").on("click", function() {
+        disableAllButtons(true);
+        $("#layer1_result").removeClass("hide");
+        disableAllButtons(false);
+      });
+
       clearAll();
+      
+      /*
+        被繼承人審查 相關事件設定
+      */
+
       // 點選「繼承登記類型」的事件處理
       $("input[name='heir_reg_type']").on("click", function(e){
+        clearAllRadioBoxes();
+        clearAllCheckBoxes();
         hideAllFieldset();
-        //$(this).prop("checked", true);
-        console.log($(this).val() + " checked!");
+        $(this).prop("checked", true);
+        //console.log($(this).val() + " checked!");
         // control the visibility of #layer1_target_check_items
         $("#layer1_target_check_items").removeClass("hide");
         $("#layer1_target_check_items > .layer2").removeClass("hide");
       });
       // 點選「死亡日期」的事件處理
-      //console.log($("input[name='death_period']"));
-      $("input[name='death_period']").on("click", function(){
-        if ($(this).val() == "jp") {
-          $("#death_period_jp_layer3").removeClass("hide");
-          $("#death_period_tw_layer3").addClass("hide");
+      $("input[name='death_period']").on("click", function(e){
+        // hide all fieldsets first
+        hideFieldsetsByElement($(this).parents("fieldset.layer2"));
+        // show up what we want to
+        var element = $(this).val() == "jp" ? $("#death_period_jp_layer3") : $("#death_period_tw_layer3");
+        activateElement(element);
+        // clear all checked box by this element
+        clearBoxesByElement(element);
+      });
+      // 點選日據時期之戶主/非戶主的事件處理
+      $("input[name='house_owner']").on("click", function(e) {
+        hideFieldsetsByElement($(this).parents("fieldset.layer3"));
+        var element = $(this).val() == "yes" ? $("#house_owner_yes_layer4") : $("#house_owner_no_layer4");
+        activateElement(element);
+        // clear all checked box by this element
+        clearBoxesByElement(element);
+      });
+      // 點選 日據時期/戶主/選項 事件處理
+      $("input[name='house_owner_yes_heir_seq']").on("click",function(e) {
+        hideFieldsetsByElement($(this).parents("fieldset.layer4"));
+        activateElement("#house_owner_yes_layer4");
+        var element = $("#house_owner_yes_heir_seq_one_layer5");
+        $(this).val() == "one" ? activateElement(element) : deactivateElement(element);
+      });
+      // 點選 日據時期/戶主/第四選項 事件處理
+      $("input[name='house_owner_yes_heir_seq_1_children']").on("click", function(e) {
+        activateElement("#house_owner_yes_heir_seq_one_layer5");
+        var element = $("#house_owner_yes_heir_seq_1_children_fourth_layer6");
+        $(this).val() == "fourth" ? activateElement(element) : deactivateElement(element);
+      });
+      // 點選 日據時期/非戶主/選項 事件處理
+      $("input[name='house_owner_no_heir_seq']").on("click",function(e) {
+        hideFieldsetsByElement($(this).parents("fieldset.layer4"));
+        activateElement("#house_owner_no_layer4");
+        var element = $("#house_owner_no_heir_seq_one_layer5");
+        $(this).val() == "one" ? activateElement(element) : deactivateElement(element);
+      });
+      // 點選 日據時期/非戶主/第四選項 事件處理
+      $("input[name='house_owner_no_heir_seq_1_children']").on("click", function(e) {
+        activateElement("#house_owner_no_heir_seq_one_layer5");
+        var element = $("#house_owner_no_heir_seq_1_children_fourth_layer6");
+        $(this).val() == "fourth" ? activateElement(element) : deactivateElement(element);
+      });
+      // 點選 光復後/民法修正[前|後] 事件處理
+      $("input[name='tw_death_period']").on("click", function(e) {
+        hideFieldsetsByElement($(this).parents("fieldset.layer3"));
+        activateElement("#tw_death_period_layer4");
+        // clear all checked box by this element
+        clearBoxesByElement($("#tw_death_period_layer4"));
+      });
+      // 點選 光復後/民法修正[前|後]/配偶 事件處理
+      $("input[name='tw_death_period_heir_spouse']").on("click", function(e) {
+        var element = $("#tw_death_period_heir_spouse_yes_layer5");
+        $(this).prop("checked") === true ? activateElement(element) : deactivateElement(element);
+      });
+      // 點選 光復後/民法修正[前|後]/順位選項 事件處理
+      $("input[name='tw_death_period_heir_seq']").on("click", function(e) {
+        // store spouse live checked or not
+        var spouse_live_yes = $("#tw_death_period_heir_spouse_live_yes").prop("checked");
+        var spouse_live_no = $("#tw_death_period_heir_spouse_live_no").prop("checked");
+        
+        hideFieldsetsByElement($(this).parents("fieldset.layer4"));
+        // clear all checked box by this element
+        //clearBoxesByElement(element);
+        
+        var choosed = $(this).val();
+        switch (choosed) {
+          case "one":
+            activateElement("#tw_death_period_heir_seq_one_layer5");
+            clearBoxesByElement($("#tw_death_period_heir_seq_one_layer5"));
+            break;
+          case "third":
+            activateElement("#tw_death_period_heir_seq_third_layer5");
+            clearBoxesByElement($("#tw_death_period_heir_seq_third_layer5"));
+            break;
+          default:
+            activateElement("#tw_death_period_layer4");
+            break;
+        }
+        // 控制 配偶 區塊顯示
+        var element = $("#tw_death_period_heir_spouse_yes_layer5");
+        if ($("#tw_death_period_heir_spouse").prop("checked") === true) {
+          activateElement(element);
+          console.log("Go!");
+          if (spouse_live_yes) {
+            $("#tw_death_period_heir_spouse_live_yes").prop("checked", true);
+          }
+          if (spouse_live_no) {
+            $("#tw_death_period_heir_spouse_live_no").prop("checked", true);
+          }
         } else {
-          $("#death_period_tw_layer3").removeClass("hide");
-          $("#death_period_jp_layer3").addClass("hide");
+          deactivateElement(element);
+        }
+      });
+      // 點選 光復後/民法修正[前|後]/第一順位選項 事件處理
+      $("input[name='tw_death_period_heir_seq_1_option']").on("click", function(e) {
+        // store spouse checked or not
+        var spouse_live_yes = $("#tw_death_period_heir_spouse_live_yes").prop("checked");
+        var spouse_live_no = $("#tw_death_period_heir_spouse_live_no").prop("checked");
+
+        hideFieldsetsByElement($(this).parents("fieldset.layer4"));
+
+        // 顯示本身區塊
+        activateElement("#tw_death_period_heir_seq_one_layer5");
+        //clearBoxesByElement(element);
+        // 其他layer6區塊控制
+        var element = $("#tw_death_period_heir_seq_1_option_third_layer6");
+        $(this).val() == "third" ? activateElement(element) : deactivateElement(element);
+        clearBoxesByElement(element);
+        element = $("#tw_death_period_heir_seq_1_option_third_layer6");
+        $(this).val() == "third" ? activateElement(element) :deactivateElement(element);
+        clearBoxesByElement(element);
+
+        // 控制 配偶 區塊顯示
+        element = $("#tw_death_period_heir_spouse_yes_layer5");
+        if ($("#tw_death_period_heir_spouse").prop("checked") === true) {
+          activateElement(element);
+          console.log("Go!");
+          if (spouse_live_yes) {
+            $("#tw_death_period_heir_spouse_live_yes").prop("checked", true);
+          }
+          if (spouse_live_no) {
+            $("#tw_death_period_heir_spouse_live_no").prop("checked", true);
+          }
+        } else {
+          deactivateElement(element);
+        }
+      });
+
+      /*
+        繼承人審查 相關事件設定
+      */
+      $("input[name='heir_method']").on("click", function(e) {
+        // hide all fieldsets first
+        hideFieldsetsByElement($(this).parents("fieldset.layer1"));
+        var choosed = $(this).val();
+        // show up what we want to
+        var element = null;
+        switch(choosed) {
+          case "abandon":
+            element = $("#heir_method_abandon_layer2");
+            break;
+          case "lost":
+            element = $("#heir_method_lost_layer2");
+            break;
+          case "domestic":
+            element = $("#heir_method_domestic_layer2");
+            break;
+          case "foreign":
+            element = $("#heir_method_foreign_layer2");
+            break;
+          case "china":
+            element = $("#heir_method_china_layer2");
+            break;
+          default:
+            alert("Not Supported Option! (" + choosed + ")");
+            break;
+        }
+        activateElement(element);
+        // clear all checked box by this element
+        clearBoxesByElement(element);
+      });
+      // 外國人第一選項 事件處理
+      $("input[name='heir_method_foreign_opt']").on("click", function(e) {
+        hideFieldsetsByElement($(this).parents("fieldset.layer2"));
+        var choosed = $(this).val();
+        if (choosed == "one") {
+          activateElement("#heir_method_foreign_opt1_layer3");
+        } else if (choosed == "second") {
+          activateElement("#heir_method_foreign_opt2_layer3");
+        } else {
+          activateElement("#heir_method_foreign_layer2");
         }
       });
     });
