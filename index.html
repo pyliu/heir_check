@@ -480,6 +480,12 @@ legend {
         disableAllButtons(false);
       });
 
+      $("#GEN_btn").on("click", function(e) {
+        disableAllButtons(true);
+        window.open("inheritance_table.html?"+$("#inheritance_form").serialize(), "_blank");
+        disableAllButtons(false);
+      });
+
       clearAll();
       
       /*
@@ -692,7 +698,7 @@ legend {
         結果區塊相關事件處理
       */
       $("#heir_other_doc").on("click", function(e) {
-        $("#heir_other_doc_text").prop("disabled", !$(this).is(":checked"));
+        $("#heir_other_doc_text").attr("disabled", !$(this).is(":checked"));
       });
     });
   </script>
