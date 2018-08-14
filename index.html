@@ -133,16 +133,16 @@ legend {
         <div class="col-8 text-center">
           <form id="inheritance_form" name="inheritance_form" action="">
 
-            <fieldset class="layer1 fix">
-              <legend>收件資訊</legend>
-              <label for="serial"><span class="text-danger">*</span>收件年期字號：</label>
+            <fieldset class="layer1 fix" id="layer1_input_case">
+              <legend><span class="text-danger">*</span>收件資訊</legend>
+              <label for="serial">收件年期字號：</label>
               <input type="text" id="serial" name="serial" value="" />
-              <label for="heir"><span class="text-danger">*</span>被繼承人姓名：</label>
+              <label for="heir">被繼承人姓名：</label>
               <input type="text" id="heir" name="heir" value="" />
             </fieldset>
 
             <fieldset class="layer1 fix" id="layer1_select_type">
-              <legend>繼承登記類型</legend>
+              <legend><span class="text-danger">*</span>繼承登記類型</legend>
               <div class="">
                 <label for="type_0_law_heir"><input type="radio" id="type_0_law_heir" name="heir_reg_type" value="type_0_law_heir" /> 法定繼承</label>
                 <label for="type_1_split_heir"><input type="radio" id="type_1_split_heir" name="heir_reg_type" value="type_1_split_heir" /> 分割繼承</label>
@@ -238,8 +238,6 @@ legend {
               </fieldset>
             </fieldset>
 
-            <div><button id='NEXT_btn' class='btn btn-sm btn-default' title="Heir Review">下一步(繼承人審查)</button></div>
-            
             <fieldset class="layer1 fix" id="layer1_heir_check_items">
               <legend>繼承人審查項目</legend>
               <div class="left">
@@ -249,7 +247,7 @@ legend {
                   <label for="heir_method_abandon_yes"><input type="radio" id="heir_method_abandon_yes" name="heir_method_abandon" value="yes" /> 是</label> <br/>
                   <label for="heir_method_abandon_no"><input type="radio" id="heir_method_abandon_no" name="heir_method_abandon" value="no" /> 否</label> <br/>
                 </fieldset>
-                <label for="heir_method_lost"><input type="radio" id="heir_method_lost" name="heir_method" value="lost" /> 繼承權拋棄</label> <br/>
+                <label for="heir_method_lost"><input type="radio" id="heir_method_lost" name="heir_method" value="lost" /> 繼承權喪失</label> <br/>
                 <fieldset class="layer2" id="heir_method_lost_layer2">
                   <legend></legend>
                   <label for="heir_method_lost_yes"><input type="radio" id="heir_method_lost_yes" name="heir_method_lost" value="yes" /> 是</label> <br/>
@@ -263,6 +261,11 @@ legend {
                   <label for="heir_method_domestic_opt3"><input type="radio" id="heir_method_domestic_opt3" name="heir_method_domestic_opt" value="third" /> 無行為能力(7歲以下)</label> <br/>
                   <label for="heir_method_domestic_opt4"><input type="radio" id="heir_method_domestic_opt4" name="heir_method_domestic_opt" value="fourth" /> 養子女</label> <br/>
                   <label for="heir_method_domestic_opt5"><input type="radio" id="heir_method_domestic_opt5" name="heir_method_domestic_opt" value="fifth" /> 胎兒</label> <br/>
+                  <fieldset class="layer3" id="heir_method_domestic_opt5_layer3">
+                    <legend></legend>
+                    <label for="heir_method_domestic_opt5_rename"><input type="radio" id="heir_method_domestic_opt5_rename" name="heir_method_domestic_opt5_modify" value="rename" /> 更名登記</label> <br/>
+                    <label for="heir_method_domestic_opt5_correct"><input type="radio" id="heir_method_domestic_opt5_correct" name="heir_method_domestic_opt5_modify" value="correct" /> 更正登記</label> <br/>
+                  </fieldset>
                 </fieldset>
                 <label for="heir_method_foreign"><input type="radio" id="heir_method_foreign" name="heir_method" value="foreign" /> 外國人繼承</label> <br/>
                 <fieldset class="layer2" id="heir_method_foreign_layer2">
@@ -284,6 +287,11 @@ legend {
                   <label for="heir_method_foreign_opt5"><input type="radio" id="heir_method_foreign_opt5" name="heir_method_foreign_opt" value="fifth" /> 無行為能力(7歲以下)</label> <br/>
                   <label for="heir_method_foreign_opt6"><input type="radio" id="heir_method_foreign_opt6" name="heir_method_foreign_opt" value="sixth" /> 養子女</label> <br/>
                   <label for="heir_method_foreign_opt7"><input type="radio" id="heir_method_foreign_opt7" name="heir_method_foreign_opt" value="seventh" /> 胎兒</label> <br/>
+                  <fieldset class="layer3" id="heir_method_foreign_opt7_layer3">
+                    <legend></legend>
+                    <label for="heir_method_foreign_opt7_rename"><input type="radio" id="heir_method_foreign_opt7_rename" name="heir_method_foreign_opt7_modify" value="rename" /> 更名登記</label> <br/>
+                    <label for="heir_method_foreign_opt7_correct"><input type="radio" id="heir_method_foreign_opt7_correct" name="heir_method_foreign_opt7_modify" value="correct" /> 更正登記</label> <br/>
+                  </fieldset>
                 </fieldset>
                 <label for="heir_method_china"><input type="radio" id="heir_method_china" name="heir_method" value="china" /> 大陸地區人民繼承</label> <br/>
                 <fieldset class="layer2" id="heir_method_china_layer2">
@@ -314,7 +322,8 @@ legend {
                 <label for="heir_oversea_doc"><input type="checkbox" id="heir_oversea_doc" name="heir_oversea_doc" value="heir_oversea_doc" /> 海外授權書</label> <br/>
                 <label for="heir_will_doc"><input type="checkbox" id="heir_will_doc" name="heir_will_doc" value="heir_will_doc" /> 遺囑</label> <br/>
                 <label for="heir_court_doc"><input type="checkbox" id="heir_court_doc" name="heir_court_doc" value="heir_court_doc" /> 法院判決書及確定證明書</label> <br/>
-                <label for="heir_other_doc"><input type="checkbox" id="heir_other_doc" name="heir_other_doc" value="heir_other_doc" /> 其他 <input type="text" value="" disabled/></label> <br/>
+                <label for="heir_other_doc"><input type="checkbox" id="heir_other_doc" name="heir_other_doc" value="heir_other_doc" /> 其他 <input id="heir_other_doc_text" type="text" value="" disabled/></label> <br/>
+                <button id='GEN_btn' class='btn btn-sm btn-default' title="GENERATE TABLE">產製審查表格</button>
               </div>
             </fieldset>
             <div class="buttons">
@@ -327,7 +336,7 @@ legend {
       </div>
     </div>
   </section><!-- /section -->
-  <p id="copyright" class="text-center my-2"><strong>&copy; <a href="mailto:pangyu.liu@gmail.com">LIU, PANG-YU</a> ALL RIGHTS RESERVED.</strong></p>
+  <!--<p id="copyright" class="text-center my-2"><strong>&copy; <a href="mailto:pangyu.liu@gmail.com">LIU, PANG-YU</a> ALL RIGHTS RESERVED.</strong></p>-->
 
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -394,16 +403,24 @@ legend {
     }
 
     function activateElement(element) {
-        $(element).removeClass("hide");
-        $(".bg-warning").each(function(e){
-          $(this).removeClass("bg-warning");
-        });
-        $(element).addClass("bg-warning");
+      $(element).removeClass("hide");
+      $(".bg-warning").each(function(e){
+        $(this).removeClass("bg-warning");
+      });
+      $(element).addClass("bg-warning");
     }
 
     function deactivateElement(element) {
-        $(element).addClass("hide");
-        $(element).removeClass("bg-warning");
+      $(element).addClass("hide");
+      $(element).removeClass("bg-warning");
+    }
+
+    function scrollToElement(element) {
+      var pos = $(element).offset().top - 100;
+      if (pos < 0) return;
+      $("html, body").animate({
+        scrollTop: pos
+      }, 1000);
     }
 
     function disableAllButtons(flag) {
@@ -434,6 +451,30 @@ legend {
       });
 
       $("#OK_btn").on("click", function() {
+        // 基本檢查必要輸入
+        var serial = $("#serial");
+        var heir = $("#heir");
+        if (serial.val() == "" || serial.val() == undefined) {
+          alert("請輸入收件年期字號。");
+          scrollToElement("#layer1_input_case");
+          activateElement("#serial");
+          return;
+        }
+        if (heir.val() == "" || heir.val() == undefined) {
+          alert("請輸入被繼承人姓名。");
+          scrollToElement("#layer1_input_case");
+          activateElement("#heir");
+          return;
+        }
+        if ($("input:radio[name=heir_reg_type]").is(":checked") === false) {
+          alert("請選擇繼承登記類型！");
+          scrollToElement("#layer1_select_type");
+          activateElement("#layer1_select_type");
+          return;
+        }
+        // 進階選項檢查
+
+
         disableAllButtons(true);
         $("#layer1_result").removeClass("hide");
         disableAllButtons(false);
@@ -540,7 +581,6 @@ legend {
         var element = $("#tw_death_period_heir_spouse_yes_layer5");
         if ($("#tw_death_period_heir_spouse").prop("checked") === true) {
           activateElement(element);
-          console.log("Go!");
           if (spouse_live_yes) {
             $("#tw_death_period_heir_spouse_live_yes").prop("checked", true);
           }
@@ -619,17 +659,40 @@ legend {
         // clear all checked box by this element
         clearBoxesByElement(element);
       });
+      // 本國人第五選項 事件處理
+      $("input[name='heir_method_domestic_opt']").on("click", function(e) {
+        hideFieldsetsByElement($(this).parents("fieldset.layer2"));
+        var choosed = $(this).val();
+        if (choosed == "fifth") {
+          activateElement("#heir_method_domestic_opt5_layer3");
+        } else {
+          activateElement("#heir_method_domestic_layer2");
+        }
+      });
       // 外國人第一選項 事件處理
       $("input[name='heir_method_foreign_opt']").on("click", function(e) {
         hideFieldsetsByElement($(this).parents("fieldset.layer2"));
         var choosed = $(this).val();
-        if (choosed == "one") {
-          activateElement("#heir_method_foreign_opt1_layer3");
-        } else if (choosed == "second") {
-          activateElement("#heir_method_foreign_opt2_layer3");
-        } else {
-          activateElement("#heir_method_foreign_layer2");
+        switch (choosed) {
+          case "one":
+            activateElement("#heir_method_foreign_opt1_layer3");
+            break;
+          case "second":
+            activateElement("#heir_method_foreign_opt2_layer3");
+            break;
+          case "seventh":
+            activateElement("#heir_method_foreign_opt7_layer3");
+            break;
+          default:
+            activateElement("#heir_method_foreign_layer2");
+            break;
         }
+      });
+      /*
+        結果區塊相關事件處理
+      */
+      $("#heir_other_doc").on("click", function(e) {
+        $("#heir_other_doc_text").prop("disabled", !$(this).is(":checked"));
       });
     });
   </script>
