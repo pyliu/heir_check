@@ -68,8 +68,8 @@ body {
             <label for="house_owner_yes_heir_seq_1_children_4"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_4" name="house_owner_yes_heir_seq_1_children" value="fourth" /> 螟蛉子</label>
           </td>
           <td>
-            <label for="house_owner_yes_heir_seq_method_subrogation"><input type="checkbox" id="house_owner_yes_heir_seq_method_subrogation" name="house_owner_yes_heir_seq_method" value="subrogation" /> 代位</label> <br/>
-            <label for="house_owner_yes_heir_seq_method_transfer"><input type="checkbox" id="house_owner_yes_heir_seq_method_transfer" name="house_owner_yes_heir_seq_method" value="transfer" /> 再轉</label>
+            <label for="house_owner_yes_heir_seq_method_subrogation"><input type="checkbox" id="house_owner_yes_heir_seq_method_subrogation" name="house_owner_yes_heir_seq_method_subrogation" value="subrogation" /> 代位</label> <br/>
+            <label for="house_owner_yes_heir_seq_method_transfer"><input type="checkbox" id="house_owner_yes_heir_seq_method_transfer" name="house_owner_yes_heir_seq_method_transfer" value="transfer" /> 再轉</label>
           </td>
         </tr>
         <tr>
@@ -127,13 +127,13 @@ body {
         <tr>
           <td><label for="tw_death_period_heir_seq_1"><input type="checkbox" id="tw_death_period_heir_seq_1" name="tw_death_period_heir_seq" value="one" /> 1. 直系血親卑親屬(親等近者為先)</label></td>
           <td>
-            <label for="tw_death_period_heir_seq_1_option1"><input type="checkbox" id="tw_death_period_heir_seq_1_option1" name="tw_death_period_heir_seq_1_option" value="one" /> 1. 婚生子女</label> <br/>
-            <label for="tw_death_period_heir_seq_1_option2"><input type="checkbox" id="tw_death_period_heir_seq_1_option2" name="tw_death_period_heir_seq_1_option" value="second" /> 2. 認領</label> <br/>
-            <label for="tw_death_period_heir_seq_1_option3"><input type="checkbox" id="tw_death_period_heir_seq_1_option3" name="tw_death_period_heir_seq_1_option" value="third" /> 3. 養子女</label>
+            <label for="tw_death_period_heir_seq_1_option1"><input type="checkbox" id="tw_death_period_heir_seq_1_option1" name="tw_death_period_heir_seq_1_option1" value="one" /> 1. 婚生子女</label> <br/>
+            <label for="tw_death_period_heir_seq_1_option2"><input type="checkbox" id="tw_death_period_heir_seq_1_option2" name="tw_death_period_heir_seq_1_option2" value="second" /> 2. 認領</label> <br/>
+            <label for="tw_death_period_heir_seq_1_option3"><input type="checkbox" id="tw_death_period_heir_seq_1_option3" name="tw_death_period_heir_seq_1_option3" value="third" /> 3. 養子女</label>
           </td>
           <td>
-            <label for="tw_death_period_heir_seq_1_option_method_1"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_1" name="tw_death_period_heir_seq_1_option_method" value="one" /> 代位</label> <br/>
-            <label for="tw_death_period_heir_seq_1_option_method_2"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_2" name="tw_death_period_heir_seq_1_option_method" value="second" /> 再轉</label>
+            <label for="tw_death_period_heir_seq_1_option_method_1"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_1" name="tw_death_period_heir_seq_1_option_method_1" value="one" /> 代位</label> <br/>
+            <label for="tw_death_period_heir_seq_1_option_method_2"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_2" name="tw_death_period_heir_seq_1_option_method_2" value="second" /> 再轉</label>
           </td>
         </tr>
         <tr>
@@ -417,12 +417,24 @@ body {
       $("#house_owner_"+url_params["house_owner"]).attr("checked", true);
       // 戶主下選項
       $("#house_owner_yes_heir_seq_"+url_params["house_owner_yes_heir_seq"]).attr("checked", true);
-      $("#house_owner_yes_heir_seq_1_children_"+url_params["house_owner_yes_heir_seq_1_children"]).attr("checked", true);
-      $("#house_owner_yes_heir_seq_method_"+url_params["house_owner_yes_heir_seq_method"]).attr("checked", true);
+      // from radio to checkbox so....
+      $("#house_owner_yes_heir_seq_1_children_"+url_params["house_owner_yes_heir_seq_1_children_1"]).attr("checked", true);
+      $("#house_owner_yes_heir_seq_1_children_"+url_params["house_owner_yes_heir_seq_1_children_2"]).attr("checked", true);
+      $("#house_owner_yes_heir_seq_1_children_"+url_params["house_owner_yes_heir_seq_1_children_3"]).attr("checked", true);
+      $("#house_owner_yes_heir_seq_1_children_"+url_params["house_owner_yes_heir_seq_1_children_4"]).attr("checked", true);
+      // 代位、再轉
+      $("#house_owner_yes_heir_seq_method_"+url_params["house_owner_yes_heir_seq_method_subrogation"]).attr("checked", true);
+      $("#house_owner_yes_heir_seq_method_"+url_params["house_owner_yes_heir_seq_method_transfer"]).attr("checked", true);
       // 非戶主下選項
       $("#house_owner_no_heir_seq_"+url_params["house_owner_no_heir_seq"]).attr("checked", true);
-      $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children"]).attr("checked", true);
-      $("#house_owner_no_heir_seq_method_"+url_params["house_owner_no_heir_seq_method"]).attr("checked", true);
+      // from radio to checkbox so....
+      $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_1"]).attr("checked", true);
+      $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_2"]).attr("checked", true);
+      $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_3"]).attr("checked", true);
+      $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_4"]).attr("checked", true);
+      // 代位、再轉
+      $("#house_owner_no_heir_seq_method_"+url_params["house_owner_no_heir_seq_method_subrogation"]).attr("checked", true);
+      $("#house_owner_no_heir_seq_method_"+url_params["house_owner_no_heir_seq_method_transfer"]).attr("checked", true);
       // 光復後選項
       $("#"+url_params["tw_death_period"]).attr("checked", true);
       // 光復後選項之配偶
@@ -432,7 +444,9 @@ body {
       }
       // 光復後選項除配偶外選項
       $("#tw_death_period_heir_seq_"+url_params["tw_death_period_heir_seq"]).attr("checked", true);
-      $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option"]).attr("checked", true);
+      $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option1"]).attr("checked", true);
+      $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option2"]).attr("checked", true);
+      $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option3"]).attr("checked", true);
       $("#tw_death_period_heir_seq_1_option_method_"+url_params["tw_death_period_heir_seq_1_option_method"]).attr("checked", true);
       if (url_params["tw_death_period_heir_seq_3_method"] == "transfer") {
         $("#tw_death_period_heir_seq_3_method").attr("checked", true);
