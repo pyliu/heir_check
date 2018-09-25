@@ -253,15 +253,15 @@ legend {
                 <label for="heir_method_domestic"><input type="checkbox" id="heir_method_domestic" name="heir_method_domestic" value="domestic" class="heir_method_checkbox" /> 本國人繼承</label> <br/>
                 <fieldset class="layer2" id="heir_method_domestic_layer2">
                   <legend></legend>
-                  <label for="heir_method_domestic_opt1"><input type="radio" id="heir_method_domestic_opt1" name="heir_method_domestic_opt" value="1" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
-                  <label for="heir_method_domestic_opt2"><input type="radio" id="heir_method_domestic_opt2" name="heir_method_domestic_opt" value="2" /> 限制行為能力(7-20歲)</label> <br/>
-                  <label for="heir_method_domestic_opt3"><input type="radio" id="heir_method_domestic_opt3" name="heir_method_domestic_opt" value="3" /> 無行為能力(7歲以下)</label> <br/>
-                  <label for="heir_method_domestic_opt4"><input type="radio" id="heir_method_domestic_opt4" name="heir_method_domestic_opt" value="4" /> 養子女</label> <br/>
-                  <label for="heir_method_domestic_opt5"><input type="radio" id="heir_method_domestic_opt5" name="heir_method_domestic_opt" value="5" /> 胎兒</label> <br/>
+                  <label for="heir_method_domestic_opt1"><input type="checkbox" id="heir_method_domestic_opt1" name="heir_method_domestic_opt1" value="1" class="heir_method_domestic_opt" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
+                  <label for="heir_method_domestic_opt2"><input type="checkbox" id="heir_method_domestic_opt2" name="heir_method_domestic_opt2" value="2" class="heir_method_domestic_opt" /> 限制行為能力(7-20歲)</label> <br/>
+                  <label for="heir_method_domestic_opt3"><input type="checkbox" id="heir_method_domestic_opt3" name="heir_method_domestic_opt3" value="3" class="heir_method_domestic_opt" /> 無行為能力(7歲以下)</label> <br/>
+                  <label for="heir_method_domestic_opt4"><input type="checkbox" id="heir_method_domestic_opt4" name="heir_method_domestic_opt4" value="4" class="heir_method_domestic_opt" /> 養子女</label> <br/>
+                  <label for="heir_method_domestic_opt5"><input type="checkbox" id="heir_method_domestic_opt5" name="heir_method_domestic_opt5" value="5" class="heir_method_domestic_opt" /> 胎兒</label> <br/>
                   <fieldset class="layer3" id="heir_method_domestic_opt5_layer3">
                     <legend></legend>
-                    <label for="heir_method_domestic_opt5_rename"><input type="radio" id="heir_method_domestic_opt5_rename" name="heir_method_domestic_opt5" value="rename" /> 更名登記</label> <br/>
-                    <label for="heir_method_domestic_opt5_correct"><input type="radio" id="heir_method_domestic_opt5_correct" name="heir_method_domestic_opt5" value="correct" /> 更正登記</label> <br/>
+                    <label for="heir_method_domestic_opt5_rename"><input type="checkbox" id="heir_method_domestic_opt5_rename" name="heir_method_domestic_opt5_rename" value="rename" /> 更名登記</label> <br/>
+                    <label for="heir_method_domestic_opt5_correct"><input type="checkbox" id="heir_method_domestic_opt5_correct" name="heir_method_domestic_opt5_correct" value="correct" /> 更正登記</label> <br/>
                   </fieldset>
                 </fieldset>
                 <label for="heir_method_foreign"><input type="checkbox" id="heir_method_foreign" name="heir_method_foreign" value="foreign" class="heir_method_checkbox" /> 外國人繼承</label> <br/>
@@ -695,16 +695,19 @@ legend {
         });
       });
       // 本國人第五選項 事件處理
-      $("input[name='heir_method_domestic_opt']").on("click", function(e) {
+      $("input.heir_method_domestic_opt").on("click", function(e) {
         hideFieldsetsByElement($(this).parents("fieldset.layer2"));
         // clear sub layers checked value
-        clearBoxesByElement($(this).parents("fieldset.layer2").find("fieldset.layer3"));
-        var choosed = $(this).val();
-        if (choosed == "5") {
-          activateElement("#heir_method_domestic_opt5_layer3");
-        } else {
-          activateElement("#heir_method_domestic_layer2");
-        }
+        //clearBoxesByElement($(this).parents("fieldset.layer2").find("fieldset.layer3"));
+        $("input.heir_method_domestic_opt").each(function() {
+          var choosed = $(this).val();
+          if (choosed == "5" && $(this).is(":checked")) {
+            activateElement("#heir_method_domestic_opt5_layer3");
+          } else {
+            activateElement("#heir_method_domestic_layer2");
+          }
+        });
+        
       });
       // 外國人第一選項 事件處理
       $("input[name='heir_method_foreign_opt']").on("click", function(e) {
