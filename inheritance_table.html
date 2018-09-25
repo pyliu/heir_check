@@ -456,11 +456,16 @@ body {
       /*
         繼承人審查
       */
-      $("#heir_method_"+url_params["heir_method"]).attr("checked", true);
+      //$("#heir_method_"+url_params["heir_method"]).attr("checked", true);
+      $("#heir_method_"+url_params["heir_method_abandon"]).attr("checked", true);
+      $("#heir_method_"+url_params["heir_method_lost"]).attr("checked", true);
+      $("#heir_method_"+url_params["heir_method_domestic"]).attr("checked", true);
+      $("#heir_method_"+url_params["heir_method_foreign"]).attr("checked", true);
+      $("#heir_method_"+url_params["heir_method_china"]).attr("checked", true);
       // 放棄
-      $("#heir_method_abandon_"+url_params["heir_method_abandon"]).attr("checked", true);
+      $("#heir_method_abandon_"+url_params["heir_method_abandon_yn"]).attr("checked", true);
       // 喪失
-      $("#heir_method_lost_"+url_params["heir_method_lost"]).attr("checked", true);
+      $("#heir_method_lost_"+url_params["heir_method_lost_yn"]).attr("checked", true);
       // 本國人其他選項
       $("#heir_method_domestic_opt"+url_params["heir_method_domestic_opt"]).attr("checked", true);
       $("#heir_method_domestic_opt5_"+url_params["heir_method_domestic_opt5"]).attr("checked", true);

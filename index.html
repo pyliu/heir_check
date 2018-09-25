@@ -241,19 +241,19 @@ legend {
             <fieldset class="layer1 fix" id="layer1_heir_check_items">
               <legend>繼承人審查項目</legend>
               <div class="left">
-                <label for="heir_method_abandon"><input type="radio" id="heir_method_abandon" name="heir_method" value="abandon" /> 繼承權拋棄</label> <br/>
+                <label for="heir_method_abandon"><input type="checkbox" id="heir_method_abandon" name="heir_method_abandon" value="abandon" class="heir_method_checkbox" /> 繼承權拋棄</label> <br/>
                 <fieldset class="layer2" id="heir_method_abandon_layer2">
                   <legend></legend>
-                  <label for="heir_method_abandon_yes"><input type="radio" id="heir_method_abandon_yes" name="heir_method_abandon" value="yes" /> 有</label> <br/>
-                  <label for="heir_method_abandon_no"><input type="radio" id="heir_method_abandon_no" name="heir_method_abandon" value="no" /> 無</label> <br/>
+                  <label for="heir_method_abandon_yes"><input type="radio" id="heir_method_abandon_yes" name="heir_method_abandon_yn" value="yes" /> 有</label> <br/>
+                  <label for="heir_method_abandon_no"><input type="radio" id="heir_method_abandon_no" name="heir_method_abandon_yn" value="no" /> 無</label> <br/>
                 </fieldset>
-                <label for="heir_method_lost"><input type="radio" id="heir_method_lost" name="heir_method" value="lost" /> 繼承權喪失</label> <br/>
+                <label for="heir_method_lost"><input type="checkbox" id="heir_method_lost" name="heir_method_lost" value="lost" class="heir_method_checkbox" /> 繼承權喪失</label> <br/>
                 <fieldset class="layer2" id="heir_method_lost_layer2">
                   <legend></legend>
-                  <label for="heir_method_lost_yes"><input type="radio" id="heir_method_lost_yes" name="heir_method_lost" value="yes" /> 有</label> <br/>
-                  <label for="heir_method_lost_no"><input type="radio" id="heir_method_lost_no" name="heir_method_lost" value="no" /> 無</label> <br/>
+                  <label for="heir_method_lost_yes"><input type="radio" id="heir_method_lost_yes" name="heir_method_lost_yn" value="yes" /> 有</label> <br/>
+                  <label for="heir_method_lost_no"><input type="radio" id="heir_method_lost_no" name="heir_method_lost_yn" value="no" /> 無</label> <br/>
                 </fieldset>
-                <label for="heir_method_domestic"><input type="radio" id="heir_method_domestic" name="heir_method" value="domestic" /> 本國人繼承</label> <br/>
+                <label for="heir_method_domestic"><input type="checkbox" id="heir_method_domestic" name="heir_method_domestic" value="domestic" class="heir_method_checkbox" /> 本國人繼承</label> <br/>
                 <fieldset class="layer2" id="heir_method_domestic_layer2">
                   <legend></legend>
                   <label for="heir_method_domestic_opt1"><input type="radio" id="heir_method_domestic_opt1" name="heir_method_domestic_opt" value="1" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
@@ -267,7 +267,7 @@ legend {
                     <label for="heir_method_domestic_opt5_correct"><input type="radio" id="heir_method_domestic_opt5_correct" name="heir_method_domestic_opt5" value="correct" /> 更正登記</label> <br/>
                   </fieldset>
                 </fieldset>
-                <label for="heir_method_foreign"><input type="radio" id="heir_method_foreign" name="heir_method" value="foreign" /> 外國人繼承</label> <br/>
+                <label for="heir_method_foreign"><input type="checkbox" id="heir_method_foreign" name="heir_method_foreign" value="foreign" class="heir_method_checkbox" /> 外國人繼承</label> <br/>
                 <fieldset class="layer2" id="heir_method_foreign_layer2">
                   <legend></legend>
                   <label for="heir_method_foreign_opt1"><input type="radio" id="heir_method_foreign_opt1" name="heir_method_foreign_opt" value="1" /> 平等互惠(土地法第18條)</label> <br/>
@@ -293,7 +293,7 @@ legend {
                     <label for="heir_method_foreign_opt7_correct"><input type="radio" id="heir_method_foreign_opt7_correct" name="heir_method_foreign_opt7" value="correct" /> 更正登記</label> <br/>
                   </fieldset>
                 </fieldset>
-                <label for="heir_method_china"><input type="radio" id="heir_method_china" name="heir_method" value="china" /> 大陸地區人民繼承</label> <br/>
+                <label for="heir_method_china"><input type="checkbox" id="heir_method_china" name="heir_method_china" value="china" class="heir_method_checkbox" /> 大陸地區人民繼承</label> <br/>
                 <fieldset class="layer2" id="heir_method_china_layer2">
                   <legend></legend>
                   <label for="heir_method_china_opt1"><input type="radio" id="heir_method_china_opt1" name="heir_method_china_opt" value="1" /> 依兩岸人民關係條例-不得繼承不動產</label> <br/>
@@ -661,36 +661,41 @@ legend {
       /*
         繼承人審查 相關事件設定
       */
-      $("input[name='heir_method']").on("click", function(e) {
+      // 繼承人審查項目 第一層點擊事件
+      $("input.heir_method_checkbox").on("click", function(e) {
         var layer1_fieldset = $(this).parents("fieldset.layer1");
         // hide all fieldsets first
         hideFieldsetsByElement(layer1_fieldset);
         // clear all checked box under layer1
         clearBoxesByElement(layer1_fieldset.find("fieldset.layer2"));
-        var choosed = $(this).val();
-        // show up what we want to
-        var element = null;
-        switch(choosed) {
-          case "abandon":
-            element = $("#heir_method_abandon_layer2");
-            break;
-          case "lost":
-            element = $("#heir_method_lost_layer2");
-            break;
-          case "domestic":
-            element = $("#heir_method_domestic_layer2");
-            break;
-          case "foreign":
-            element = $("#heir_method_foreign_layer2");
-            break;
-          case "china":
-            element = $("#heir_method_china_layer2");
-            break;
-          default:
-            alert("Not Supported Option! (" + choosed + ")");
-            break;
-        }
-        activateElement(element);
+        $("input.heir_method_checkbox").each(function(){
+          var choosed = $(this).val();
+          // show up what we want to
+          var element = null;
+          switch(choosed) {
+            case "abandon":
+              element = $("#heir_method_abandon_layer2");
+              break;
+            case "lost":
+              element = $("#heir_method_lost_layer2");
+              break;
+            case "domestic":
+              element = $("#heir_method_domestic_layer2");
+              break;
+            case "foreign":
+              element = $("#heir_method_foreign_layer2");
+              break;
+            case "china":
+              element = $("#heir_method_china_layer2");
+              break;
+            default:
+              alert("Not Supported Option! (" + choosed + ")");
+              break;
+          }
+          if ($(this).is(":checked")) {
+            activateElement(element);
+          }
+        });
       });
       // 本國人第五選項 事件處理
       $("input[name='heir_method_domestic_opt']").on("click", function(e) {
