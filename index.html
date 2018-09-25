@@ -669,21 +669,27 @@ legend {
           var choosed = $(this).val();
           // show up what we want to
           var element = null;
+          var clear_element = null;
           switch(choosed) {
             case "abandon":
               element = $("#heir_method_abandon_layer2");
+              clear_element = $("#heir_method_abandon_layer2");
               break;
             case "lost":
               element = $("#heir_method_lost_layer2");
+              clear_element = $("#heir_method_lost_layer2");
               break;
             case "domestic":
               element = $("#heir_method_domestic_layer2");
+              clear_element = $("#heir_method_domestic_layer2");
               break;
             case "foreign":
               element = $("#heir_method_foreign_layer2");
+              clear_element = $("#heir_method_foreign_layer2");
               break;
             case "china":
               element = $("#heir_method_china_layer2");
+              clear_element = $("#heir_method_china_layer2");
               break;
             default:
               alert("Not Supported Option! (" + choosed + ")");
@@ -691,6 +697,8 @@ legend {
           }
           if ($(this).is(":checked")) {
             activateElement(element);
+          } else {
+            clearBoxesByElement(clear_element);
           }
         });
       });
