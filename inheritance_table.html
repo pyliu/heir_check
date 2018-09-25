@@ -132,8 +132,8 @@ body {
             <label for="tw_death_period_heir_seq_1_option3"><input type="checkbox" id="tw_death_period_heir_seq_1_option3" name="tw_death_period_heir_seq_1_option3" value="third" /> 3. 養子女</label>
           </td>
           <td>
-            <label for="tw_death_period_heir_seq_1_option_method_1"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_1" name="tw_death_period_heir_seq_1_option_method_1" value="one" /> 代位</label> <br/>
-            <label for="tw_death_period_heir_seq_1_option_method_2"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_2" name="tw_death_period_heir_seq_1_option_method_2" value="second" /> 再轉</label>
+            <label for="tw_death_period_heir_seq_1_option_method_1"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_1" name="tw_death_period_heir_seq_1_option_method_1" value="1" /> 代位</label> <br/>
+            <label for="tw_death_period_heir_seq_1_option_method_2"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_2" name="tw_death_period_heir_seq_1_option_method_2" value="2" /> 再轉</label>
           </td>
         </tr>
         <tr>
@@ -447,7 +447,9 @@ body {
       $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option1"]).attr("checked", true);
       $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option2"]).attr("checked", true);
       $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option3"]).attr("checked", true);
-      $("#tw_death_period_heir_seq_1_option_method_"+url_params["tw_death_period_heir_seq_1_option_method"]).attr("checked", true);
+      // 代位、再轉
+      $("#tw_death_period_heir_seq_1_option_method_"+url_params["tw_death_period_heir_seq_1_option_method_1"]).attr("checked", true);
+      $("#tw_death_period_heir_seq_1_option_method_"+url_params["tw_death_period_heir_seq_1_option_method_2"]).attr("checked", true);
       if (url_params["tw_death_period_heir_seq_3_method"] == "transfer") {
         $("#tw_death_period_heir_seq_3_method").attr("checked", true);
       }
