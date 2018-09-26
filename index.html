@@ -713,6 +713,9 @@ legend {
             activateElement("#heir_method_domestic_opt5_layer3");
           } else {
             activateElement("#heir_method_domestic_layer2");
+            if (choosed == "5") {
+              clearBoxesByElement("#heir_method_domestic_opt5_layer3");
+            }
           }
         });
         
