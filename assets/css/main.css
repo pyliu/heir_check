@@ -33,9 +33,11 @@ fieldset {
 	}
 
 legend {
+	width: auto;
 	padding:5px 10px;
-	background-color:#4F709F;
+	background-color:rgb(88, 88, 88);
 	color:#FFF;
+	font-weight: bold;
 
 	border-radius:3px;
 	-moz-border-radius:3px;
@@ -53,25 +55,55 @@ legend {
 .layer1 {
   margin-bottom: 15px;
 }
+.layer1 legend {
+	text-align: left;
+}
+
 .layer2 {
   text-align: left;
   margin: 0 15px 15px 15px;
 }
+.layer2 legend {
+	background-color:rgb(129, 127, 127);
+	font-size: larger;
+}
+
 .layer3 {
   margin: 0 15px 15px 15px;
 }
+.layer3 legend {
+	background-color:rgb(174, 177, 175);
+	font-size: large;
+}
+
 .layer4 {
   margin: 0 15px 15px 15px;
 }
+.layer4 legend {
+	background-color:rgb(174, 177, 175);
+	font-size: large;
+}
+
 .layer5 {
   margin: 0 15px 15px 15px;
 }
+.layer5 legend {
+	background-color:rgb(174, 177, 175);
+	font-size: large;
+}
+
 .layer6 {
   margin: 0 15px 15px 15px;
 }
+.layer6 legend {
+	background-color:rgb(174, 177, 175);
+	font-size: large;
+}
+
 .buttons {
   margin-top: 15px;
 }
+
 .hide {
   display: none;
 }

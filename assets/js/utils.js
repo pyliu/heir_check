@@ -52,7 +52,9 @@ function hideAllFieldset() {
 
 function hideFieldsetsByElement(element) {
     $(element).find("fieldset").each(function(e) {
-        deactivateElement(this);
+        if (!$(this).hasClass("fix")) {
+            deactivateElement(this);
+        }
     });
     // always hide result fieldset
     deactivateElement("#layer1_result");
@@ -84,4 +86,11 @@ function disableAllButtons(flag) {
         var ele = $(this);
         ele.prop("disabled", flag);
     });
+}
+
+function isEmpty(variable) {
+    if (variable === undefined || $.trim(variable) == "") {
+        return true;
+    }
+    return false;
 }
