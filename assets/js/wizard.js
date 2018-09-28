@@ -101,12 +101,11 @@ $(document).ready(function(e) {
             if ($("input:checkbox[name=tw_death_period_heir_spouse]").is(":checked") === true) {
                 if ($("input:radio[name=tw_death_period_heir_spouse_live]").is(":checked") === false) {
                     showPopper("#tw_death_period_heir_spouse_live_legend");
+                    return;
                 }
-                return;
             }
         }
 
-        // TODO: Checking the necessary items
         // hide step2 panel
         deactivateElement("#no2_btn_grp");
         deactivateElement("#layer1_target_check_items");
@@ -127,6 +126,12 @@ $(document).ready(function(e) {
     $("#no3_btn_next").on("click", function(e) {
         
         // TODO: Checking the necessary items
+        if ($("input:checkbox[name=heir_method_abandon]").is(":checked") === true &&
+            $("input:radio[name=heir_method_abandon_yn]").is(":checked") === false
+        ) {
+            showPopper("#heir_method_abandon_yn_legend");
+            return;
+        }
 
         // hide step3 panel
         deactivateElement("#no3_btn_grp");
