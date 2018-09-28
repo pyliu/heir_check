@@ -126,10 +126,35 @@ $(document).ready(function(e) {
     $("#no3_btn_next").on("click", function(e) {
         
         // TODO: Checking the necessary items
+        // 繼承權拋棄 檢查
         if ($("input:checkbox[name=heir_method_abandon]").is(":checked") === true &&
             $("input:radio[name=heir_method_abandon_yn]").is(":checked") === false
         ) {
             showPopper("#heir_method_abandon_yn_legend");
+            return;
+        }
+
+        // 繼承權喪失 檢查
+        if ($("input:checkbox[name=heir_method_lost]").is(":checked") === true &&
+            $("input:radio[name=heir_method_lost_yn]").is(":checked") === false
+        ) {
+            showPopper("#heir_method_lost_yn_legend");
+            return;
+        }
+
+        // 平等互惠(土地法第18條) 檢查
+        if ($("input:checkbox[name=heir_method_foreign_opt1]").is(":checked") === true &&
+            $("input:radio[name=heir_method_foreign_opt1_yn]").is(":checked") === false
+        ) {
+            showPopper("#heir_method_foreign_opt1_yn_legend");
+            return;
+        }
+
+        // 繼承土地法第17條第1項土地 檢查
+        if ($("input:checkbox[name=heir_method_foreign_opt2]").is(":checked") === true &&
+            $("input:radio[name=heir_method_foreign_opt2_yn]").is(":checked") === false
+        ) {
+            showPopper("#heir_method_foreign_opt2_yn_legend");
             return;
         }
 
