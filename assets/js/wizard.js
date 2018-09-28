@@ -37,8 +37,8 @@ $(document).ready(function(e) {
         // check if user selected a option
         if ($("input:radio[name=heir_reg_type]").is(":checked") === false) {
             alert("請選擇繼承登記類型！");
-            scrollToElement("#layer1_select_type");
             activateElement("#layer1_select_type");
+            scrollToElement("#layer1_select_type");
             return;
         }
 
@@ -60,12 +60,45 @@ $(document).ready(function(e) {
         deactivateElement("#layer1_target_check_items");
     });
     $("#no2_btn_next").on("click", function(e) {
-        // TODO ... 
+        
+        // TODO: Checking the necessary items
+
         // hide step2 panel
         deactivateElement("#no2_btn_grp");
         deactivateElement("#layer1_target_check_items");
         // bring up step3 panel
         activateElement("#no3_btn_grp");
         activateElement("#layer1_heir_check_items");
+    });
+
+    // step 3 buttons events
+    $("#no3_btn_prev").on("click", function(e) {
+        // bring up step2 panel
+        activateElement("#no2_btn_grp");
+        activateElement("#layer1_target_check_items");
+        // hide step3 panel
+        deactivateElement("#no3_btn_grp");
+        deactivateElement("#layer1_heir_check_items");
+    });
+    $("#no3_btn_next").on("click", function(e) {
+        
+        // TODO: Checking the necessary items
+
+        // hide step3 panel
+        deactivateElement("#no3_btn_grp");
+        deactivateElement("#layer1_heir_check_items");
+        // bring up step4 panel
+        activateElement("#no4_btn_grp");
+        activateElement("#layer1_result");
+    });
+
+    // step 4 buttons events
+    $("#no4_btn_prev").on("click", function(e) {
+        // bring up step3 panel
+        activateElement("#no3_btn_grp");
+        activateElement("#layer1_heir_check_items");
+        // hide step4 panel
+        deactivateElement("#no4_btn_grp");
+        deactivateElement("#layer1_result");
     });
 });

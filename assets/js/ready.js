@@ -5,61 +5,6 @@ $(document).ready(function(e) {
         return false;
     });
 
-    $("#CANCEL_btn").on("click", function() {
-        disableAllButtons(true);
-        clearAll();
-
-        // show main blocks
-        $("#layer1_heir_check_items").removeClass("hide");
-        $("#layer1_select_type").removeClass("hide");
-        $("#layer1_target_check_items").removeClass("hide");
-        $("#layer1_input_case").removeClass("hide");
-        $("#OK_btn").removeClass("hide");
-
-        disableAllButtons(false);
-    });
-
-    $("#OK_btn").on("click", function() {
-        // 基本檢查必要輸入
-        /*
-        var serial = $("#serial");
-        var heir = $("#heir");
-        if (serial.val() == "" || serial.val() == undefined) {
-            alert("請輸入收件年期字號。");
-            scrollToElement("#layer1_input_case");
-            activateElement("#serial");
-            return;
-        }
-        if (heir.val() == "" || heir.val() == undefined) {
-            alert("請輸入被繼承人姓名。");
-            scrollToElement("#layer1_input_case");
-            activateElement("#heir");
-            return;
-        }
-        if ($("input:radio[name=heir_reg_type]").is(":checked") === false) {
-            alert("請選擇繼承登記類型！");
-            scrollToElement("#layer1_select_type");
-            activateElement("#layer1_select_type");
-            return;
-        }
-        */
-        // 進階選項檢查 ... TBD
-
-
-        disableAllButtons(true);
-
-        // hide main blocks
-        $("#layer1_heir_check_items").addClass("hide");
-        $("#layer1_select_type").addClass("hide");
-        $("#layer1_target_check_items").addClass("hide");
-        $("#layer1_input_case").addClass("hide");
-        $(this).addClass("hide");
-
-        activateElement("#layer1_result");
-        scrollToElement("#layer1_result");
-        disableAllButtons(false);
-    });
-
     $("#GEN_btn").on("click", function(e) {
         disableAllButtons(true);
         window.open("inheritance_table.html?" + $("#inheritance_form").serialize(), "_blank");

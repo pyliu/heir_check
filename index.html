@@ -172,7 +172,7 @@
             </div>
 
             <fieldset class="layer1" id="layer1_heir_check_items">
-              <legend>繼承人審查項目</legend>
+              <legend>#3 繼承人審查項目</legend>
               <div class="left">
                 <label for="heir_method_abandon"><input type="checkbox" id="heir_method_abandon" name="heir_method_abandon" value="abandon" class="heir_method_checkbox" /> 繼承權拋棄</label> <br/>
                 <fieldset class="layer2" id="heir_method_abandon_layer2">
@@ -206,14 +206,14 @@
                   <label for="heir_method_foreign_opt1"><input type="checkbox" id="heir_method_foreign_opt1" name="heir_method_foreign_opt1" value="1" class="heir_method_foreign_opt" /> 平等互惠(土地法第18條)</label> <br/>
                   <fieldset class="layer3" id="heir_method_foreign_opt1_layer3">
                     <legend></legend>
-                    <label for="heir_method_foreign_opt1_yes"><input type="radio" id="heir_method_foreign_opt1_yes" name="heir_method_foreign_opt1_yn" value="yes" /> 有</label> <br/>
-                    <label for="heir_method_foreign_opt1_no"><input type="radio" id="heir_method_foreign_opt1_no" name="heir_method_foreign_opt1_yn" value="no" /> 無</label> <br/>
+                    <label for="heir_method_foreign_opt1_yes"><input type="radio" id="heir_method_foreign_opt1_yes" name="heir_method_foreign_opt1_yn" value="yes" /> 有</label>
+                    <label for="heir_method_foreign_opt1_no"><input type="radio" id="heir_method_foreign_opt1_no" name="heir_method_foreign_opt1_yn" value="no" /> 無</label>
                   </fieldset>
                   <label for="heir_method_foreign_opt2"><input type="checkbox" id="heir_method_foreign_opt2" name="heir_method_foreign_opt2" value="2" class="heir_method_foreign_opt" /> 繼承土地法第17條第1項土地</label> <br/>
                   <fieldset class="layer3" id="heir_method_foreign_opt2_layer3">
                     <legend></legend>
-                    <label for="heir_method_foreign_opt2_yes"><input type="radio" id="heir_method_foreign_opt2_yes" name="heir_method_foreign_opt2_yn" value="yes" /> 有</label> <br/>
-                    <label for="heir_method_foreign_opt2_no"><input type="radio" id="heir_method_foreign_opt2_no" name="heir_method_foreign_opt2_yn" value="no" /> 無</label> <br/>
+                    <label for="heir_method_foreign_opt2_yes"><input type="radio" id="heir_method_foreign_opt2_yes" name="heir_method_foreign_opt2_yn" value="yes" /> 有</label>
+                    <label for="heir_method_foreign_opt2_no"><input type="radio" id="heir_method_foreign_opt2_no" name="heir_method_foreign_opt2_yn" value="no" /> 無</label>
                   </fieldset>
                   <label for="heir_method_foreign_opt3"><input type="checkbox" id="heir_method_foreign_opt3" name="heir_method_foreign_opt3" value="3" class="heir_method_foreign_opt" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
                   <label for="heir_method_foreign_opt4"><input type="checkbox" id="heir_method_foreign_opt4" name="heir_method_foreign_opt4" value="4" class="heir_method_foreign_opt" /> 限制行為能力(7-20歲)</label> <br/>
@@ -237,8 +237,13 @@
               </div>
             </fieldset>
 
+            <div id="no3_btn_grp" class="hide">
+              <button id="no3_btn_prev" class="btn btn-sm btn-default">上一步</button>
+              <button id="no3_btn_next" class="btn btn-sm btn-default">下一步</button>
+            </div>
+
             <fieldset class="layer1" id="layer1_result">
-              <legend>相關法令與應附文件</legend>
+              <legend>#4 相關法令與應附文件</legend>
               <p id="relative_law_result">
                 相關法令：<a href="assets/files/00_遺贈登記法規(範例).pdf">00_遺贈登記法規(範例).pdf</a>
               </p>
@@ -262,17 +267,14 @@
                 <div class="w3-row">
                   <label for="heir_other_doc" class="w3-rest"><input type="checkbox" id="heir_other_doc" name="heir_other_doc" value="yes" /> 其他 <input id="heir_other_doc_text" name="heir_other_doc_text" type="text" value="" disabled/></label>
                 </div>
-                <div class="w3-row">
-                  <div class="w3-col text-center">
-                    <button id='GEN_btn' class='btn btn-sm btn-default' title="GENERATE TABLE">產製審查表格</button>
-                  </div>
-                </div>
-              </div>
-              <div class="buttons">
-                <button id='OK_btn' class='btn btn-sm btn-default' title="相關法令與應附文件">下一步</button>
-                <button id='CANCEL_btn' class='btn btn-sm btn-default' title="CANCEL">重置</button>
               </div>
             </fieldset>
+
+            <div id="no4_btn_grp" class="hide">
+              <button id="no4_btn_prev" class="btn btn-sm btn-default">上一步</button>
+              <button id='GEN_btn' class='btn btn-sm btn-default' title="GENERATE TABLE">產製審查表格</button>
+            </div>
+
           </form>
         </div>
         <div class="col"></div>
