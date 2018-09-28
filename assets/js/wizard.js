@@ -63,17 +63,38 @@ $(document).ready(function(e) {
             showPopper("#death_period_legend");
             return;
         }
-        // 已勾選日據時期死亡，檢查是否勾選被繼承人身分
+        // 已勾選日據時期死亡
         if ($("input:radio[id=jp]").is(":checked") === true) {
+            // 檢查是否勾選被繼承人身分
             if ($("input:radio[name=house_owner]").is(":checked") === false) {
                 showPopper("#house_owner_legend");
                 return;
+            } else {
+                if ($("input:radio[id=house_owner_yes]").is(":checked") === true) {
+                    // 已勾選戶主
+                    if ($("input:radio[name=house_owner_yes_heir_seq]").is(":checked") === false) {
+                        showPopper("#house_owner_yes_heir_seq_legend");
+                        return;
+                    }
+                } else {
+                    // 已勾選非戶主
+                    if ($("input:radio[name=house_owner_no_heir_seq]").is(":checked") === false) {
+                        showPopper("#house_owner_no_heir_seq_legend");
+                        return;
+                    }
+                }
             }
+
         }
         // 已勾選光復後死亡，檢查是否勾選確切時間
         if ($("input:radio[id=tw]").is(":checked") === true) {
             if ($("input:radio[name=tw_death_period]").is(":checked") === false) {
                 showPopper("#tw_death_period_legend");
+                return;
+            }
+            // tw_death_period_heir_seq
+            if ($("input:radio[name=tw_death_period_heir_seq]").is(":checked") === false) {
+                showPopper("#tw_death_period_heir_seq_legend");
                 return;
             }
         }
