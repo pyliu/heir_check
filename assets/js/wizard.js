@@ -4,12 +4,10 @@ $(document).ready(function(e) {
     activateElement("#layer1_input_case");
     $("#no0_btn_next").on("click", function(e) {
         if (isEmpty($("#serial").val())) {
-            alert("收件字號不能為空白！");
             $("#serial").focus();
             return;
         }
         if (isEmpty($("#heir").val())) {
-            alert("繼承人姓名不能為空白！");
             $("#heir").focus();
             return;
         }
