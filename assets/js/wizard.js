@@ -125,7 +125,12 @@ $(document).ready(function(e) {
     });
     $("#no3_btn_next").on("click", function(e) {
         
-        // TODO: Checking the necessary items
+        // #3 繼承人審查項目 全無勾選檢查
+        if ($("input:checkbox[class=heir_method_checkbox]").is(":checked") === false) {
+            showPopper("#heir_method_legend");
+            return;
+        }
+
         // 繼承權拋棄 檢查
         if ($("input:checkbox[name=heir_method_abandon]").is(":checked") === true &&
             $("input:radio[name=heir_method_abandon_yn]").is(":checked") === false
