@@ -52,6 +52,10 @@
         <div class="col-8 text-center">
           <form id="inheritance_form" name="inheritance_form" action="">
 
+            <div id="no0_btn_grp">
+              <button id="no0_btn_next" class="btn btn-primary">下一步</button>
+            </div>
+            
             <fieldset class="layer1" id="layer1_input_case">
               <legend><span class="text-danger">*</span>#0 繼承審查檢核表-收件資訊</legend>
               <label for="serial">收件年期字號：</label>
@@ -60,10 +64,11 @@
               <input type="text" id="heir" name="heir" value="" />
             </fieldset>
             
-            <div id="no0_btn_grp">
-              <button id="no0_btn_next" class="btn btn-sm btn-default">下一步</button>
-            </div>
-            
+            <div id="no1_btn_grp" class="hide">
+              <button id="no1_btn_prev" class="btn btn-default">上一步</button>
+              <button id="no1_btn_next" class="btn btn-primary">下一步</button>
+          </div>
+
             <fieldset class="layer1" id="layer1_select_type">
               <legend><span class="text-danger">*</span>#1 繼承登記類型</legend>
               <div class="">
@@ -77,9 +82,9 @@
               </div>
             </fieldset>
 
-            <div id="no1_btn_grp" class="hide">
-                <button id="no1_btn_prev" class="btn btn-sm btn-default">上一步</button>
-                <button id="no1_btn_next" class="btn btn-sm btn-default">下一步</button>
+            <div id="no2_btn_grp" class="hide">
+              <button id="no2_btn_prev" class="btn btn-secondary">上一步</button>
+              <button id="no2_btn_next" class="btn btn-primary">下一步</button>
             </div>
 
             <fieldset class="layer1" id="layer1_target_check_items">
@@ -166,9 +171,9 @@
               </fieldset>
             </fieldset>
 
-            <div id="no2_btn_grp" class="hide">
-                <button id="no2_btn_prev" class="btn btn-sm btn-default">上一步</button>
-                <button id="no2_btn_next" class="btn btn-sm btn-default">下一步</button>
+            <div id="no3_btn_grp" class="hide">
+              <button id="no3_btn_prev" class="btn btn-secondary">上一步</button>
+              <button id="no3_btn_next" class="btn btn-primary">下一步</button>
             </div>
 
             <fieldset class="layer1" id="layer1_heir_check_items">
@@ -237,9 +242,9 @@
               </div>
             </fieldset>
 
-            <div id="no3_btn_grp" class="hide">
-              <button id="no3_btn_prev" class="btn btn-sm btn-default">上一步</button>
-              <button id="no3_btn_next" class="btn btn-sm btn-default">下一步</button>
+            <div id="no4_btn_grp" class="hide">
+              <button id="no4_btn_prev" class="btn btn-secondary">上一步</button>
+              <button id='GEN_btn' class='btn btn-success' title="GENERATE TABLE">產製審查表格</button>
             </div>
 
             <fieldset class="layer1" id="layer1_result">
@@ -269,11 +274,6 @@
                 </div>
               </div>
             </fieldset>
-
-            <div id="no4_btn_grp" class="hide">
-              <button id="no4_btn_prev" class="btn btn-sm btn-default">上一步</button>
-              <button id='GEN_btn' class='btn btn-sm btn-default' title="GENERATE TABLE">產製審查表格</button>
-            </div>
 
           </form>
         </div>
