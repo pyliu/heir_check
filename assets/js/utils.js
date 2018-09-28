@@ -94,3 +94,10 @@ function isEmpty(variable) {
     }
     return false;
 }
+
+function showPopper(selector) {
+    $(selector).popover('show');
+    setTimeout(function() {
+            $(selector).popover('hide');
+    }, 2000);
+}

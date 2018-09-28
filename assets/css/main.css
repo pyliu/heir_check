@@ -15,8 +15,9 @@
 fieldset {
 	border:0;
 	padding:10px;
-	margin-bottom:
-	10px;background:#EEE;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	background:#EEE;
 
 	border-radius: 8px;
 	-moz-border-radius: 8px;

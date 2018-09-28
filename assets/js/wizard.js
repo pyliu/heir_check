@@ -29,12 +29,11 @@ $(document).ready(function(e) {
         deactivateElement("#layer1_select_type");
     });
     $("#no1_btn_next").on("click", function(e) {
-        // TODO ... 
         // collapse step 2 panel
         hideFieldsetsByElement("#layer1_target_check_items");
         // check if user selected a option
         if ($("input:radio[name=heir_reg_type]").is(":checked") === false) {
-            alert("請選擇繼承登記類型！");
+            showPopper('#heir_reg_type_legend');
             activateElement("#layer1_select_type");
             scrollToElement("#layer1_select_type");
             return;
@@ -59,8 +58,27 @@ $(document).ready(function(e) {
     });
     $("#no2_btn_next").on("click", function(e) {
         
-        // TODO: Checking the necessary items
+        // 檢查死亡日期是否勾選
+        if ($("input:radio[name=death_period]").is(":checked") === false) {
+            showPopper("#death_period_legend");
+            return;
+        }
+        // 已勾選日據時期死亡，檢查是否勾選被繼承人身分
+        if ($("input:radio[id=jp]").is(":checked") === true) {
+            if ($("input:radio[name=house_owner]").is(":checked") === false) {
+                showPopper("#house_owner_legend");
+                return;
+            }
+        }
+        // 已勾選光復後死亡，檢查是否勾選確切時間
+        if ($("input:radio[id=tw]").is(":checked") === true) {
+            if ($("input:radio[name=tw_death_period]").is(":checked") === false) {
+                showPopper("#tw_death_period_legend");
+                return;
+            }
+        }
 
+        // TODO: Checking the necessary items
         // hide step2 panel
         deactivateElement("#no2_btn_grp");
         deactivateElement("#layer1_target_check_items");
