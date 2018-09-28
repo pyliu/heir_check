@@ -28,12 +28,7 @@ $(document).ready(function(e) {
     $("input[name='heir_reg_type']").on("click", function(e) {
         clearAllRadioBoxes();
         clearAllCheckBoxes();
-        //hideAllFieldset();
         $(this).prop("checked", true);
-        //console.log($(this).val() + " checked!");
-        // control the visibility of #layer1_target_check_items
-        //$("#layer1_target_check_items").removeClass("hide");
-        //$("#layer1_target_check_items > .layer2").removeClass("hide");
     });
     // 點選「死亡日期」的事件處理
     $("input[name='death_period']").on("click", function(e) {
