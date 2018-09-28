@@ -59,7 +59,7 @@
             <fieldset class="layer1" id="layer1_input_case">
               <legend><span class="text-danger">*</span>#0 繼承審查檢核表-收件資訊</legend>
               <label for="serial">收件年期字號：</label>
-              <input type="text" id="serial" name="serial" value="" />
+              <input type="text" id="serial" name="serial" value="" data-toggle="popover" title="收件年期字號" data-content="如：107-HA81-012345" data-placement="bottom" />
               <label for="heir">被繼承人姓名：</label>
               <input type="text" id="heir" name="heir" value="" />
             </fieldset>
@@ -277,7 +277,9 @@
 
           </form>
         </div>
-        <div class="col"></div>
+        <div id="preview" class="col">
+          <!-- preview selected result here -->
+        </div>
       </div>
     </div>
   </section><!-- /section -->
@@ -298,6 +300,11 @@
   <script src="assets/js/wizard.js"></script>
   <script>
     // other script add here
+    
+    // one way to initialize all popovers on a page would be to select them by their data-toggle attribute:
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+    });
   </script>
 </body>
 </html>
