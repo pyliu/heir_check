@@ -1,5 +1,12 @@
 $(document).ready(function(e) {
 
+    // one way to initialize all popovers on a page would be to select them by their data-toggle attribute:
+    $(function () {
+        $('[data-toggle="popover"]').popover({
+            trigger: 'focus'
+        });
+    });
+
     $("#inheritance_form").on("submit", function(e) {
         e.stopPropagation();
         return false;
