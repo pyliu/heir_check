@@ -82,7 +82,7 @@ legend {
 }
 .layer4 legend {
 	background-color:rgb(174, 177, 175);
-	font-size: large;
+	font-size: medium;
 }
 
 .layer5 {
@@ -90,7 +90,7 @@ legend {
 }
 .layer5 legend {
 	background-color:rgb(174, 177, 175);
-	font-size: large;
+	font-size: small;
 }
 
 .layer6 {
@@ -98,7 +98,7 @@ legend {
 }
 .layer6 legend {
 	background-color:rgb(174, 177, 175);
-	font-size: large;
+	font-size: small;
 }
 
 .buttons {
