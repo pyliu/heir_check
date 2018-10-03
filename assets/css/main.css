@@ -108,3 +108,8 @@ legend {
 .hide {
   display: none;
 }
+
+.pdf {
+	width: 16px;
+	height: auto;
+}
