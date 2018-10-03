@@ -16,6 +16,9 @@
 body {
     padding-top: 1rem;
 }
+.hide {
+  display: none;
+}
 </style>
 </head>
 
@@ -55,7 +58,7 @@ body {
           <td>被繼承人身分</td>
           <td>繼承人順位</td>
           <td></td>
-          <td>代位或再轉</td>
+          <td></td>
         </tr>
         <tr>
           <td rowspan="7" class="align-middle"><label for="jp"><input type="checkbox" id="jp" name="death_period" value="jp" /> 日據時期(民國34年10月24日前死亡)</label></td>
@@ -68,8 +71,8 @@ body {
             <label for="house_owner_yes_heir_seq_1_children_4"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_4" name="house_owner_yes_heir_seq_1_children" value="fourth" /> 螟蛉子</label>
           </td>
           <td>
-            <label for="house_owner_yes_heir_seq_method_subrogation"><input type="checkbox" id="house_owner_yes_heir_seq_method_subrogation" name="house_owner_yes_heir_seq_method_subrogation" value="subrogation" /> 代位</label> <br/>
-            <label for="house_owner_yes_heir_seq_method_transfer"><input type="checkbox" id="house_owner_yes_heir_seq_method_transfer" name="house_owner_yes_heir_seq_method_transfer" value="transfer" /> 再轉</label>
+            <label for="house_owner_yes_heir_seq_method_subrogation" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_method_subrogation" name="house_owner_yes_heir_seq_method_subrogation" value="subrogation" /> 代位</label> <br/>
+            <label for="house_owner_yes_heir_seq_method_transfer" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_method_transfer" name="house_owner_yes_heir_seq_method_transfer" value="transfer" /> 再轉</label>
           </td>
         </tr>
         <tr>
@@ -92,8 +95,8 @@ body {
             <label for="house_owner_no_heir_seq_1_children_4"><input type="checkbox" id="house_owner_no_heir_seq_1_children_4" name="house_owner_no_heir_seq_1_children" value="fourth" /> 螟蛉子</label>
           </td>
           <td>
-            <label for="house_owner_no_heir_seq_method_subrogation"><input type="checkbox" id="house_owner_no_heir_seq_method_subrogation" name="house_owner_no_heir_seq_method" value="subrogation" /> 代位</label> <br/>
-            <label for="house_owner_no_heir_seq_method_transfer"><input type="checkbox" id="house_owner_no_heir_seq_method_transfer" name="house_owner_no_heir_seq_method" value="transfer" /> 再轉</label>
+            <label for="house_owner_no_heir_seq_method_subrogation" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_method_subrogation" name="house_owner_no_heir_seq_method" value="subrogation" /> 代位</label> <br/>
+            <label for="house_owner_no_heir_seq_method_transfer" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_method_transfer" name="house_owner_no_heir_seq_method" value="transfer" /> 再轉</label>
           </td>
         </tr>
         <tr>
@@ -132,8 +135,8 @@ body {
             <label for="tw_death_period_heir_seq_1_option3"><input type="checkbox" id="tw_death_period_heir_seq_1_option3" name="tw_death_period_heir_seq_1_option3" value="third" /> 3. 養子女</label>
           </td>
           <td>
-            <label for="tw_death_period_heir_seq_1_option_method_1"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_1" name="tw_death_period_heir_seq_1_option_method_1" value="1" /> 代位</label> <br/>
-            <label for="tw_death_period_heir_seq_1_option_method_2"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_2" name="tw_death_period_heir_seq_1_option_method_2" value="2" /> 再轉</label>
+            <label for="tw_death_period_heir_seq_1_option_method_1" class="hide"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_1" name="tw_death_period_heir_seq_1_option_method_1" value="1" /> 代位</label> <br/>
+            <label for="tw_death_period_heir_seq_1_option_method_2" class="hide"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_2" name="tw_death_period_heir_seq_1_option_method_2" value="2" /> 再轉</label>
           </td>
         </tr>
         <tr>
@@ -144,7 +147,7 @@ body {
         <tr>
           <td><label for="tw_death_period_heir_seq_3"><input type="checkbox" id="tw_death_period_heir_seq_3" name="tw_death_period_heir_seq" value="third" /> 3. 兄弟姊妹</label></td>
           <td></td>
-          <td><label for="tw_death_period_heir_seq_3_method"><input type="checkbox" id="tw_death_period_heir_seq_3_method" name="tw_death_period_heir_seq_3_method" value="one" /> 再轉</label></td>
+          <td><label for="tw_death_period_heir_seq_3_method" class="hide"><input type="checkbox" id="tw_death_period_heir_seq_3_method" name="tw_death_period_heir_seq_3_method" value="one" /> 再轉</label></td>
         </tr>
         <tr>
           <td><label for="tw_death_period_heir_seq_4"><input type="checkbox" id="tw_death_period_heir_seq_4" name="tw_death_period_heir_seq" value="fourth" /> 4. 祖父母</label></td>
@@ -158,14 +161,14 @@ body {
         </tr>
         <tr>
           <td rowspan="24"></td>
-          <td colspan=""><label for="heir_method_subrogation"><input type="checkbox" id="heir_method_subrogation" name="heir_method_subrogation" value="yes" /> 代位</label></td>
+          <td colspan=""><label for="heir_method_subrogation"><input type="checkbox" id="heir_method_subrogation" name="heir_method_subrogation" value="subrogation" /> 代位</label></td>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
-          <td colspan=""><label for="heir_method_transfer"><input type="checkbox" id="heir_method_transfer" name="heir_method_transfer" value="yes" /> 再轉</label></td>
+          <td colspan=""><label for="heir_method_transfer"><input type="checkbox" id="heir_method_transfer" name="heir_method_transfer" value="transfer" /> 再轉</label></td>
           <td></td>
           <td></td>
           <td></td>

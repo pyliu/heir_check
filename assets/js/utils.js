@@ -100,4 +100,5 @@ function showPopper(selector) {
     setTimeout(function() {
             $(selector).popover('hide');
     }, 2000);
+    scrollToElement(selector);
 }
