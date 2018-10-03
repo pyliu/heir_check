@@ -194,8 +194,11 @@ $(document).ready(function(e) {
                     element = $("#heir_method_china_layer2");
                     clear_element = $("#heir_method_china_layer2");
                     break;
+                case "subrogation":
+                case "transfer":
+                    break;
                 default:
-                    alert("Not Supported Option! (" + choosed + ")");
+                    alert("Not Supported Option! (heir_method_checkbox, " + choosed + ")");
                     break;
             }
             if ($(this).is(":checked")) {
