@@ -61,8 +61,8 @@ $(document).ready(function(e) {
     // 點選 日據時期/戶主/第四選項 事件處理
     $("input[name='house_owner_yes_heir_seq_1_children_4']").on("click", function(e) {
         activateElement("#house_owner_yes_heir_seq_one_layer5");
-        var element = $("#house_owner_yes_heir_seq_1_children_fourth_layer6");
-        $(this).val() == "4" ? activateElement(element) : deactivateElement(element);
+        //var element = $("#house_owner_yes_heir_seq_1_children_fourth_layer6");
+        //$(this).val() == "4" ? activateElement(element) : deactivateElement(element);
     });
     // 點選 日據時期/非戶主/選項 事件處理
     $("input[name='house_owner_no_heir_seq']").on("click", function(e) {
@@ -75,8 +75,8 @@ $(document).ready(function(e) {
     // 點選 日據時期/非戶主/第四選項 事件處理
     $("input[name='house_owner_no_heir_seq_1_children_4']").on("click", function(e) {
         activateElement("#house_owner_no_heir_seq_one_layer5");
-        var element = $("#house_owner_no_heir_seq_1_children_fourth_layer6");
-        $(this).val() == "4" ? activateElement(element) : deactivateElement(element);
+        //var element = $("#house_owner_no_heir_seq_1_children_fourth_layer6");
+        //$(this).val() == "4" ? activateElement(element) : deactivateElement(element);
     });
     // 點選 光復後/民法修正[前|後] 事件處理
     $("input[name='tw_death_period']").on("click", function(e) {
@@ -103,9 +103,9 @@ $(document).ready(function(e) {
             case "1":
                 activateElement("#tw_death_period_heir_seq_one_layer5");
                 break;
-            case "3":
+            /*case "3":
                 activateElement("#tw_death_period_heir_seq_third_layer5");
-                break;
+                break;*/
             default:
                 activateElement("#tw_death_period_layer4");
                 break;
@@ -137,12 +137,12 @@ $(document).ready(function(e) {
         activateElement("#tw_death_period_heir_seq_one_layer5");
         //clearBoxesByElement(element);
         // 其他layer6區塊控制
-        var element = $("#tw_death_period_heir_seq_1_option_third_layer6");
-        activateElement(element);
-        clearBoxesByElement(element);
+        //var element = $("#tw_death_period_heir_seq_1_option_third_layer6");
+        //activateElement(element);
+        //clearBoxesByElement(element);
 
         // 控制 配偶 區塊顯示
-        element = $("#tw_death_period_heir_spouse_yes_layer5");
+        var element = $("#tw_death_period_heir_spouse_yes_layer5");
         if ($("#tw_death_period_heir_spouse").prop("checked") === true) {
             activateElement(element);
             if (spouse_live_yes) {
