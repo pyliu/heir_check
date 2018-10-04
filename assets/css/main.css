@@ -112,4 +112,5 @@ legend {
 .pdf {
 	width: 16px;
 	height: auto;
+	vertical-align: middle;
 }
