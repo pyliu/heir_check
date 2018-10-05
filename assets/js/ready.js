@@ -113,17 +113,17 @@ $(document).ready(function(e) {
         clearBoxesByElement($(this).parents("fieldset.layer4").find("fieldset.layer5"));
 
         var choosed = $(this).val();
-        switch (choosed) {
-            case "1":
-                activateElement("#tw_death_period_heir_seq_one_layer5");
-                break;
-            /*case "3":
-                activateElement("#tw_death_period_heir_seq_third_layer5");
-                break;*/
-            default:
-                activateElement("#tw_death_period_layer4");
-                break;
+        var activate_ele = choosed == "1" ? "#tw_death_period_heir_seq_one_layer5" : "#tw_death_period_layer4";
+        if ($("#tw_death_period_heir_spouse").prop("checked") === true) {
+            activateElement("#tw_death_period_heir_spouse_yes_layer5");
+            if (spouse_live_yes) {
+                $("#tw_death_period_heir_spouse_live_yes").prop("checked", true);
+            }
+            if (spouse_live_no) {
+                $("#tw_death_period_heir_spouse_live_no").prop("checked", true);
+            }
         }
+        activateElement(activate_ele);
     });
     // 點選 光復後/民法修正[前|後]/第一順位選項 事件處理
     function handleClick(e) {
@@ -133,14 +133,6 @@ $(document).ready(function(e) {
 
         hideFieldsetsByElement($(this).parents("fieldset.layer4"));
         clearBoxesByElement("#tw_death_period_heir_seq_1_option_third_layer6");
-
-        // 顯示本身區塊
-        activateElement("#tw_death_period_heir_seq_one_layer5");
-        //clearBoxesByElement(element);
-        // 其他layer6區塊控制
-        //var element = $("#tw_death_period_heir_seq_1_option_third_layer6");
-        //activateElement(element);
-        //clearBoxesByElement(element);
 
         // 控制 配偶 區塊顯示
         var element = $("#tw_death_period_heir_spouse_yes_layer5");
@@ -155,6 +147,9 @@ $(document).ready(function(e) {
         } else {
             deactivateElement(element);
         }
+        
+        // always 顯示本身區塊
+        activateElement("#tw_death_period_heir_seq_one_layer5");
     }
     $("input[name='tw_death_period_heir_seq_1_option1']").on("click", handleClick);
     $("input[name='tw_death_period_heir_seq_1_option2']").on("click", handleClick);
