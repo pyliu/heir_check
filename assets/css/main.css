@@ -114,3 +114,8 @@ legend {
 	height: auto;
 	vertical-align: middle;
 }
+
+.btn_grp {
+	clear: both;
+	text-align: right;
+}
