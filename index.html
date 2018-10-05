@@ -13,6 +13,7 @@
 <!-- Custom styles for this template -->
 <link href="assets/css/starter-template.css" rel="stylesheet">
 <link href="assets/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
+<link href="assets/css/bootstrap-treeview.min.css" rel="stylesheet">
 <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
@@ -49,7 +50,10 @@
   <section>
     <div class="container-fluid">
       <div class="row">
-        <div class="col" id="preview"><!-- preview selected result here --></div>
+        <div class="col" id="preview">
+          <!-- preview selected result here -->
+          <div id="tree"></div>
+        </div>
         <div class="col-6 text-center">
           <form id="inheritance_form" name="inheritance_form" action="">
 
@@ -290,6 +294,7 @@
   <!-- <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap-treeview.min.js"></script>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   <!-- Custom scripts for UI event handling -->
