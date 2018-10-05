@@ -119,3 +119,8 @@ legend {
 	clear: both;
 	text-align: right;
 }
+
+.btn_grp img {
+	width: 32px;
+	height: auto;
+}
