@@ -5,6 +5,7 @@ body {
 .hamburger {
 	font-size: 32px;
 	font-weight: bold;
+	vertical-align: middle;
 }
 
 .tooltip > .tooltip-inner {
