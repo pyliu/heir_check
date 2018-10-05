@@ -95,6 +95,20 @@ $(document).ready(function(e) {
         var spouse_live_yes = $("#tw_death_period_heir_spouse_live_yes").prop("checked");
         var spouse_live_no = $("#tw_death_period_heir_spouse_live_no").prop("checked");
 
+        // 控制 配偶 區塊顯示
+        var element = $("#tw_death_period_heir_spouse_yes_layer5");
+        if ($("#tw_death_period_heir_spouse").prop("checked") === true) {
+            activateElement(element);
+            if (spouse_live_yes) {
+                $("#tw_death_period_heir_spouse_live_yes").prop("checked", true);
+            }
+            if (spouse_live_no) {
+                $("#tw_death_period_heir_spouse_live_no").prop("checked", true);
+            }
+        } else {
+            deactivateElement(element);
+        }
+
         hideFieldsetsByElement($(this).parents("fieldset.layer4"));
         clearBoxesByElement($(this).parents("fieldset.layer4").find("fieldset.layer5"));
 
@@ -109,19 +123,6 @@ $(document).ready(function(e) {
             default:
                 activateElement("#tw_death_period_layer4");
                 break;
-        }
-        // 控制 配偶 區塊顯示
-        var element = $("#tw_death_period_heir_spouse_yes_layer5");
-        if ($("#tw_death_period_heir_spouse").prop("checked") === true) {
-            activateElement(element);
-            if (spouse_live_yes) {
-                $("#tw_death_period_heir_spouse_live_yes").prop("checked", true);
-            }
-            if (spouse_live_no) {
-                $("#tw_death_period_heir_spouse_live_no").prop("checked", true);
-            }
-        } else {
-            deactivateElement(element);
         }
     });
     // 點選 光復後/民法修正[前|後]/第一順位選項 事件處理
