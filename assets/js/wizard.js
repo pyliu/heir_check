@@ -45,6 +45,8 @@ $(document).ready(function(e) {
         // bring up step2 panel
         activateElement("#no2_btn_grp");
         activateElement("#layer1_target_check_items");
+        // focus on the initial fieldset
+        activateElement("#layer1_target_check_items .layer2");
     });
 
     // step 2 buttons events
