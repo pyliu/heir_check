@@ -134,3 +134,7 @@ legend {
 #contact a:link, a:visited, a:hover {
 	color: gray;
 }
+
+.container-custom-width {
+	min-width: 1024px;
+}
