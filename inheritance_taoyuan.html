@@ -51,13 +51,184 @@ body {
     <div class="container-fluid container-custom-width">
       <div class="row">
         <div class="col-4">
-          <h3 class="text-center">被繼承人審查項目</h3>
+          <fieldset class="layer1" id="layer1_target_check_items">
+              <legend>被繼承人審查項目</legend>
+              <fieldset class="layer2 fix">
+                <legend id="death_period_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇死亡日期！" data-placement="right">死亡日期</legend>
+                <label for="jp"><input type="radio" id="jp" name="death_period" value="jp" /> 日據時期(民國34年10月24日前死亡)</label> <a href="assets/files/01_日據時期繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a><br/>
+                  <fieldset class="layer3" id="death_period_jp_layer3">
+                    <legend id="house_owner_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇被繼承人身分！" data-placement="right">被繼承人身分</legend>
+                    <label for="house_owner_yes"><input type="radio" id="house_owner_yes" name="house_owner" value="yes" /> 戶主</label> <br/>
+                      <fieldset class="layer4" id="house_owner_yes_layer4">
+                        <legend id="house_owner_yes_heir_seq_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇繼承人順位(戶主)！" data-placement="right">繼承人順位(戶主)</legend>
+                        <label for="house_owner_yes_heir_seq_1"><input type="radio" id="house_owner_yes_heir_seq_1" name="house_owner_yes_heir_seq" value="1" /> 1.法定戶主繼承人-同一戶內男子直系卑親屬(親等近者為先)</label> <br/>
+                          <fieldset class="layer5" id="house_owner_yes_heir_seq_one_layer5">
+                            <legend></legend>
+                            <label for="house_owner_yes_heir_seq_1_children_1"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_1" name="house_owner_yes_heir_seq_1_children_1" value="1" /> 婚、私生子</label> <br/>
+                            <label for="house_owner_yes_heir_seq_1_children_2"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_2" name="house_owner_yes_heir_seq_1_children_2" value="2" /> 養子</label> <br/>
+                            <label for="house_owner_yes_heir_seq_1_children_3"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_3" name="house_owner_yes_heir_seq_1_children_3" value="3" /> 過房子</label> <br/>
+                            <label for="house_owner_yes_heir_seq_1_children_4"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_4" name="house_owner_yes_heir_seq_1_children_4" value="4" /> 螟蛉子</label> <br/>
+                            <fieldset class="layer6" id="house_owner_yes_heir_seq_1_children_fourth_layer6">
+                              <legend>代位或再轉</legend>
+                              <label for="house_owner_yes_heir_seq_method_subrogation"><input type="checkbox" id="house_owner_yes_heir_seq_method_subrogation" name="house_owner_yes_heir_seq_method_subrogation" value="subrogation" /> 代位</label> <br/>
+                              <label for="house_owner_yes_heir_seq_method_transfer"><input type="checkbox" id="house_owner_yes_heir_seq_method_transfer" name="house_owner_yes_heir_seq_method_transfer" value="transfer" /> 再轉</label> <br/>
+                            </fieldset>
+                          </fieldset>
+                        <label for="house_owner_yes_heir_seq_2"><input type="radio" id="house_owner_yes_heir_seq_2" name="house_owner_yes_heir_seq" value="2" /> 2.指定戶主繼承人-依當時戶籍登記為準</label> <br/>
+                        <label for="house_owner_yes_heir_seq_3"><input type="radio" id="house_owner_yes_heir_seq_3" name="house_owner_yes_heir_seq" value="3" /> 3.選定戶主繼承人-依當時戶籍登記為準</label> <br/>
+                      </fieldset>
+                      <label for="house_owner_no"><input type="radio" id="house_owner_no" name="house_owner" value="no" /> 非戶主</label> <br/>
+                      <fieldset class="layer4" id="house_owner_no_layer4">
+                        <legend id="house_owner_no_heir_seq_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇繼承人順位(非戶主)！" data-placement="right">繼承人順位(非戶主)</legend>
+                        <label for="house_owner_no_heir_seq_1"><input type="radio" id="house_owner_no_heir_seq_1" name="house_owner_no_heir_seq" value="1" /> 1.直系卑親屬(親等近者為先)</label> <br/>
+                          <fieldset class="layer5" id="house_owner_no_heir_seq_one_layer5">
+                            <legend></legend>
+                            <label for="house_owner_no_heir_seq_1_children_1"><input type="checkbox" id="house_owner_no_heir_seq_1_children_1" name="house_owner_no_heir_seq_1_children_1" value="1" /> 婚、私生子</label> <br/>
+                            <label for="house_owner_no_heir_seq_1_children_2"><input type="checkbox" id="house_owner_no_heir_seq_1_children_2" name="house_owner_no_heir_seq_1_children_2" value="2" /> 養子</label> <br/>
+                            <label for="house_owner_no_heir_seq_1_children_3"><input type="checkbox" id="house_owner_no_heir_seq_1_children_3" name="house_owner_no_heir_seq_1_children_3" value="3" /> 過房子</label> <br/>
+                            <label for="house_owner_no_heir_seq_1_children_4"><input type="checkbox" id="house_owner_no_heir_seq_1_children_4" name="house_owner_no_heir_seq_1_children_4" value="4" /> 螟蛉子</label> <br/>
+                            <fieldset class="layer6" id="house_owner_no_heir_seq_1_children_fourth_layer6">
+                              <legend>代位或再轉</legend>
+                              <label for="house_owner_no_heir_seq_method_subrogation"><input type="checkbox" id="house_owner_no_heir_seq_method_subrogation" name="house_owner_no_heir_seq_method_subrogation" value="subrogation" /> 代位</label> <br/>
+                              <label for="house_owner_no_heir_seq_method_transfer"><input type="checkbox" id="house_owner_no_heir_seq_method_transfer" name="house_owner_no_heir_seq_method_transfer" value="transfer" /> 再轉</label> <br/>
+                            </fieldset>
+                          </fieldset>
+                        <label for="house_owner_no_heir_seq_2"><input type="radio" id="house_owner_no_heir_seq_2" name="house_owner_no_heir_seq" value="2" /> 2.配偶</label> <br/>
+                        <label for="house_owner_no_heir_seq_3"><input type="radio" id="house_owner_no_heir_seq_3" name="house_owner_no_heir_seq" value="3" /> 3.直系尊親屬(親等近者為先)</label> <br/>
+                        <label for="house_owner_no_heir_seq_4"><input type="radio" id="house_owner_no_heir_seq_4" name="house_owner_no_heir_seq" value="4" /> 4.戶主</label> <br/>
+                      </fieldset>
+                  </fieldset>
+                <label for="tw"><input type="radio" id="tw" name="death_period" value="tw" /> 光復後(民國34年10月25日後死亡)</label> <a href="assets/files/02_光復後繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
+                  <fieldset class="layer3" id="death_period_tw_layer3">
+                    <legend id="tw_death_period_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇確切時間！" data-placement="right">確切時間</legend>
+                    <label for="tw34_74"><input type="radio" id="tw34_74" name="tw_death_period" value="tw34_74" /> 民法修正前(民國34年10月25日~74年6月4日前)</label> <br/>
+                    <label for="after_tw74"><input type="radio" id="after_tw74" name="tw_death_period" value="after_tw74" /> 民法修正後(民國74年6月5日後)</label> <br/>
+                    <fieldset class="layer4" id="tw_death_period_layer4">
+                      <legend id="tw_death_period_heir_seq_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇繼承人順位！" data-placement="right">繼承人順位</legend>
+                      <label for="tw_death_period_heir_spouse"><input type="checkbox" id="tw_death_period_heir_spouse" name="tw_death_period_heir_spouse" value="yes" /> 配偶</label> <br/>
+                      <fieldset class="layer5" id="tw_death_period_heir_spouse_yes_layer5">
+                        <legend id="tw_death_period_heir_spouse_live_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇配偶存歿！" data-placement="right">存歿</legend>
+                        <label for="tw_death_period_heir_spouse_live_yes"><input type="radio" id="tw_death_period_heir_spouse_live_yes" name="tw_death_period_heir_spouse_live" value="yes" /> 生存</label>
+                        <label for="tw_death_period_heir_spouse_live_no"><input type="radio" id="tw_death_period_heir_spouse_live_no" name="tw_death_period_heir_spouse_live" value="no" /> 亡歿</label>
+                      </fieldset>
+                      <label for="tw_death_period_heir_seq_1"><input type="radio" id="tw_death_period_heir_seq_1" name="tw_death_period_heir_seq" value="1" /> 1. 直系血親卑親屬(親等近者為先)</label> <br/>
+                      <fieldset class="layer5" id="tw_death_period_heir_seq_one_layer5">
+                        <legend>名份</legend>
+                        <label for="tw_death_period_heir_seq_1_option1"><input type="checkbox" id="tw_death_period_heir_seq_1_option1" name="tw_death_period_heir_seq_1_option1" value="1" /> 1. 婚生子女</label> <br/>
+                        <label for="tw_death_period_heir_seq_1_option2"><input type="checkbox" id="tw_death_period_heir_seq_1_option2" name="tw_death_period_heir_seq_1_option2" value="2" /> 2. 認領</label> <br/>
+                        <label for="tw_death_period_heir_seq_1_option3"><input type="checkbox" id="tw_death_period_heir_seq_1_option3" name="tw_death_period_heir_seq_1_option3" value="3" /> 3. 養子女</label> <br/>
+                        <fieldset class="layer6" id="tw_death_period_heir_seq_1_option_third_layer6">
+                          <legend>代位或再轉</legend>
+                          <label for="tw_death_period_heir_seq_1_option_method_1"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_1" name="tw_death_period_heir_seq_1_option_method_1" value="1" /> 代位</label> <br/>
+                          <label for="tw_death_period_heir_seq_1_option_method_2"><input type="checkbox" id="tw_death_period_heir_seq_1_option_method_2" name="tw_death_period_heir_seq_1_option_method_2" value="2" /> 再轉</label> <br/>
+                        </fieldset>
+                      </fieldset>
+                      <label for="tw_death_period_heir_seq_2"><input type="radio" id="tw_death_period_heir_seq_2" name="tw_death_period_heir_seq" value="2" /> 2. 父母</label> <br/>
+                      <label for="tw_death_period_heir_seq_3"><input type="radio" id="tw_death_period_heir_seq_3" name="tw_death_period_heir_seq" value="3" /> 3. 兄弟姊妹</label> <br/>
+                      <fieldset class="layer5" id="tw_death_period_heir_seq_third_layer5">
+                        <legend></legend>
+                        <label for="tw_death_period_heir_seq_3_method"><input type="checkbox" id="tw_death_period_heir_seq_3_method" name="tw_death_period_heir_seq_3_method" value="transfer" /> 再轉</label> <br/>
+                      </fieldset>
+                      <label for="tw_death_period_heir_seq_4"><input type="radio" id="tw_death_period_heir_seq_4" name="tw_death_period_heir_seq" value="4" /> 4. 祖父母</label> <br/>
+                    </fieldset>
+                  </fieldset>
+              </fieldset>
+            </fieldset>
         </div>
         <div class="col-4">
-          <h3 class="text-center">繼承人審查項目</h3>
+          <fieldset class="layer1" id="layer1_heir_check_items">
+            <legend id="heir_method_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇繼承人審查項目！" data-placement="right">繼承人審查項目</legend>
+            <div class="left">
+              <label for="heir_method_subrogation"><input type="checkbox" id="heir_method_subrogation" name="heir_method_subrogation" value="subrogation" class="heir_method_checkbox" /> 代位</label> <a href="assets/files/03_代位及再轉繼承之規定.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
+              <label for="heir_method_transfer"><input type="checkbox" id="heir_method_transfer" name="heir_method_transfer" value="transfer" class="heir_method_checkbox" /> 再轉</label> <a href="assets/files/03_代位及再轉繼承之規定.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
+              <label for="heir_method_abandon"><input type="checkbox" id="heir_method_abandon" name="heir_method_abandon" value="abandon" class="heir_method_checkbox" /> 繼承權拋棄</label> <a href="assets/files/04_繼承之喪失及拋棄.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
+              <fieldset class="layer2" id="heir_method_abandon_layer2">
+                <legend id="heir_method_abandon_yn_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇有或無！" data-placement="right">Y/N</legend>
+                <label for="heir_method_abandon_yes"><input type="radio" id="heir_method_abandon_yes" name="heir_method_abandon_yn" value="yes" /> 有</label> 
+                <label for="heir_method_abandon_no"><input type="radio" id="heir_method_abandon_no" name="heir_method_abandon_yn" value="no" /> 無</label>
+              </fieldset>
+              <label for="heir_method_lost"><input type="checkbox" id="heir_method_lost" name="heir_method_lost" value="lost" class="heir_method_checkbox" /> 繼承權喪失</label> <a href="assets/files/04_繼承之喪失及拋棄.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
+              <fieldset class="layer2" id="heir_method_lost_layer2">
+                <legend id="heir_method_lost_yn_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇有或無！" data-placement="right">Y/N</legend>
+                <label for="heir_method_lost_yes"><input type="radio" id="heir_method_lost_yes" name="heir_method_lost_yn" value="yes" /> 有</label>
+                <label for="heir_method_lost_no"><input type="radio" id="heir_method_lost_no" name="heir_method_lost_yn" value="no" /> 無</label>
+              </fieldset>
+              <label for="heir_method_domestic"><input type="checkbox" id="heir_method_domestic" name="heir_method_domestic" value="domestic" class="heir_method_checkbox" /> 本國人繼承</label> <a href="assets/files/05_本國人繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
+              <fieldset class="layer2" id="heir_method_domestic_layer2">
+                <legend></legend>
+                <label for="heir_method_domestic_opt1"><input type="checkbox" id="heir_method_domestic_opt1" name="heir_method_domestic_opt1" value="1" class="heir_method_domestic_opt" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
+                <label for="heir_method_domestic_opt2"><input type="checkbox" id="heir_method_domestic_opt2" name="heir_method_domestic_opt2" value="2" class="heir_method_domestic_opt" /> 限制行為能力(7-20歲或受輔助宣告之人)</label> <br/>
+                <label for="heir_method_domestic_opt3"><input type="checkbox" id="heir_method_domestic_opt3" name="heir_method_domestic_opt3" value="3" class="heir_method_domestic_opt" /> 無行為能力(7歲以下或受監護宣告之人)</label> <br/>
+                <label for="heir_method_domestic_opt4"><input type="checkbox" id="heir_method_domestic_opt4" name="heir_method_domestic_opt4" value="4" class="heir_method_domestic_opt" /> 養子女</label> <br/>
+                <label for="heir_method_domestic_opt5"><input type="checkbox" id="heir_method_domestic_opt5" name="heir_method_domestic_opt5" value="5" class="heir_method_domestic_opt" /> 胎兒</label> <br/>
+                <fieldset class="layer3" id="heir_method_domestic_opt5_layer3">
+                  <legend></legend>
+                  <label for="heir_method_domestic_opt5_rename"><input type="checkbox" id="heir_method_domestic_opt5_rename" name="heir_method_domestic_opt5_rename" value="rename" /> 更名登記</label> <br/>
+                  <label for="heir_method_domestic_opt5_correct"><input type="checkbox" id="heir_method_domestic_opt5_correct" name="heir_method_domestic_opt5_correct" value="correct" /> 更正登記</label> <br/>
+                </fieldset>
+              </fieldset>
+              <label for="heir_method_foreign"><input type="checkbox" id="heir_method_foreign" name="heir_method_foreign" value="foreign" class="heir_method_checkbox" /> 外國人繼承</label> <a href="assets/files/06_外國人繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
+              <fieldset class="layer2" id="heir_method_foreign_layer2">
+                <legend></legend>
+                <label for="heir_method_foreign_opt1"><input type="checkbox" id="heir_method_foreign_opt1" name="heir_method_foreign_opt1" value="1" class="heir_method_foreign_opt" /> 平等互惠(土地法第18條)</label> <br/>
+                <fieldset class="layer3" id="heir_method_foreign_opt1_layer3">
+                  <legend id="heir_method_foreign_opt1_yn_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇有或無！" data-placement="right">Y/N</legend>
+                  <label for="heir_method_foreign_opt1_yes"><input type="radio" id="heir_method_foreign_opt1_yes" name="heir_method_foreign_opt1_yn" value="yes" /> 有</label>
+                  <label for="heir_method_foreign_opt1_no"><input type="radio" id="heir_method_foreign_opt1_no" name="heir_method_foreign_opt1_yn" value="no" /> 無</label>
+                </fieldset>
+                <label for="heir_method_foreign_opt2"><input type="checkbox" id="heir_method_foreign_opt2" name="heir_method_foreign_opt2" value="2" class="heir_method_foreign_opt" /> 繼承土地法第17條第1項土地</label> <br/>
+                <fieldset class="layer3" id="heir_method_foreign_opt2_layer3">
+                  <legend id="heir_method_foreign_opt2_yn_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇有或無！" data-placement="right">Y/N</legend>
+                  <label for="heir_method_foreign_opt2_yes"><input type="radio" id="heir_method_foreign_opt2_yes" name="heir_method_foreign_opt2_yn" value="yes" /> 有</label>
+                  <label for="heir_method_foreign_opt2_no"><input type="radio" id="heir_method_foreign_opt2_no" name="heir_method_foreign_opt2_yn" value="no" /> 無</label>
+                </fieldset>
+                <label for="heir_method_foreign_opt3"><input type="checkbox" id="heir_method_foreign_opt3" name="heir_method_foreign_opt3" value="3" class="heir_method_foreign_opt" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
+                <label for="heir_method_foreign_opt4"><input type="checkbox" id="heir_method_foreign_opt4" name="heir_method_foreign_opt4" value="4" class="heir_method_foreign_opt" /> 限制行為能力(7-20歲或受輔助宣告之人)</label> <br/>
+                <label for="heir_method_foreign_opt5"><input type="checkbox" id="heir_method_foreign_opt5" name="heir_method_foreign_opt5" value="5" class="heir_method_foreign_opt" /> 無行為能力(7歲以下或受監護宣告之人)</label> <br/>
+                <label for="heir_method_foreign_opt6"><input type="checkbox" id="heir_method_foreign_opt6" name="heir_method_foreign_opt6" value="6" class="heir_method_foreign_opt" /> 養子女</label> <br/>
+                <label for="heir_method_foreign_opt7"><input type="checkbox" id="heir_method_foreign_opt7" name="heir_method_foreign_opt7" value="7" class="heir_method_foreign_opt" /> 胎兒</label> <br/>
+                <fieldset class="layer3" id="heir_method_foreign_opt7_layer3">
+                  <legend></legend>
+                  <label for="heir_method_foreign_opt7_rename"><input type="checkbox" id="heir_method_foreign_opt7_rename" name="heir_method_foreign_opt7_rename" value="rename" /> 更名登記</label> <br/>
+                  <label for="heir_method_foreign_opt7_correct"><input type="checkbox" id="heir_method_foreign_opt7_correct" name="heir_method_foreign_opt7_correct" value="correct" /> 更正登記</label> <br/>
+                </fieldset>
+              </fieldset>
+              <label for="heir_method_china"><input type="checkbox" id="heir_method_china" name="heir_method_china" value="china" class="heir_method_checkbox" /> 大陸地區人民繼承</label> <a href="assets/files/07_大陸地區人民繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
+              <fieldset class="layer2" id="heir_method_china_layer2">
+                <legend></legend>
+                <label for="heir_method_china_opt1"><input type="checkbox" id="heir_method_china_opt1" name="heir_method_china_opt1" value="1" /> 依兩岸人民關係條例-不得繼承不動產</label> <br/>
+                <label for="heir_method_china_opt2"><input type="checkbox" id="heir_method_china_opt2" name="heir_method_china_opt2" value="2" /> 配偶(長期居留許可者)</label> <br/>
+                <label for="heir_method_china_opt3"><input type="checkbox" id="heir_method_china_opt3" name="heir_method_china_opt3" value="3" /> 繼承土地法第17條第1項土地</label> <br/>
+                <label for="heir_method_china_opt4"><input type="checkbox" id="heir_method_china_opt4" name="heir_method_china_opt4" value="4" /> 台灣地區繼承人賴以居住</label> <br/>
+              </fieldset>
+            </div>
+          </fieldset>
         </div>
         <div class="col-4">
-          <h3 class="text-center">應附文件</h3>
+          <fieldset class="layer1" id="layer1_result">
+            <legend>應附文件</legend>
+            <div class="container-fluid left">
+              <div class="w3-row">
+                <label for="heir_death_remove_cert" class="w3-col"><input type="checkbox" id="heir_death_remove_cert" name="heir_death_remove_cert" value="yes" /> 被繼承人死亡除戶戶籍謄本</label>
+                <label for="heir_now_cert" class="w3-col"><input type="checkbox" id="heir_now_cert" name="heir_now_cert" value="yes" /> 繼承人現在戶籍謄本</label>
+                <label for="heir_sys_table" class="w3-col"><input type="checkbox" id="heir_sys_table" name="heir_sys_table" value="yes" /> 繼承系統表</label>
+                <label for="heir_drop_doc" class="w3-col"><input type="checkbox" id="heir_drop_doc" name="heir_drop_doc" value="yes" /> 拋棄繼承權證明文件</label>
+                <label for="heir_tax_doc" class="w3-col"><input type="checkbox" id="heir_tax_doc" name="heir_tax_doc" value="yes" /> 遺產稅完免納證明文件</label>
+                <label for="heir_affidavit_doc" class="w3-col"><input type="checkbox" id="heir_affidavit_doc" name="heir_affidavit_doc" value="yes" /> 權利書狀或切結書</label>
+              </div>
+              <div class="w3-row">
+                <label for="heir_split_doc" class="w3-col"><input type="checkbox" id="heir_split_doc" name="heir_split_doc" value="yes" /> 遺產分割協議書</label>
+                <label for="heir_stamp_doc" class="w3-col"><input type="checkbox" id="heir_stamp_doc" name="heir_stamp_doc" value="yes" /> 繼承人之印鑑證明書</label>
+                <label for="heir_check_id" class="w3-col"><input type="checkbox" id="heir_check_id" name="heir_check_id" value="yes" /> 親自到場核對身分</label>
+                <label for="heir_oversea_doc" class="w3-col"><input type="checkbox" id="heir_oversea_doc" name="heir_oversea_doc" value="yes" /> 海外授權書</label>
+                <label for="heir_court_doc" class="w3-col"><input type="checkbox" id="heir_court_doc" name="heir_court_doc" value="yes" /> 法院判決書及確定證明書</label>
+                <label for="heir_will_doc" class="w3-col"><input type="checkbox" id="heir_will_doc" name="heir_will_doc" value="yes" /> 遺囑</label>
+              </div>
+              <div class="w3-row">
+                <label for="heir_other_doc" class="w3-rest"><input type="checkbox" id="heir_other_doc" name="heir_other_doc" value="yes" /> 其他 <input id="heir_other_doc_text" name="heir_other_doc_text" type="text" value="" disabled/></label>
+              </div>
+            </div>
+          </fieldset>
         </div>
       </div>
     </div>
