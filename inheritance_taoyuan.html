@@ -25,6 +25,9 @@ body {
 .hide {
   display: none;
 }
+.cascade_layer {
+  margin: 0 15px 15px 15px;
+}
 </style>
 </head>
 
@@ -53,14 +56,50 @@ body {
   -->
   <section>
     <div class="container-fluid container-custom-width">
-      <div>收件年期字號：<span id="serial"></span> 被繼承人姓名：<span id="heir"></span></div>
       <div class="row">
         <div class="col-4">
-          <fieldset class="layer1" id="layer1_target_check_items">
+          <fieldset class="head">
+            <legend>收件年期字號</legend>
+            <span id="serial"></span>
+          </fieldset>
+        </div>
+        <div class="col-4">
+          <fieldset class="head">
+            <legend>被繼承人姓名</legend>
+            <span id="heir"></span>
+          </fieldset>
+        </div>
+        <div class="col-4">
+          <fieldset class="head">
+            <legend>繼承登記類型</legend>
+            <span id="heir_reg_type"></span>
+          </fieldset>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <fieldset id="layer1_target_check_items">
               <legend>被繼承人審查項目</legend>
+              <div class="cascade_layer">
+                <div>
+                  死亡日期:
+                  <span id="jp">日據時期(民國34年10月24日前死亡)</span>
+                  <span id="tw">光復後(民國34年10月25日後死亡)</span>
+                </div>
+                <div id="jp_" class="cascade_layer">
+                  被繼承人身分：
+                  <span id="house_owner_yes">戶主</span>
+                  <span id="house_owner_no">非戶主</span>
+                </div>
+                <div id="tw_" class="cascade_layer">
+                  確切時間：
+                  <span id="tw34_74">民法修正前(民國34年10月25日~74年6月4日前)</span>
+                  <span id="after_tw74">民法修正後(民國74年6月5日後)</span>
+                </div>
+              </div>
               <fieldset class="layer2">
                 <legend id="death_period_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇死亡日期！" data-placement="right">死亡日期</legend>
-                <label for="jp"><input type="radio" id="jp" name="death_period" value="jp" /> 日據時期(民國34年10月24日前死亡)</label> <a href="assets/files/01_日據時期繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a><br/>
+                <label for="jp"><input type="radio" name="death_period" value="jp" /> 日據時期(民國34年10月24日前死亡)</label> <a href="assets/files/01_日據時期繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a><br/>
                   <fieldset class="layer3" id="death_period_jp_layer3">
                     <legend id="house_owner_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇被繼承人身分！" data-placement="right">被繼承人身分</legend>
                     <label for="house_owner_yes"><input type="radio" id="house_owner_yes" name="house_owner" value="yes" /> 戶主</label> <br/>
@@ -261,12 +300,28 @@ body {
       console.log(url_params);
       $("#serial").html(url_params["serial"]);
       $("#heir").html(url_params["heir"]);
-      $("#"+url_params["heir_reg_type"]).attr("checked", true);
+      var heir_reg_type = [];
+      heir_reg_type["type_0_law_heir"] = "繼承";
+      heir_reg_type["type_1_split_heir"] = "分割繼承";
+      heir_reg_type["type_2_share_heir"] = "共同共有繼承";
+      heir_reg_type["type_3_modify"] = "名義更正";
+      heir_reg_type["type_4_will_heir"] = "遺囑繼承";
+      heir_reg_type["type_5_judge_heir"] = "判決繼承";
+      heir_reg_type["type_6_nobody_heir"] = "無人承認繼承";
+      $("#heir_reg_type").html(heir_reg_type[url_params["heir_reg_type"]]);
       
       /*
         被繼承人審查
       */
       // 日據時期/光復後
+      //$("#"+url_params["death_period"]).attr("checked", true);
+      if (url_params["death_period"] == "jp") {
+        $("#jp").show();
+        $("#tw").hide();
+      } else {
+        $("#jp").hide();
+        $("#tw").show();
+      }
       $("#"+url_params["death_period"]).attr("checked", true);
       // 戶主/非戶主選項
       $("#house_owner_"+url_params["house_owner"]).attr("checked", true);
