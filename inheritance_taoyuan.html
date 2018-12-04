@@ -53,11 +53,12 @@ body {
   -->
   <section>
     <div class="container-fluid container-custom-width">
+      <div>收件年期字號：<span id="serial"></span> 被繼承人姓名：<span id="heir"></span></div>
       <div class="row">
         <div class="col-4">
           <fieldset class="layer1" id="layer1_target_check_items">
               <legend>被繼承人審查項目</legend>
-              <fieldset class="layer2 fix">
+              <fieldset class="layer2">
                 <legend id="death_period_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇死亡日期！" data-placement="right">死亡日期</legend>
                 <label for="jp"><input type="radio" id="jp" name="death_period" value="jp" /> 日據時期(民國34年10月24日前死亡)</label> <a href="assets/files/01_日據時期繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a><br/>
                   <fieldset class="layer3" id="death_period_jp_layer3">
