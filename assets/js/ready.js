@@ -14,7 +14,6 @@ $(document).ready(function(e) {
 
     $("#GEN_btn").on("click", function(e) {
         disableAllButtons(true);
-        alert($("#is_luzhu_table").is(":checked"));
         if ($("#is_luzhu_table").is(":checked")) {
             window.open("inheritance_luzhu.html?" + $("#inheritance_form").serialize(), "_blank");
         } else {
