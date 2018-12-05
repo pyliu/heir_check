@@ -168,6 +168,9 @@ label {
                 <label id="heir_method_foreign_opt7_correct_label" for="heir_method_foreign_opt7_correct" class="hide"><input type="checkbox" id="heir_method_foreign_opt7_correct" value="correct" /> 更正登記</label>
               </div>
             </div>
+
+            <label id="heir_method_china_label" for="heir_method_china" class="hide"><input type="checkbox" id="heir_method_china" value="china" /> 大陸地區人民繼承</label>
+
           </fieldset>
         </div>
         <div class="col-4">
@@ -486,17 +489,18 @@ label {
         $("#heir_method_foreign_opt7_label").show();
       }
       $("#heir_method_foreign_opt7_"+url_params["heir_method_foreign_opt7_correct"]).attr("checked", true);
-      if ($("#heir_method_foreign_opt7_rename").is(":checked")) {
-        $("#heir_method_foreign_opt7_rename_label").show();
-      }
-      $("#heir_method_foreign_opt7_"+url_params["heir_method_foreign_opt7_rename"]).attr("checked", true);
       if ($("#heir_method_foreign_opt7_correct").is(":checked")) {
         $("#heir_method_foreign_opt7_correct_label").show();
       }
-      
+      $("#heir_method_foreign_opt7_"+url_params["heir_method_foreign_opt7_rename"]).attr("checked", true);
+      if ($("#heir_method_foreign_opt7_rename").is(":checked")) {
+        $("#heir_method_foreign_opt7_rename_label").show();
+      }
       
       $("#heir_method_"+url_params["heir_method_china"]).attr("checked", true);
-
+      if ($("#heir_method_china").is(":checked")) {
+        $("#heir_method_china_label").show();
+      }
       
       // 大陸地區人民選項
       $("#heir_method_china_opt"+url_params["heir_method_china_opt1"]).attr("checked", true);
