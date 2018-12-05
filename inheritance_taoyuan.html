@@ -91,6 +91,15 @@ label {
               <label id="tw_death_period_heir_spouse_label" for="tw_death_period_heir_spouse" class="hide"><input type="checkbox" id="tw_death_period_heir_spouse" value="yes" /> 配偶</label>
               <label id="tw_death_period_heir_spouse_live_yes_label" for="tw_death_period_heir_spouse_live_yes" class="hide"><input type="checkbox" id="tw_death_period_heir_spouse_live_yes" value="yes" /> 生存</label>
               <label id="tw_death_period_heir_spouse_live_no_label" for="tw_death_period_heir_spouse_live_no" class="hide"><input type="checkbox" id="tw_death_period_heir_spouse_live_no" value="no" /> 亡歿</label>
+
+              <label id="tw_death_period_heir_seq_1_label" for="tw_death_period_heir_seq_1" class="hide"><input type="checkbox" id="tw_death_period_heir_seq_1" value="one" /> 1. 直系血親卑親屬(親等近者為先)</label>
+              <label id="tw_death_period_heir_seq_1_option1_label" for="tw_death_period_heir_seq_1_option1" class="hide"><input type="checkbox" id="tw_death_period_heir_seq_1_option1" value="one" /> 1. 婚生子女</label>
+              <label id="tw_death_period_heir_seq_1_option2_label" for="tw_death_period_heir_seq_1_option2" class="hide"><input type="checkbox" id="tw_death_period_heir_seq_1_option2" value="second" /> 2. 認領</label>
+              <label id="tw_death_period_heir_seq_1_option3_label" for="tw_death_period_heir_seq_1_option3"class="hide"><input type="checkbox" id="tw_death_period_heir_seq_1_option3" value="third" /> 3. 養子女</label>
+
+              <label id="tw_death_period_heir_seq_2_label" for="tw_death_period_heir_seq_2" class="hide"><input type="checkbox" id="tw_death_period_heir_seq_2" value="second" /> 2. 父母</label>
+              <label id="tw_death_period_heir_seq_3_label" for="tw_death_period_heir_seq_3" class="hide"><input type="checkbox" id="tw_death_period_heir_seq_3" value="third" /> 3. 兄弟姊妹</label>
+              <label id="tw_death_period_heir_seq_4_label" for="tw_death_period_heir_seq_4" class="hide"><input type="checkbox" id="tw_death_period_heir_seq_4" value="fourth" /> 4. 祖父母</label>
         </div>
         <div class="col-4">
           <fieldset class="layer1" id="layer1_heir_check_items">
@@ -314,12 +323,33 @@ label {
         $("#tw_death_period_heir_spouse_live_"+url_params["tw_death_period_heir_spouse_live"]).attr("checked", true);
         $("#tw_death_period_heir_spouse_live_"+url_params["tw_death_period_heir_spouse_live"]+"_label").show();
       }
-      
       // 光復後選項除配偶外選項
       $("#tw_death_period_heir_seq_"+url_params["tw_death_period_heir_seq"]).attr("checked", true);
+      if ($("#tw_death_period_heir_seq_1").is(":checked")) {
+        $("#tw_death_period_heir_seq_1_label").show();
+      }
+      if ($("#tw_death_period_heir_seq_2").is(":checked")) {
+        $("#tw_death_period_heir_seq_2_label").show();
+      }
+      if ($("#tw_death_period_heir_seq_3").is(":checked")) {
+        $("#tw_death_period_heir_seq_3_label").show();
+      }
+      if ($("#tw_death_period_heir_seq_4").is(":checked")) {
+        $("#tw_death_period_heir_seq_4_label").show();
+      }
+      // tw_death_period_heir_seq_1 下 options
       $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option1"]).attr("checked", true);
+      if ($("#tw_death_period_heir_seq_1_option1").is(":checked")) {
+        $("#tw_death_period_heir_seq_1_option1_label").show();
+      }
       $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option2"]).attr("checked", true);
+      if ($("#tw_death_period_heir_seq_1_option2").is(":checked")) {
+        $("#tw_death_period_heir_seq_1_option2_label").show();
+      }
       $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option3"]).attr("checked", true);
+      if ($("#tw_death_period_heir_seq_1_option3").is(":checked")) {
+        $("#tw_death_period_heir_seq_1_option3_label").show();
+      }
       // 代位、再轉
       $("#tw_death_period_heir_seq_1_option_method_"+url_params["tw_death_period_heir_seq_1_option_method_1"]).attr("checked", true);
       $("#tw_death_period_heir_seq_1_option_method_"+url_params["tw_death_period_heir_seq_1_option_method_2"]).attr("checked", true);
