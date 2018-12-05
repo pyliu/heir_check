@@ -14,11 +14,7 @@
 <link href="assets/css/bootstrap-treeview.min.css" rel="stylesheet">
 <link href="assets/css/main.css" rel="stylesheet">
 <style type="text/css">
-@media print {
-  @page {
-    size: landscape
-  }
-}
+@media print{@page {size: landscape}}
 body {
     padding-top: 1rem;
 }
@@ -31,6 +27,11 @@ body {
 label {
   display: block;
 }
+.top_title {
+  font-size: 1.25em;
+  font-weight: bolder;
+  margin-left: 15px;
+}
 </style>
 </head>
 
@@ -41,19 +42,19 @@ label {
         <div class="col-4">
           <fieldset class="head">
             <legend>收件年期字號</legend>
-            <span id="serial"></span>
+            <div id="serial" class="top_title"></div>
           </fieldset>
         </div>
         <div class="col-4">
           <fieldset class="head">
             <legend>被繼承人姓名</legend>
-            <span id="heir"></span>
+            <div id="heir" class="top_title"></div>
           </fieldset>
         </div>
         <div class="col-4">
           <fieldset class="head">
             <legend>繼承登記類型</legend>
-            <span id="heir_reg_type"></span>
+            <div id="heir_reg_type" class="top_title"></div>
           </fieldset>
         </div>
       </div>
