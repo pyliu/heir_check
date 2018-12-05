@@ -99,6 +99,15 @@ label {
               <label id="house_owner_yes_heir_seq_3_label" for="house_owner_yes_heir_seq_3" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_3" value="third" /> 3.選定戶主繼承人-依當時戶籍登記為準</label>
               
               <label id="house_owner_no_label" for="house_owner_no" class="hide"><input type="checkbox" id="house_owner_no" value="no" /> 非戶主</label>
+              <label id="house_owner_no_heir_seq_1_label" for="house_owner_no_heir_seq_1" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_1" value="one" /> 1.直系卑親屬(親等近者為先)</label>
+              <label id="house_owner_no_heir_seq_1_children_1_label" for="house_owner_no_heir_seq_1_children_1" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_1_children_1" value="one" /> 婚、私生子</label>
+              <label id="house_owner_no_heir_seq_1_children_2_label" for="house_owner_no_heir_seq_1_children_2" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_1_children_2" value="second" /> 養子</label>
+              <label id="house_owner_no_heir_seq_1_children_3_label" for="house_owner_no_heir_seq_1_children_3" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_1_children_3" value="third" /> 過房子</label>
+              <label id="house_owner_no_heir_seq_1_children_4_label" for="house_owner_no_heir_seq_1_children_4" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_1_children_4" value="fourth" /> 螟蛉子</label>
+              
+              <label id="house_owner_no_heir_seq_2_label" for="house_owner_no_heir_seq_2" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_2" value="second" /> 2.配偶</label>
+              <label id="house_owner_no_heir_seq_3_label" for="house_owner_no_heir_seq_3" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_3" value="third" /> 3.直系尊親屬(親等近者為先)</label>
+              <label id="house_owner_no_heir_seq_4_label" for="house_owner_no_heir_seq_4" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_4" value="fourth" /> 4.戶主</label>
               <!--
                 <div>
                   死亡日期: <span id="death_period"></span>
@@ -307,16 +316,38 @@ label {
       }
       */
 
-
-
-      
       // 非戶主下選項
       $("#house_owner_no_heir_seq_"+url_params["house_owner_no_heir_seq"]).attr("checked", true);
-      // from radio to checkbox so....
+      if ($("#house_owner_no_heir_seq_1").is(":checked")) {
+        $("#house_owner_no_heir_seq_1_label").show();
+      }
+      if ($("#house_owner_no_heir_seq_2").is(":checked")) {
+        $("#house_owner_no_heir_seq_1_label").show();
+      }
+      if ($("#house_owner_no_heir_seq_3").is(":checked")) {
+        $("#house_owner_no_heir_seq_1_label").show();
+      }
+      if ($("#house_owner_no_heir_seq_4").is(":checked")) {
+        $("#house_owner_no_heir_seq_4_label").show();
+      }
+      
+      // 非戶主下順位
       $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_1"]).attr("checked", true);
+      if ($("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_1"]).is(":checked")) {
+        $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_1"]+"_label").show();
+      }
       $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_2"]).attr("checked", true);
+      if ($("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_2"]).is(":checked")) {
+        $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_2"]+"_label").show();
+      }
       $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_3"]).attr("checked", true);
+      if ($("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_3"]).is(":checked")) {
+        $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_3"]+"_label").show();
+      }
       $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_4"]).attr("checked", true);
+      if ($("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_4"]).is(":checked")) {
+        $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_4"]+"_label").show();
+      }
       // 代位、再轉
       $("#house_owner_no_heir_seq_method_"+url_params["house_owner_no_heir_seq_method_subrogation"]).attr("checked", true);
       $("#house_owner_no_heir_seq_method_"+url_params["house_owner_no_heir_seq_method_transfer"]).attr("checked", true);
