@@ -83,18 +83,14 @@ label {
         <div class="col-4">
           <fieldset id="layer1_target_check_items">
               <legend>被繼承人審查項目</legend>
-              <label id="jp_label" for="jp" class="hide"><input type="checkbox" id="jp" name="death_period" value="jp" /> 日據時期(民國34年10月24日前死亡)</label>
-              
+              <label id="jp_label" for="jp" class="hide"><input type="checkbox" id="jp" value="jp" /> 日據時期(民國34年10月24日前死亡)</label>  
               <label id="house_owner_yes_label" for="house_owner_yes" class="hide"><input type="checkbox" id="house_owner_yes" value="yes" /> 戶主</label>
               <label id="house_owner_yes_heir_seq_1_label" for="house_owner_yes_heir_seq_1" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_1" value="one" /> 1.法定戶主繼承人-同一戶內男子直系卑親屬(親等近者為先)</label>
               <label id="house_owner_yes_heir_seq_1_children_1_label" for="house_owner_yes_heir_seq_1_children_1" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_1" value="1" /> 婚、私生子</label>
               <label id="house_owner_yes_heir_seq_1_children_2_label" for="house_owner_yes_heir_seq_1_children_2" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_2" value="2" /> 養子</label>
               <label id="house_owner_yes_heir_seq_1_children_3_label" for="house_owner_yes_heir_seq_1_children_3" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_3" value="3" /> 過房子</label>
               <label id="house_owner_yes_heir_seq_1_children_4_label" for="house_owner_yes_heir_seq_1_children_4" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_1_children_4" value="4" /> 螟蛉子</label>
-              <!--
-              <label id="house_owner_yes_heir_seq_method_subrogation_label" for="house_owner_yes_heir_seq_method_subrogation" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_method_subrogation" value="subrogation" /> 代位</label>
-              <label id="house_owner_yes_heir_seq_method_transfer_label" for="house_owner_yes_heir_seq_method_transfer" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_method_transfer" value="transfer" /> 再轉</label>
-              -->
+
               <label id="house_owner_yes_heir_seq_2_label" for="house_owner_yes_heir_seq_2" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_2" value="second" /> 2.指定戶主繼承人-依當時戶籍登記為準</label>
               <label id="house_owner_yes_heir_seq_3_label" for="house_owner_yes_heir_seq_3" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_3" value="third" /> 3.選定戶主繼承人-依當時戶籍登記為準</label>
               
@@ -108,20 +104,10 @@ label {
               <label id="house_owner_no_heir_seq_2_label" for="house_owner_no_heir_seq_2" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_2" value="second" /> 2.配偶</label>
               <label id="house_owner_no_heir_seq_3_label" for="house_owner_no_heir_seq_3" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_3" value="third" /> 3.直系尊親屬(親等近者為先)</label>
               <label id="house_owner_no_heir_seq_4_label" for="house_owner_no_heir_seq_4" class="hide"><input type="checkbox" id="house_owner_no_heir_seq_4" value="fourth" /> 4.戶主</label>
-              <!--
-                <div>
-                  死亡日期: <span id="death_period"></span>
-                </div>
-                <div id="jp_content" class="cascade_layer hide">
-                  被繼承人身分： <span id="house_owner"></span>
-                  繼承人順位： <span id="house_owner_yes_heir_seq"></span>
-                </div>
-                <div id="tw_content" class="cascade_layer hide">
-                  確切時間：
-                  <span id="tw34_74">民法修正前(民國34年10月25日~74年6月4日前)</span>
-                  <span id="after_tw74">民法修正後(民國74年6月5日後)</span>
-                </div>
-              -->
+              
+
+              <label id="tw_label" for="tw" class="hide"><input type="checkbox" id="tw" value="tw" /> 光復後(民國34年10月25日後死亡)</label>
+
         </div>
         <div class="col-4">
           <fieldset class="layer1" id="layer1_heir_check_items">
@@ -268,9 +254,8 @@ label {
       */
       // 日據時期/光復後
       $("#"+url_params["death_period"]).attr("checked", true);
-      if ($("#"+url_params["death_period"]).is(":checked")) {
-        $("#jp_label").show();
-      }
+      $("#jp").is(":checked") ? $("#jp_label").show() : $("#jp_label").hide();
+      $("#tw").is(":checked") ? $("#tw_label").show() : $("#tw_label").hide();
       // 戶主/非戶主選項
       $("#house_owner_"+url_params["house_owner"]).attr("checked", true);
       if ($("#house_owner_"+url_params["house_owner"]).is(":checked")) {
