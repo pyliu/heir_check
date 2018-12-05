@@ -122,69 +122,29 @@ label {
         <div class="col-4">
           <fieldset class="layer1" id="layer1_heir_check_items">
             <legend id="heir_method_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇繼承人審查項目！" data-placement="right">繼承人審查項目</legend>
-            <div class="left">
-              <label for="heir_method_subrogation"><input type="checkbox" id="heir_method_subrogation" name="heir_method_subrogation" value="subrogation" class="heir_method_checkbox" /> 代位</label> <a href="assets/files/03_代位及再轉繼承之規定.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
-              <label for="heir_method_transfer"><input type="checkbox" id="heir_method_transfer" name="heir_method_transfer" value="transfer" class="heir_method_checkbox" /> 再轉</label> <a href="assets/files/03_代位及再轉繼承之規定.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
-              <label for="heir_method_abandon"><input type="checkbox" id="heir_method_abandon" name="heir_method_abandon" value="abandon" class="heir_method_checkbox" /> 繼承權拋棄</label> <a href="assets/files/04_繼承之喪失及拋棄.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
-              <fieldset class="layer2" id="heir_method_abandon_layer2">
-                <legend id="heir_method_abandon_yn_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇有或無！" data-placement="right">Y/N</legend>
-                <label for="heir_method_abandon_yes"><input type="radio" id="heir_method_abandon_yes" name="heir_method_abandon_yn" value="yes" /> 有</label> 
-                <label for="heir_method_abandon_no"><input type="radio" id="heir_method_abandon_no" name="heir_method_abandon_yn" value="no" /> 無</label>
-              </fieldset>
-              <label for="heir_method_lost"><input type="checkbox" id="heir_method_lost" name="heir_method_lost" value="lost" class="heir_method_checkbox" /> 繼承權喪失</label> <a href="assets/files/04_繼承之喪失及拋棄.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
-              <fieldset class="layer2" id="heir_method_lost_layer2">
-                <legend id="heir_method_lost_yn_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇有或無！" data-placement="right">Y/N</legend>
-                <label for="heir_method_lost_yes"><input type="radio" id="heir_method_lost_yes" name="heir_method_lost_yn" value="yes" /> 有</label>
-                <label for="heir_method_lost_no"><input type="radio" id="heir_method_lost_no" name="heir_method_lost_yn" value="no" /> 無</label>
-              </fieldset>
-              <label for="heir_method_domestic"><input type="checkbox" id="heir_method_domestic" name="heir_method_domestic" value="domestic" class="heir_method_checkbox" /> 本國人繼承</label> <a href="assets/files/05_本國人繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
-              <fieldset class="layer2" id="heir_method_domestic_layer2">
-                <legend></legend>
-                <label for="heir_method_domestic_opt1"><input type="checkbox" id="heir_method_domestic_opt1" name="heir_method_domestic_opt1" value="1" class="heir_method_domestic_opt" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
-                <label for="heir_method_domestic_opt2"><input type="checkbox" id="heir_method_domestic_opt2" name="heir_method_domestic_opt2" value="2" class="heir_method_domestic_opt" /> 限制行為能力(7-20歲或受輔助宣告之人)</label> <br/>
-                <label for="heir_method_domestic_opt3"><input type="checkbox" id="heir_method_domestic_opt3" name="heir_method_domestic_opt3" value="3" class="heir_method_domestic_opt" /> 無行為能力(7歲以下或受監護宣告之人)</label> <br/>
-                <label for="heir_method_domestic_opt4"><input type="checkbox" id="heir_method_domestic_opt4" name="heir_method_domestic_opt4" value="4" class="heir_method_domestic_opt" /> 養子女</label> <br/>
-                <label for="heir_method_domestic_opt5"><input type="checkbox" id="heir_method_domestic_opt5" name="heir_method_domestic_opt5" value="5" class="heir_method_domestic_opt" /> 胎兒</label> <br/>
-                <fieldset class="layer3" id="heir_method_domestic_opt5_layer3">
-                  <legend></legend>
-                  <label for="heir_method_domestic_opt5_rename"><input type="checkbox" id="heir_method_domestic_opt5_rename" name="heir_method_domestic_opt5_rename" value="rename" /> 更名登記</label> <br/>
-                  <label for="heir_method_domestic_opt5_correct"><input type="checkbox" id="heir_method_domestic_opt5_correct" name="heir_method_domestic_opt5_correct" value="correct" /> 更正登記</label> <br/>
-                </fieldset>
-              </fieldset>
-              <label for="heir_method_foreign"><input type="checkbox" id="heir_method_foreign" name="heir_method_foreign" value="foreign" class="heir_method_checkbox" /> 外國人繼承</label> <a href="assets/files/06_外國人繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
-              <fieldset class="layer2" id="heir_method_foreign_layer2">
-                <legend></legend>
-                <label for="heir_method_foreign_opt1"><input type="checkbox" id="heir_method_foreign_opt1" name="heir_method_foreign_opt1" value="1" class="heir_method_foreign_opt" /> 平等互惠(土地法第18條)</label> <br/>
-                <fieldset class="layer3" id="heir_method_foreign_opt1_layer3">
-                  <legend id="heir_method_foreign_opt1_yn_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇有或無！" data-placement="right">Y/N</legend>
-                  <label for="heir_method_foreign_opt1_yes"><input type="radio" id="heir_method_foreign_opt1_yes" name="heir_method_foreign_opt1_yn" value="yes" /> 有</label>
-                  <label for="heir_method_foreign_opt1_no"><input type="radio" id="heir_method_foreign_opt1_no" name="heir_method_foreign_opt1_yn" value="no" /> 無</label>
-                </fieldset>
-                <label for="heir_method_foreign_opt2"><input type="checkbox" id="heir_method_foreign_opt2" name="heir_method_foreign_opt2" value="2" class="heir_method_foreign_opt" /> 繼承土地法第17條第1項土地</label> <br/>
-                <fieldset class="layer3" id="heir_method_foreign_opt2_layer3">
-                  <legend id="heir_method_foreign_opt2_yn_legend" data-trigger="manual" data-toggle="popover" data-content="請選擇有或無！" data-placement="right">Y/N</legend>
-                  <label for="heir_method_foreign_opt2_yes"><input type="radio" id="heir_method_foreign_opt2_yes" name="heir_method_foreign_opt2_yn" value="yes" /> 有</label>
-                  <label for="heir_method_foreign_opt2_no"><input type="radio" id="heir_method_foreign_opt2_no" name="heir_method_foreign_opt2_yn" value="no" /> 無</label>
-                </fieldset>
-                <label for="heir_method_foreign_opt3"><input type="checkbox" id="heir_method_foreign_opt3" name="heir_method_foreign_opt3" value="3" class="heir_method_foreign_opt" /> 有行為能力(滿20歲或未成年已結婚者)</label> <br/>
-                <label for="heir_method_foreign_opt4"><input type="checkbox" id="heir_method_foreign_opt4" name="heir_method_foreign_opt4" value="4" class="heir_method_foreign_opt" /> 限制行為能力(7-20歲或受輔助宣告之人)</label> <br/>
-                <label for="heir_method_foreign_opt5"><input type="checkbox" id="heir_method_foreign_opt5" name="heir_method_foreign_opt5" value="5" class="heir_method_foreign_opt" /> 無行為能力(7歲以下或受監護宣告之人)</label> <br/>
-                <label for="heir_method_foreign_opt6"><input type="checkbox" id="heir_method_foreign_opt6" name="heir_method_foreign_opt6" value="6" class="heir_method_foreign_opt" /> 養子女</label> <br/>
-                <label for="heir_method_foreign_opt7"><input type="checkbox" id="heir_method_foreign_opt7" name="heir_method_foreign_opt7" value="7" class="heir_method_foreign_opt" /> 胎兒</label> <br/>
-                <fieldset class="layer3" id="heir_method_foreign_opt7_layer3">
-                  <legend></legend>
-                  <label for="heir_method_foreign_opt7_rename"><input type="checkbox" id="heir_method_foreign_opt7_rename" name="heir_method_foreign_opt7_rename" value="rename" /> 更名登記</label> <br/>
-                  <label for="heir_method_foreign_opt7_correct"><input type="checkbox" id="heir_method_foreign_opt7_correct" name="heir_method_foreign_opt7_correct" value="correct" /> 更正登記</label> <br/>
-                </fieldset>
-              </fieldset>
-              <label for="heir_method_china"><input type="checkbox" id="heir_method_china" name="heir_method_china" value="china" class="heir_method_checkbox" /> 大陸地區人民繼承</label> <a href="assets/files/07_大陸地區人民繼承.pdf" title="相關法令" target="_blank"><img src="assets/img/pdf.png" class="pdf" /></a> <br/>
-              <fieldset class="layer2" id="heir_method_china_layer2">
-                <legend></legend>
-                <label for="heir_method_china_opt1"><input type="checkbox" id="heir_method_china_opt1" name="heir_method_china_opt1" value="1" /> 依兩岸人民關係條例-不得繼承不動產</label> <br/>
-                <label for="heir_method_china_opt2"><input type="checkbox" id="heir_method_china_opt2" name="heir_method_china_opt2" value="2" /> 配偶(長期居留許可者)</label> <br/>
-                <label for="heir_method_china_opt3"><input type="checkbox" id="heir_method_china_opt3" name="heir_method_china_opt3" value="3" /> 繼承土地法第17條第1項土地</label> <br/>
-                <label for="heir_method_china_opt4"><input type="checkbox" id="heir_method_china_opt4" name="heir_method_china_opt4" value="4" /> 台灣地區繼承人賴以居住</label> <br/>
-              </fieldset>
+            <label id="heir_method_subrogation_label" for="heir_method_subrogation" class="hide"><input type="checkbox" id="heir_method_subrogation" value="subrogation" /> 代位</label>
+            <label id="heir_method_transfer_label" for="heir_method_transfer" class="hide"><input type="checkbox" id="heir_method_transfer" value="transfer" /> 再轉</label>
+            <label id="heir_method_abandon_label" for="heir_method_abandon" class="hide"><input type="checkbox" id="heir_method_abandon" value="abandon" /> 繼承權拋棄</label>
+            <div class="cascade">
+              <label id="heir_method_abandon_yes_label" for="heir_method_abandon_yes" class="hide"><input type="checkbox" id="heir_method_abandon_yes" value="yes" /> 有</label>
+              <label id="heir_method_abandon_no_label" for="heir_method_abandon_no" class="hide"><input type="checkbox" id="heir_method_abandon_no" value="no" /> 無</label>
+            </div>
+            <label id="heir_method_lost_label" for="heir_method_lost" class="hide"><input type="checkbox" id="heir_method_lost" value="lost" /> 繼承權喪失</label>
+            <div class="cascade">
+              <label id="heir_method_lost_yes_label" for="heir_method_lost_yes" class="hide"><input type="checkbox" id="heir_method_lost_yes" value="yes" /> 有</label>
+              <label id="heir_method_lost_no_label" for="heir_method_lost_no" class="hide"><input type="checkbox" id="heir_method_lost_no" value="no" /> 無</label>
+            </div>
+            <label id="heir_method_domestic_label" for="heir_method_domestic" class="hide"><input type="checkbox" id="heir_method_domestic" value="domestic" /> 本國人繼承</label>
+            <div class="cascade">
+              <label id="heir_method_domestic_opt1_label" for="heir_method_domestic_opt1" class="hide"><input type="checkbox" id="heir_method_domestic_opt1" value="one" /> 有行為能力(滿20歲或未成年已結婚者)</label>
+              <label id="heir_method_domestic_opt2_label" for="heir_method_domestic_opt2" class="hide"><input type="checkbox" id="heir_method_domestic_opt2" value="second" /> 限制行為能力(7-20歲)</label>
+              <label id="heir_method_domestic_opt3_label" for="heir_method_domestic_opt3" class="hide"><input type="checkbox" id="heir_method_domestic_opt3" value="third" /> 無行為能力(7歲以下)</label>
+              <label id="heir_method_domestic_opt4_label" for="heir_method_domestic_opt4" class="hide"><input type="checkbox" id="heir_method_domestic_opt4" value="fourth" /> 養子女</label>
+              <label id="heir_method_domestic_opt5_label" for="heir_method_domestic_opt5" class="hide"><input type="checkbox" id="heir_method_domestic_opt5" value="fifth" /> 胎兒</label>
+              <div class="cascade">
+                <label id="heir_method_domestic_opt5_rename_label" for="heir_method_domestic_opt5_rename" class="hide"><input type="checkbox" id="heir_method_domestic_opt5_rename" value="rename" /> 更名登記</label>
+                <label id="heir_method_domestic_opt5_correct_label" for="heir_method_domestic_opt5_correct" class="hide"><input type="checkbox" id="heir_method_domestic_opt5_correct" value="correct" /> 更正登記</label>
+              </div>
             </div>
           </fieldset>
         </div>
@@ -380,37 +340,88 @@ label {
       if ($("#tw_death_period_heir_seq_1_option3").is(":checked")) {
         $("#tw_death_period_heir_seq_1_option3_label").show();
       }
-      // 代位、再轉
-      $("#tw_death_period_heir_seq_1_option_method_"+url_params["tw_death_period_heir_seq_1_option_method_1"]).attr("checked", true);
-      $("#tw_death_period_heir_seq_1_option_method_"+url_params["tw_death_period_heir_seq_1_option_method_2"]).attr("checked", true);
-      if (url_params["tw_death_period_heir_seq_3_method"] == "transfer") {
-        $("#tw_death_period_heir_seq_3_method").attr("checked", true);
-      }
-      $("#tw_death_period_heir_seq_"+url_params["tw_death_period_heir_seq"]).attr("checked", true);
-      
+
       /*
         繼承人審查
       */
-      //$("#heir_method_"+url_params["heir_method"]).attr("checked", true);
       $("#heir_method_"+url_params["heir_method_subrogation"]).attr("checked", true);
+      if ($("#heir_method_subrogation").is(":checked")) {
+        $("#heir_method_subrogation_label").show();
+      }
+
       $("#heir_method_"+url_params["heir_method_transfer"]).attr("checked", true);
-      $("#heir_method_"+url_params["heir_method_abandon"]).attr("checked", true);
-      $("#heir_method_"+url_params["heir_method_lost"]).attr("checked", true);
-      $("#heir_method_"+url_params["heir_method_domestic"]).attr("checked", true);
-      $("#heir_method_"+url_params["heir_method_foreign"]).attr("checked", true);
-      $("#heir_method_"+url_params["heir_method_china"]).attr("checked", true);
+      if ($("#heir_method_transfer").is(":checked")) {
+        $("#heir_method_transfer_label").show();
+      }
+
       // 放棄
+      $("#heir_method_"+url_params["heir_method_abandon"]).attr("checked", true);
+      if ($("#heir_method_abandon").is(":checked")) {
+        $("#heir_method_abandon_label").show();
+      }
       $("#heir_method_abandon_"+url_params["heir_method_abandon_yn"]).attr("checked", true);
+      if ($("#heir_method_abandon_yes").is(":checked")) {
+        $("#heir_method_abandon_yes_label").show();
+      }
+      if ($("#heir_method_abandon_no").is(":checked")) {
+        $("#heir_method_abandon_no_label").show();
+      }
+      
       // 喪失
+      $("#heir_method_"+url_params["heir_method_lost"]).attr("checked", true);
+      if ($("#heir_method_lost").is(":checked")) {
+        $("#heir_method_lost_label").show();
+      }
       $("#heir_method_lost_"+url_params["heir_method_lost_yn"]).attr("checked", true);
+      if ($("#heir_method_lost_yes").is(":checked")) {
+        $("#heir_method_lost_yes_label").show();
+      }
+      if ($("#heir_method_lost_no").is(":checked")) {
+        $("#heir_method_lost_no_label").show();
+      }
+
+      // 本國人繼承
+      $("#heir_method_"+url_params["heir_method_domestic"]).attr("checked", true);
+      if ($("#heir_method_domestic").is(":checked")) {
+        $("#heir_method_domestic_label").show();
+      }
       // 本國人其他選項
       $("#heir_method_domestic_opt"+url_params["heir_method_domestic_opt1"]).attr("checked", true);
+      if ($("#heir_method_domestic_opt1").is(":checked")) {
+        $("#heir_method_domestic_opt1_label").show();
+      }
       $("#heir_method_domestic_opt"+url_params["heir_method_domestic_opt2"]).attr("checked", true);
+      if ($("#heir_method_domestic_opt2").is(":checked")) {
+        $("#heir_method_domestic_opt2_label").show();
+      }
       $("#heir_method_domestic_opt"+url_params["heir_method_domestic_opt3"]).attr("checked", true);
+      if ($("#heir_method_domestic_opt3").is(":checked")) {
+        $("#heir_method_domestic_opt3_label").show();
+      }
       $("#heir_method_domestic_opt"+url_params["heir_method_domestic_opt4"]).attr("checked", true);
+      if ($("#heir_method_domestic_opt4").is(":checked")) {
+        $("#heir_method_domestic_opt4_label").show();
+      }
       $("#heir_method_domestic_opt"+url_params["heir_method_domestic_opt5"]).attr("checked", true);
+      if ($("#heir_method_domestic_opt5").is(":checked")) {
+        $("#heir_method_domestic_opt5_label").show();
+      }
       $("#heir_method_domestic_opt5_"+url_params["heir_method_domestic_opt5_rename"]).attr("checked", true);
+      if ($("#heir_method_domestic_opt5_rename").is(":checked")) {
+        $("#heir_method_domestic_opt5_rename_label").show();
+      }
       $("#heir_method_domestic_opt5_"+url_params["heir_method_domestic_opt5_correct"]).attr("checked", true);
+      if ($("#heir_method_domestic_opt5_correct").is(":checked")) {
+        $("#heir_method_domestic_opt5_correct_label").show();
+      }
+
+
+      
+      $("#heir_method_"+url_params["heir_method_foreign"]).attr("checked", true);
+      $("#heir_method_"+url_params["heir_method_china"]).attr("checked", true);
+
+      
+      
       // 外國人其他選項
       $("#heir_method_foreign_opt"+url_params["heir_method_foreign_opt1"]).attr("checked", true);
       $("#heir_method_foreign_opt"+url_params["heir_method_foreign_opt2"]).attr("checked", true);
