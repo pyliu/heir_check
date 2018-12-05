@@ -180,27 +180,19 @@ label {
         <div class="col-4">
           <fieldset class="layer1" id="layer1_result">
             <legend>應附文件</legend>
-            <div class="container-fluid left">
-              <div class="w3-row">
-                <label for="heir_death_remove_cert" class="w3-col"><input type="checkbox" id="heir_death_remove_cert" name="heir_death_remove_cert" value="yes" /> 被繼承人死亡除戶戶籍謄本</label>
-                <label for="heir_now_cert" class="w3-col"><input type="checkbox" id="heir_now_cert" name="heir_now_cert" value="yes" /> 繼承人現在戶籍謄本</label>
-                <label for="heir_sys_table" class="w3-col"><input type="checkbox" id="heir_sys_table" name="heir_sys_table" value="yes" /> 繼承系統表</label>
-                <label for="heir_drop_doc" class="w3-col"><input type="checkbox" id="heir_drop_doc" name="heir_drop_doc" value="yes" /> 拋棄繼承權證明文件</label>
-                <label for="heir_tax_doc" class="w3-col"><input type="checkbox" id="heir_tax_doc" name="heir_tax_doc" value="yes" /> 遺產稅完免納證明文件</label>
-                <label for="heir_affidavit_doc" class="w3-col"><input type="checkbox" id="heir_affidavit_doc" name="heir_affidavit_doc" value="yes" /> 權利書狀或切結書</label>
-              </div>
-              <div class="w3-row">
-                <label for="heir_split_doc" class="w3-col"><input type="checkbox" id="heir_split_doc" name="heir_split_doc" value="yes" /> 遺產分割協議書</label>
-                <label for="heir_stamp_doc" class="w3-col"><input type="checkbox" id="heir_stamp_doc" name="heir_stamp_doc" value="yes" /> 繼承人之印鑑證明書</label>
-                <label for="heir_check_id" class="w3-col"><input type="checkbox" id="heir_check_id" name="heir_check_id" value="yes" /> 親自到場核對身分</label>
-                <label for="heir_oversea_doc" class="w3-col"><input type="checkbox" id="heir_oversea_doc" name="heir_oversea_doc" value="yes" /> 海外授權書</label>
-                <label for="heir_court_doc" class="w3-col"><input type="checkbox" id="heir_court_doc" name="heir_court_doc" value="yes" /> 法院判決書及確定證明書</label>
-                <label for="heir_will_doc" class="w3-col"><input type="checkbox" id="heir_will_doc" name="heir_will_doc" value="yes" /> 遺囑</label>
-              </div>
-              <div class="w3-row">
-                <label for="heir_other_doc" class="w3-rest"><input type="checkbox" id="heir_other_doc" name="heir_other_doc" value="yes" /> 其他 <input id="heir_other_doc_text" name="heir_other_doc_text" type="text" value="" disabled/></label>
-              </div>
-            </div>
+            <label class="hide" id="heir_death_remove_cert_label" for="heir_death_remove_cert"><input type="checkbox" id="heir_death_remove_cert" value="yes" /> 被繼承人死亡除戶戶籍謄本</label>
+            <label class="hide" id="heir_now_cert_label" for="heir_now_cert"><input type="checkbox" id="heir_now_cert" value="yes" /> 繼承人現在戶籍謄本</label>
+            <label class="hide" id="heir_sys_table_label" for="heir_sys_table"><input type="checkbox" id="heir_sys_table" value="yes" /> 繼承系統表</label>
+            <label class="hide" id="heir_drop_doc_label" for="heir_drop_doc"><input type="checkbox" id="heir_drop_doc" value="yes" /> 拋棄繼承權證明文件</label>
+            <label class="hide" id="heir_tax_doc_label" for="heir_tax_doc"><input type="checkbox" id="heir_tax_doc" value="yes" /> 遺產稅完免納證明文件</label>
+            <label class="hide" id="heir_affidavit_doc_label" for="heir_affidavit_doc"><input type="checkbox" id="heir_affidavit_doc" value="yes" /> 權利書狀或切結書</label>
+            <label class="hide" id="heir_split_doc_label" for="heir_split_doc"><input type="checkbox" id="heir_split_doc" value="yes" /> 遺產分割協議書</label>
+            <label class="hide" id="heir_stamp_doc_label" for="heir_stamp_doc"><input type="checkbox" id="heir_stamp_doc" value="yes" /> 繼承人之印鑑證明書</label>
+            <label class="hide" id="heir_check_id_label" for="heir_check_id"><input type="checkbox" id="heir_check_id" value="yes" /> 親自到場核對身分</label>
+            <label class="hide" id="heir_oversea_doc_label" for="heir_oversea_doc"><input type="checkbox" id="heir_oversea_doc" value="yes" /> 海外授權書</label>
+            <label class="hide" id="heir_court_doc_label" for="heir_court_doc"><input type="checkbox" id="heir_court_doc" value="yes" /> 法院判決書及確定證明書</label>
+            <label class="hide" id="heir_will_doc_label" for="heir_will_doc"><input type="checkbox" id="heir_will_doc" value="yes" /> 遺囑</label>
+            <label class="hide" id="heir_other_doc_label" for="heir_other_doc"><input type="checkbox" id="heir_other_doc" value="yes" /> 其他： <span id="heir_other_doc_text"></span></label>
           </fieldset>
         </div>
       </div>
@@ -525,24 +517,65 @@ label {
       }
 
       /*
-        應附文件
-      */
-      url_params["heir_death_remove_cert"] == "yes" ? $("#heir_death_remove_cert").attr("checked", true) : "";
-      url_params["heir_now_cert"] == "yes" ? $("#heir_now_cert").attr("checked", true) : "";
-      url_params["heir_sys_table"] == "yes" ? $("#heir_sys_table").attr("checked", true) : "";
-      url_params["heir_drop_doc"] == "yes" ? $("#heir_drop_doc").attr("checked", true) : "";
-      url_params["heir_tax_doc"] == "yes" ? $("#heir_tax_doc").attr("checked", true) : "";
-      url_params["heir_affidavit_doc"] == "yes" ? $("#heir_affidavit_doc").attr("checked", true) : "";
-      url_params["heir_split_doc"] == "yes" ? $("#heir_split_doc").attr("checked", true) : "";
-      url_params["heir_stamp_doc"] == "yes" ? $("#heir_stamp_doc").attr("checked", true) : "";
-      url_params["heir_check_id"] == "yes" ? $("#heir_check_id").attr("checked", true) : "";
-      url_params["heir_oversea_doc"] == "yes" ? $("#heir_oversea_doc").attr("checked", true) : "";
-      url_params["heir_court_doc"] == "yes" ? $("#heir_court_doc").attr("checked", true) : "";
-      url_params["heir_will_doc"] == "yes" ? $("#heir_will_doc").attr("checked", true) : "";
-      url_params["heir_other_doc"] == "yes" ? $("#heir_other_doc").attr("checked", true) : "";
+       * 應附文件
+       */
+      if (url_params["heir_death_remove_cert"] == "yes") {
+        $("#heir_death_remove_cert").attr("checked", true);
+        $("#heir_death_remove_cert_label").show();
+      }
+      if (url_params["heir_now_cert"] == "yes") {
+        $("#heir_now_cert").attr("checked", true);
+        $("#heir_now_cert_label").show();
+      }
+      if (url_params["heir_sys_table"] == "yes") {
+        $("#heir_sys_table").attr("checked", true);
+        $("#heir_sys_table_label").show();
+      }
+      if (url_params["heir_drop_doc"] == "yes") {
+        $("#heir_drop_doc").attr("checked", true);
+        $("#heir_drop_doc_label").show();
+      }
+      if (url_params["heir_tax_doc"] == "yes") {
+        $("#heir_tax_doc").attr("checked", true);
+        $("#heir_tax_doc_label").show();
+      }
+      if (url_params["heir_affidavit_doc"] == "yes") {
+        $("#heir_affidavit_doc").attr("checked", true);
+        $("#heir_affidavit_doc_label").show();
+      }
+      if (url_params["heir_split_doc"] == "yes") {
+        $("#heir_split_doc").attr("checked", true);
+        $("#heir_split_doc_label").show();
+      }
+      if (url_params["heir_stamp_doc"] == "yes") {
+        $("#heir_stamp_doc").attr("checked", true);
+        $("#heir_stamp_doc_label").show();
+      }
+      if (url_params["heir_check_id"] == "yes") {
+        $("#heir_check_id").attr("checked", true);
+        $("#heir_check_id_label").show();
+      }
+      if (url_params["heir_oversea_doc"] == "yes") {
+        $("#heir_oversea_doc").attr("checked", true);
+        $("#heir_oversea_doc_label").show();
+      }
+      if (url_params["heir_court_doc"] == "yes") {
+        $("#heir_court_doc").attr("checked", true);
+        $("#heir_court_doc_label").show();
+      }
+      if (url_params["heir_will_doc"] == "yes") {
+        $("#heir_will_doc").attr("checked", true);
+        $("#heir_will_doc_label").show();
+      }
+      if (url_params["heir_other_doc"] == "yes") {
+        $("#heir_other_doc").attr("checked", true);
+        $("#heir_other_doc_label").show();
+      }
       // 其他文字內容
       if (url_params["heir_other_doc_text"] != undefined) {
         $("#heir_other_doc_text").html(url_params["heir_other_doc_text"]);
+        $("#heir_other_doc").attr("checked", true);
+        $("#heir_other_doc_label").show();
       }
       window.print();
     });
