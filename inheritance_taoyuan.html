@@ -86,8 +86,11 @@ label {
 
               <label id="tw_label" for="tw" class="hide"><input type="checkbox" id="tw" value="tw" /> 光復後(民國34年10月25日後死亡)</label>
               <label id="tw34_74_label" for="tw34_74" class="hide"><input type="checkbox" id="tw34_74" value="tw34_74" /> 民法修正前(民國34年10月25日~74年6月4日前)</label>
-
               <label id="after_tw74_label" for="after_tw74" class="hide"><input type="checkbox" id="after_tw74" value="after_tw74" /> 民法修正後(民國74年6月5日後)</label>
+
+              <label id="tw_death_period_heir_spouse_label" for="tw_death_period_heir_spouse" class="hide"><input type="checkbox" id="tw_death_period_heir_spouse" value="yes" /> 配偶</label>
+              <label id="tw_death_period_heir_spouse_live_yes_label" for="tw_death_period_heir_spouse_live_yes" class="hide"><input type="checkbox" id="tw_death_period_heir_spouse_live_yes" value="yes" /> 生存</label>
+              <label id="tw_death_period_heir_spouse_live_no_label" for="tw_death_period_heir_spouse_live_no" class="hide"><input type="checkbox" id="tw_death_period_heir_spouse_live_no" value="no" /> 亡歿</label>
         </div>
         <div class="col-4">
           <fieldset class="layer1" id="layer1_heir_check_items">
@@ -304,12 +307,14 @@ label {
       $("#"+url_params["tw_death_period"]).attr("checked", true);
       $("#tw34_74").is(":checked") ? $("#tw34_74_label").show() : $("#tw34_74_label").hide();
       $("#after_tw74").is(":checked") ? $("#after_tw74_label").show() : $("#after_tw74_label").hide();
-      
       // 光復後選項之配偶
       if (url_params["tw_death_period_heir_spouse"] == "yes") {
         $("#tw_death_period_heir_spouse").attr("checked", true);
+        $("#tw_death_period_heir_spouse_label").show();
         $("#tw_death_period_heir_spouse_live_"+url_params["tw_death_period_heir_spouse_live"]).attr("checked", true);
+        $("#tw_death_period_heir_spouse_live_"+url_params["tw_death_period_heir_spouse_live"]+"_label").show();
       }
+      
       // 光復後選項除配偶外選項
       $("#tw_death_period_heir_seq_"+url_params["tw_death_period_heir_seq"]).attr("checked", true);
       $("#tw_death_period_heir_seq_1_option"+url_params["tw_death_period_heir_seq_1_option1"]).attr("checked", true);
