@@ -35,28 +35,6 @@ label {
 </head>
 
 <body>
-  <!--
-  <nav class="navbar navbar-expand-md navbar-dark bg-taoyuan fixed-top">
-    <a class="navbar-brand" href="http://www.taoyuan-land.tycg.gov.tw/" target="_blank"><img src="assets/img/taoyuan_logo.png" width="75%" height="auto" /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle hamburger" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/menu.png" width="32" height="auto" /></a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="index.html" target="_self">繼承檢核表</span></a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="http://www.taoyuan-land.tycg.gov.tw/" target="_blank">地所首頁</a>
-            <a class="dropdown-item" href="https://law.moj.gov.tw/Law/LawSearchResult.aspx?p=A&t=A1A2E1F1&k1=%E7%B9%BC%E6%89%BF" target="_blank">繼承法規查詢(需外網)</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  -->
   <section>
     <div class="container-fluid container-custom-width">
       <div class="row">
@@ -107,7 +85,9 @@ label {
               
 
               <label id="tw_label" for="tw" class="hide"><input type="checkbox" id="tw" value="tw" /> 光復後(民國34年10月25日後死亡)</label>
+              <label id="tw34_74_label" for="tw34_74" class="hide"><input type="checkbox" id="tw34_74" value="tw34_74" /> 民法修正前(民國34年10月25日~74年6月4日前)</label>
 
+              <label id="after_tw74_label" for="after_tw74" class="hide"><input type="checkbox" id="after_tw74" value="after_tw74" /> 民法修正後(民國74年6月5日後)</label>
         </div>
         <div class="col-4">
           <fieldset class="layer1" id="layer1_heir_check_items">
@@ -243,19 +223,13 @@ label {
       /*
         被繼承人審查
       */
-      /*
-      if (url_params["death_period"] == "jp") {
-        $("#death_period").html("日據時期(民國34年10月24日前死亡)");
-        $("#jp_content").show();
-      } else {
-        $("#death_period").html("光復後(民國34年10月25日後死亡)");
-        $("#tw_content").show();
-      }
-      */
       // 日據時期/光復後
       $("#"+url_params["death_period"]).attr("checked", true);
       $("#jp").is(":checked") ? $("#jp_label").show() : $("#jp_label").hide();
       $("#tw").is(":checked") ? $("#tw_label").show() : $("#tw_label").hide();
+      /*
+       * 日據時期
+       */
       // 戶主/非戶主選項
       $("#house_owner_"+url_params["house_owner"]).attr("checked", true);
       if ($("#house_owner_"+url_params["house_owner"]).is(":checked")) {
@@ -289,17 +263,6 @@ label {
       if ($("#house_owner_yes_heir_seq_1_children_"+url_params["house_owner_yes_heir_seq_1_children_4"]).is(":checked")) {
         $("#house_owner_yes_heir_seq_1_children_"+url_params["house_owner_yes_heir_seq_1_children_4"]+"_label").show();
       }
-      // 代位、再轉
-      /*
-      $("#house_owner_yes_heir_seq_method_"+url_params["house_owner_yes_heir_seq_method_subrogation"]).attr("checked", true);
-      if ($("#house_owner_yes_heir_seq_method_"+url_params["house_owner_yes_heir_seq_method_subrogation"]).is(":checked")) {
-        $("#house_owner_yes_heir_seq_method_"+url_params["house_owner_yes_heir_seq_method_subrogation"]+"_label").show();
-      }
-      $("#house_owner_yes_heir_seq_method_"+url_params["house_owner_yes_heir_seq_method_transfer"]).attr("checked", true);
-      if ($("#house_owner_yes_heir_seq_method_"+url_params["house_owner_yes_heir_seq_method_transfer"]).is(":checked")) {
-        $("#house_owner_yes_heir_seq_method_"+url_params["house_owner_yes_heir_seq_method_transfer"]+"_label").show();
-      }
-      */
 
       // 非戶主下選項
       $("#house_owner_no_heir_seq_"+url_params["house_owner_no_heir_seq"]).attr("checked", true);
@@ -333,11 +296,15 @@ label {
       if ($("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_4"]).is(":checked")) {
         $("#house_owner_no_heir_seq_1_children_"+url_params["house_owner_no_heir_seq_1_children_4"]+"_label").show();
       }
-      // 代位、再轉
-      $("#house_owner_no_heir_seq_method_"+url_params["house_owner_no_heir_seq_method_subrogation"]).attr("checked", true);
-      $("#house_owner_no_heir_seq_method_"+url_params["house_owner_no_heir_seq_method_transfer"]).attr("checked", true);
+
+      /*
+       * 光復後
+       */
       // 光復後選項
       $("#"+url_params["tw_death_period"]).attr("checked", true);
+      $("#tw34_74").is(":checked") ? $("#tw34_74_label").show() : $("#tw34_74_label").hide();
+      $("#after_tw74").is(":checked") ? $("#after_tw74_label").show() : $("#after_tw74_label").hide();
+      
       // 光復後選項之配偶
       if (url_params["tw_death_period_heir_spouse"] == "yes") {
         $("#tw_death_period_heir_spouse").attr("checked", true);
