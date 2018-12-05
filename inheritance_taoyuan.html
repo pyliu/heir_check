@@ -94,8 +94,8 @@ label {
               <label id="house_owner_yes_heir_seq_method_subrogation_label" for="house_owner_yes_heir_seq_method_subrogation" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_method_subrogation" value="subrogation" /> 代位</label>
               <label id="house_owner_yes_heir_seq_method_transfer_label" for="house_owner_yes_heir_seq_method_transfer" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_method_transfer" value="transfer" /> 再轉</label>
               -->
-
-
+              <label id="house_owner_yes_heir_seq_2_label" for="house_owner_yes_heir_seq_2" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_2" value="second" /> 2.指定戶主繼承人-依當時戶籍登記為準</label>
+              <label id="house_owner_yes_heir_seq_3_label" for="house_owner_yes_heir_seq_3" class="hide"><input type="checkbox" id="house_owner_yes_heir_seq_3" value="third" /> 3.選定戶主繼承人-依當時戶籍登記為準</label>
               <!--
                 <div>
                   死亡日期: <span id="death_period"></span>
@@ -266,8 +266,14 @@ label {
       }
       // 戶主下選項
       $("#house_owner_yes_heir_seq_"+url_params["house_owner_yes_heir_seq"]).attr("checked", true);
-      if ($("#house_owner_yes_heir_seq_"+url_params["house_owner_yes_heir_seq"]).is(":checked")) {
-        $("#house_owner_yes_heir_seq_"+url_params["house_owner_yes_heir_seq"]+"_label").show();
+      if ($("#house_owner_yes_heir_seq_1").is(":checked")) {
+        $("#house_owner_yes_heir_seq_1_label").show();
+      }
+      if ($("#house_owner_yes_heir_seq_2").is(":checked")) {
+        $("#house_owner_yes_heir_seq_2_label").show();
+      }
+      if ($("#house_owner_yes_heir_seq_3").is(":checked")) {
+        $("#house_owner_yes_heir_seq_3_label").show();
       }
       // 戶主下順位
       $("#house_owner_yes_heir_seq_1_children_"+url_params["house_owner_yes_heir_seq_1_children_1"]).attr("checked", true);
