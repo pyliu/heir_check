@@ -14,7 +14,11 @@ $(document).ready(function(e) {
 
     $("#GEN_btn").on("click", function(e) {
         disableAllButtons(true);
-        window.open("inheritance_table.html?" + $("#inheritance_form").serialize(), "_blank");
+        if ($("#is_luzhu_table").is(":checked")) {
+            window.open("inheritance_luzhu.html?" + $("#inheritance_form").serialize(), "_blank");
+        } else {
+            window.open("inheritance_taoyuan.html?" + $("#inheritance_form").serialize(), "_blank");
+        }
         disableAllButtons(false);
     });
 

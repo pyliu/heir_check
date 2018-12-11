@@ -9,7 +9,6 @@
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
 <!-- Custom styles for this template -->
 <link href="assets/css/starter-template.css" rel="stylesheet">
 <link href="assets/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
@@ -19,9 +18,9 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-md navbar-dark bg-info fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark bg-taoyuan fixed-top">
     <!--<img src="assets/img/tao.png" style="vertical-align: middle;" />　-->
-    <a class="navbar-brand" href="http://www.luzhu-land.tycg.gov.tw/" target="_blank"><img src="assets/img/luzhu_logo.png" width="90%" height="auto" /></a>
+    <a class="navbar-brand" href="http://www.taoyuan-land.tycg.gov.tw/" target="_blank"><img src="assets/img/taoyuan_logo.png" width="75%" height="auto" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -41,7 +40,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
             <a class="dropdown-item" href="index.html" target="_self">繼承檢核表</span></a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="http://www.luzhu-land.tycg.gov.tw/" target="_blank">地所首頁</a>
+            <a class="dropdown-item" href="http://www.taoyuan-land.tycg.gov.tw/" target="_blank">地所首頁</a>
             <a class="dropdown-item" href="https://law.moj.gov.tw/Law/LawSearchResult.aspx?p=A&t=A1A2E1F1&k1=%E7%B9%BC%E6%89%BF" target="_blank">繼承法規查詢(需外網)</a>
           </div>
         </li>
@@ -251,17 +250,17 @@
             </fieldset>
 
             <div id="no4_btn_grp" class="hide btn_grp">
+                <label for="is_luzhu_table" class="luzhu-table-checkbox"><input type="checkbox" id="is_luzhu_table" name="is_luzhu_table" value="yes" /> 輸出蘆竹版表格</label>
               <button id="no4_btn_prev" class="btn btn-outline-light" title="上一步"><img src="assets/img/left.png" /></button>
               <button id='GEN_btn' class="btn btn-outline-light" title="產製審查表格"><img src="assets/img/right.png" /></button>
               <!--<button id='GEN_btn' class='btn btn-success' title="GENERATE TABLE">產製審查表格</button>-->
             </div>
 
             <fieldset class="layer1 hide" id="layer1_result">
-              <legend>應附文件</legend>
+              <legend>
+                應附文件
+              </legend>
               <div class="container-fluid left">
-                <div class="w3-row">
-                    <label for="is_print_table" class="w3-col"><input type="checkbox" id="is_print_table" name="is_print_table" value="yes" /> 輸出表格</label>
-                </div>
                 <div class="w3-row">
                   <label for="heir_death_remove_cert" class="w3-col"><input type="checkbox" id="heir_death_remove_cert" name="heir_death_remove_cert" value="yes" /> 被繼承人死亡除戶戶籍謄本</label>
                   <label for="heir_now_cert" class="w3-col"><input type="checkbox" id="heir_now_cert" name="heir_now_cert" value="yes" /> 繼承人現在戶籍謄本</label>
