@@ -18,9 +18,9 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-md navbar-dark bg-taoyuan fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark bg-luzhu fixed-top">
     <!--<img src="assets/img/tao.png" style="vertical-align: middle;" />　-->
-    <a class="navbar-brand" href="http://www.taoyuan-land.tycg.gov.tw/" target="_blank"><img src="assets/img/taoyuan_logo.png" width="75%" height="auto" /></a>
+    <a class="navbar-brand" href="http://www.luzhu-land.tycg.gov.tw/" target="_blank"><img src="assets/img/luzhu_logo.png" width="85%" height="auto" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -250,7 +250,7 @@
             </fieldset>
 
             <div id="no4_btn_grp" class="hide btn_grp">
-                <label for="is_luzhu_table" class="luzhu-table-checkbox"><input type="checkbox" id="is_luzhu_table" name="is_luzhu_table" value="yes" /> 輸出蘆竹版表格</label>
+              <label for="is_luzhu_table" class="luzhu-table-checkbox"><input type="checkbox" id="is_luzhu_table" name="is_luzhu_table" value="yes" checked /> 輸出蘆竹版表格</label>
               <button id="no4_btn_prev" class="btn btn-outline-light" title="上一步"><img src="assets/img/left.png" /></button>
               <button id='GEN_btn' class="btn btn-outline-light" title="產製審查表格"><img src="assets/img/right.png" /></button>
               <!--<button id='GEN_btn' class='btn btn-success' title="GENERATE TABLE">產製審查表格</button>-->
@@ -312,7 +312,7 @@
     // other custom scripts start here
     var btype = getBrowserType();
     if (btype == "0" || (btype.indexOf('IE') !== -1 && btype != "IE11")) {
-      alert("不支援舊版IE瀏覽器, 請使用Chrome或是Firefox！");
+      alert("抱歉，本網頁只支援IE11瀏覽器、Chrome或是Firefox。");
     }
   </script>
 </body>
