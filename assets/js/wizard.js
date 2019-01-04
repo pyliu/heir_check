@@ -94,17 +94,17 @@ $(document).ready(function(e) {
                 showPopper("#tw_death_period_legend");
                 return;
             }
-            // tw_death_period_heir_seq
-            if ($("input:radio[name=tw_death_period_heir_seq]").is(":checked") === false) {
-                showPopper("#tw_death_period_heir_seq_legend");
-                return;
-            }
+                       
             // legend tw_death_period_heir_spouse_live_legend
             if ($("input:checkbox[name=tw_death_period_heir_spouse]").is(":checked") === true) {
                 if ($("input:radio[name=tw_death_period_heir_spouse_live]").is(":checked") === false) {
                     showPopper("#tw_death_period_heir_spouse_live_legend");
                     return;
                 }
+            } else if ($("input:radio[name=tw_death_period_heir_seq]").is(":checked") === false) {
+                // tw_death_period_heir_seq, 沒選擇配偶就要檢查各項option
+                showPopper("#tw_death_period_heir_seq_legend");
+                return;
             }
         }
 

@@ -15,6 +15,7 @@ function clearAllRadioBoxes() {
 function clearAllCheckBoxes() {
     // find all radio boxes and clear their checked prop
     $("input[type='checkbox']").each(function(e) {
+        if ($(this).attr("name") == "is_luzhu_table") return;
         $(this).prop("checked", false);
     });
 }
