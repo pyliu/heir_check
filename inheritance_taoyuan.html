@@ -181,19 +181,167 @@ label {
         <div class="col-4">
           <fieldset class="layer1" id="layer1_result">
             <legend>應附文件</legend>
-            <label class="hide" id="heir_death_remove_cert_label" for="heir_death_remove_cert"><input type="checkbox" id="heir_death_remove_cert" value="yes" /> 被繼承人死亡除戶戶籍謄本</label>
-            <label class="hide" id="heir_now_cert_label" for="heir_now_cert"><input type="checkbox" id="heir_now_cert" value="yes" /> 繼承人現在戶籍謄本</label>
-            <label class="hide" id="heir_sys_table_label" for="heir_sys_table"><input type="checkbox" id="heir_sys_table" value="yes" /> 繼承系統表</label>
-            <label class="hide" id="heir_drop_doc_label" for="heir_drop_doc"><input type="checkbox" id="heir_drop_doc" value="yes" /> 拋棄繼承權證明文件</label>
-            <label class="hide" id="heir_tax_doc_label" for="heir_tax_doc"><input type="checkbox" id="heir_tax_doc" value="yes" /> 遺產稅完免納證明文件</label>
-            <label class="hide" id="heir_affidavit_doc_label" for="heir_affidavit_doc"><input type="checkbox" id="heir_affidavit_doc" value="yes" /> 權利書狀或切結書</label>
-            <label class="hide" id="heir_split_doc_label" for="heir_split_doc"><input type="checkbox" id="heir_split_doc" value="yes" /> 遺產分割協議書</label>
-            <label class="hide" id="heir_stamp_doc_label" for="heir_stamp_doc"><input type="checkbox" id="heir_stamp_doc" value="yes" /> 繼承人之印鑑證明書</label>
-            <label class="hide" id="heir_check_id_label" for="heir_check_id"><input type="checkbox" id="heir_check_id" value="yes" /> 親自到場核對身分</label>
-            <label class="hide" id="heir_oversea_doc_label" for="heir_oversea_doc"><input type="checkbox" id="heir_oversea_doc" value="yes" /> 海外授權書</label>
-            <label class="hide" id="heir_court_doc_label" for="heir_court_doc"><input type="checkbox" id="heir_court_doc" value="yes" /> 法院判決書及確定證明書</label>
-            <label class="hide" id="heir_will_doc_label" for="heir_will_doc"><input type="checkbox" id="heir_will_doc" value="yes" /> 遺囑</label>
-            <label class="hide" id="heir_other_doc_label" for="heir_other_doc"><input type="checkbox" id="heir_other_doc" value="yes" /> 其他： <span id="heir_other_doc_text"></span></label>
+            <div id="taoyuan_doc_type_0_law_heir_type_2_share_heir" class="taoyuan_doc_item">
+				<label for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt1"><input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt1" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt1" value="1" /> 被繼承人除戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt2"><input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt2" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt2" value="2" /> 繼承人現戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt3"><input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt3" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt3" value="3" /> 登記清冊</label>
+				<label for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt4"><input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt4" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt4" value="4" /> 遺產稅免稅或繳納證明書</label>
+				<label for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt5"><input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt5" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt5" value="5" /> 繼承系統表</label>
+				<label for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt6">
+					<input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt6" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt6" value="6" /> 權利書狀，未能檢附權利書狀：
+					<label style="display:inline" for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt7"><input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt7" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt7" value="7" /> 切結書</label>
+				</label>
+				<ul>
+					<li>其他：</li>
+				</ul>
+				<label for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt8">
+					<input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt8" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt8" value="8" /> 拋棄繼承時-法院拋棄繼承文件、
+					<label style="display:inline" for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt9"><input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt9" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt9" value="9" /> 繼承人在國外-海外授權書、</label>
+				</label>
+				<label for="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt10">
+					<input id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt10" type="checkbox" name="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt10" value="10" />
+					<span id="taoyuan_doc_type_0_law_heir_type_2_share_heir_opt11"></span>
+				</label>
+			</div>
+			
+			<div id="taoyuan_doc_type_1_split_heir" class="taoyuan_doc_item">
+				<label for="taoyuan_doc_type_1_split_heir_opt1"><input id="taoyuan_doc_type_1_split_heir_opt1" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt1" value="1" /> 被繼承人除戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_1_split_heir_opt2"><input id="taoyuan_doc_type_1_split_heir_opt2" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt2" value="2" /> 繼承人現戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_1_split_heir_opt3"><input id="taoyuan_doc_type_1_split_heir_opt3" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt3" value="3" /> 登記清冊</label>
+				<label for="taoyuan_doc_type_1_split_heir_opt4"><input id="taoyuan_doc_type_1_split_heir_opt4" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt4" value="4" /> 分割協議書-含應繳納印花稅</label>
+				<label for="taoyuan_doc_type_1_split_heir_opt5">
+					<input id="taoyuan_doc_type_1_split_heir_opt5" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt5" value="5" /> 印鑑證明，或
+					<label style="display:inline" for="taoyuan_doc_type_1_split_heir_opt6"><input id="taoyuan_doc_type_1_split_heir_opt6" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt6" value="6" /> 親自到場核對身分</label>
+				</label>
+				<label for="taoyuan_doc_type_1_split_heir_opt7"><input id="taoyuan_doc_type_1_split_heir_opt7" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt7" value="7" /> 遺產稅免稅或繳納證明書</label>
+				<label for="taoyuan_doc_type_1_split_heir_opt8"><input id="taoyuan_doc_type_1_split_heir_opt8" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt8" value="8" /> 繼承系統表</label>
+				<label for="taoyuan_doc_type_1_split_heir_opt9">
+					<input id="taoyuan_doc_type_1_split_heir_opt9" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt9" value="9" /> 權利書狀，未能檢附權利書狀：
+					<label style="display:inline" for="taoyuan_doc_type_1_split_heir_opt10"><input id="taoyuan_doc_type_1_split_heir_opt10" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt10" value="10" /> 切結書</label>
+				</label>
+				<ul>
+					<li>其他：</li>
+				</ul>
+				<label for="taoyuan_doc_type_1_split_heir_opt11">
+					<input id="taoyuan_doc_type_1_split_heir_opt11" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt11" value="11" /> 拋棄繼承時-法院拋棄繼承文件、
+					<label style="display:inline" for="taoyuan_doc_type_1_split_heir_opt12"><input id="taoyuan_doc_type_1_split_heir_opt12" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt12" value="12" /> 繼承人在國外-海外授權書、</label>
+				</label>
+				<label for="taoyuan_doc_type_1_split_heir_opt13">
+					<input id="taoyuan_doc_type_1_split_heir_opt13" type="checkbox" name="taoyuan_doc_type_1_split_heir_opt13" value="13" />
+					<span id="taoyuan_doc_type_1_split_heir_opt14"></span>
+				</label>
+			</div>
+			
+			<div id="taoyuan_doc_type_3_modify" class="taoyuan_doc_item">
+				<label for="taoyuan_doc_type_3_modify_opt1"><input id="taoyuan_doc_type_3_modify_opt1" type="checkbox" name="taoyuan_doc_type_3_modify_opt1" value="1" /> 被繼承人除戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_3_modify_opt2"><input id="taoyuan_doc_type_3_modify_opt2" type="checkbox" name="taoyuan_doc_type_3_modify_opt2" value="2" /> 繼承人現戶戶籍謄本(含台灣光復初期原合法繼承人戶籍謄本)</label>
+				<label for="taoyuan_doc_type_3_modify_opt3"><input id="taoyuan_doc_type_3_modify_opt3" type="checkbox" name="taoyuan_doc_type_3_modify_opt3" value="3" /> 登記清冊</label>
+				<label for="taoyuan_doc_type_3_modify_opt4"><input id="taoyuan_doc_type_3_modify_opt4" type="checkbox" name="taoyuan_doc_type_3_modify_opt4" value="4" /> 遺產稅免稅或繳納證明書</label>
+				<label for="taoyuan_doc_type_3_modify_opt5"><input id="taoyuan_doc_type_3_modify_opt5" type="checkbox" name="taoyuan_doc_type_3_modify_opt5" value="5" /> 繼承系統表</label>
+				<label for="taoyuan_doc_type_3_modify_opt6">
+					<input id="taoyuan_doc_type_3_modify_opt6" type="checkbox" name="taoyuan_doc_type_3_modify_opt6" value="6" /> 權利書狀，未能檢附權利書狀：
+					<label style="display:inline" for="taoyuan_doc_type_3_modify_opt7"><input id="taoyuan_doc_type_3_modify_opt7" type="checkbox" name="taoyuan_doc_type_3_modify_opt7" value="7" /> 切結書</label>
+				</label>
+				<ul>
+					<li>其他：</li>
+				</ul>
+				<label for="taoyuan_doc_type_3_modify_opt8">
+					<input id="taoyuan_doc_type_3_modify_opt8" type="checkbox" name="taoyuan_doc_type_3_modify_opt8" value="8" />
+					<span id="taoyuan_doc_type_3_modify_opt9"></span>
+				</label>
+			</div>
+			
+			<div id="taoyuan_doc_type_4_will_heir" class="taoyuan_doc_item">
+				<label for="taoyuan_doc_type_4_will_heir_opt1"><input id="taoyuan_doc_type_4_will_heir_opt1" type="checkbox" name="taoyuan_doc_type_4_will_heir_opt1" value="1" /> 被繼承人除戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_4_will_heir_opt2"><input id="taoyuan_doc_type_4_will_heir_opt2" type="checkbox" name="taoyuan_doc_type_4_will_heir_opt2" value="2" /> 繼承人現戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_4_will_heir_opt3"><input id="taoyuan_doc_type_4_will_heir_opt3" type="checkbox" name="taoyuan_doc_type_4_will_heir_opt3" value="3" /> 遺產稅免稅或繳納證明書</label>
+				<label for="taoyuan_doc_type_4_will_heir_opt4"><input id="taoyuan_doc_type_4_will_heir_opt4" type="checkbox" name="taoyuan_doc_type_4_will_heir_opt4" value="4" /> 繼承系統表</label>
+				<label for="taoyuan_doc_type_4_will_heir_opt5"><input id="taoyuan_doc_type_4_will_heir_opt5" type="checkbox" name="taoyuan_doc_type_4_will_heir_opt5" value="5" /> 遺囑</label>
+				<label for="taoyuan_doc_type_4_will_heir_opt6">
+					<input id="taoyuan_doc_type_4_will_heir_opt6" type="checkbox" name="taoyuan_doc_type_4_will_heir_opt6" value="6" /> 權利書狀，未能檢附權利書狀：
+					<label style="display:inline" for="taoyuan_doc_type_4_will_heir_opt7"><input id="taoyuan_doc_type_4_will_heir_opt7" type="checkbox" name="taoyuan_doc_type_4_will_heir_opt7" value="7" /> 切結書</label>
+				</label>
+				<ul>
+					<li>其他：</li>
+				</ul>
+				<label for="taoyuan_doc_type_4_will_heir_opt8"><input id="taoyuan_doc_type_4_will_heir_opt8" type="checkbox" name="taoyuan_doc_type_4_will_heir_opt8" value="8" /> 代筆遺囑-見證人身分證明文件</label>
+				<label for="taoyuan_doc_type_4_will_heir_opt9">
+					<input id="taoyuan_doc_type_4_will_heir_opt9" type="checkbox" name="taoyuan_doc_type_4_will_heir_opt9" value="9" />
+					<span id="taoyuan_doc_type_4_will_heir_opt10"></span>
+				</label>
+			</div>
+			
+			<div id="taoyuan_doc_type_5_judge_heir_type_7_type_8" class="taoyuan_doc_item">
+				<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt1"><input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt1" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt1" value="1" /> 被繼承人除戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt2"><input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt2" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt2" value="2" /> 繼承人現戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt3"><input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt3" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt3" value="3" /> 遺產稅免稅或繳納證明書</label>
+				<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt4"><input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt4" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt4" value="4" /> 繼承系統表</label>
+				<div>
+					判決繼承：
+					<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt5" style="display:inline"><input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt5" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt5" value="5" /> 判決書，</label>
+					<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt6" style="display:inline"><input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt6" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt6" value="6" /> 判決確定證明書</label>
+				</div>
+				<div>
+					調解繼承：
+					<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt7" style="display:inline"><input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt7" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt7" value="7" /> 調解筆錄</label>
+				</div>
+				<div>
+					和解繼承：
+					<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt8" style="display:inline"><input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt8" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt8" value="8" /> 和解筆錄</label>
+				</div>
+				<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt9">
+					<input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt9" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt9" value="9" /> 權利書狀，未能檢附權利書狀：
+					<label style="display:inline" for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt10"><input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt10" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt10" value="10" /> 切結書</label>
+				</label>
+				<ul>
+					<li>
+						其他：
+						<label for="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt11" style="display:inline">
+							<input id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt11" type="checkbox" name="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt11" value="11" />
+							<span id="taoyuan_doc_type_5_judge_heir_type_7_type_8_opt12"></span>
+						</label>
+					</li>
+				</ul>
+			</div>
+
+			<div id="taoyuan_doc_type_9" class="taoyuan_doc_item">
+				<label for="taoyuan_doc_type_9_opt1"><input id="taoyuan_doc_type_9_opt1" type="checkbox" name="taoyuan_doc_type_9_opt1" value="1" /> 被繼承人除戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_9_opt2"><input id="taoyuan_doc_type_9_opt2" type="checkbox" name="taoyuan_doc_type_9_opt2" value="2" /> 登記清冊</label>
+				<label for="taoyuan_doc_type_9_opt3"><input id="taoyuan_doc_type_9_opt3" type="checkbox" name="taoyuan_doc_type_9_opt3" value="3" /> 親屬會議選定或經法院指定之證明文件</label>
+				<label for="taoyuan_doc_type_9_opt4"><input id="taoyuan_doc_type_9_opt4" type="checkbox" name="taoyuan_doc_type_9_opt4" value="4" /> 遺產管理人身分證明文件</label>
+				<ul>
+					<li>
+						其他：
+						<label for="taoyuan_doc_type_9_opt5" style="display:inline">
+							<input id="taoyuan_doc_type_9_opt5" type="checkbox" name="taoyuan_doc_type_9_opt5" value="5" />
+							<span id="taoyuan_doc_type_9_opt6"></span>
+						</label>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="taoyuan_doc_type_10" class="taoyuan_doc_item">
+				<label for="taoyuan_doc_type_10_opt1"><input id="taoyuan_doc_type_10_opt1" type="checkbox" name="taoyuan_doc_type_10_opt1" value="1" /> 被繼承人除戶戶籍謄本</label>
+				<label for="taoyuan_doc_type_10_opt2"><input id="taoyuan_doc_type_10_opt2" type="checkbox" name="taoyuan_doc_type_10_opt2" value="2" /> 登記清冊</label>
+				<label for="taoyuan_doc_type_10_opt3"><input id="taoyuan_doc_type_10_opt3" type="checkbox" name="taoyuan_doc_type_10_opt3" value="3" /> 移交清冊</label>
+				<label for="taoyuan_doc_type_10_opt4"><input id="taoyuan_doc_type_10_opt4" type="checkbox" name="taoyuan_doc_type_10_opt4" value="4" /> 切結已完成公示催告無人報明債權及受遺贈人</label>
+				<label for="taoyuan_doc_type_10_opt5"><input id="taoyuan_doc_type_10_opt5" type="checkbox" name="taoyuan_doc_type_10_opt5" value="5" /> 公示催告裁定書</label>
+				<label for="taoyuan_doc_type_10_opt6"><input id="taoyuan_doc_type_10_opt6" type="checkbox" name="taoyuan_doc_type_10_opt6" value="6" /> 刊報影本</label>
+				<label for="taoyuan_doc_type_10_opt7"><input id="taoyuan_doc_type_10_opt7" type="checkbox" name="taoyuan_doc_type_10_opt7" value="7" /> 遺產稅免稅或繳納證明書</label>
+				<label for="taoyuan_doc_type_10_opt8">
+					<input id="taoyuan_doc_type_10_opt8" type="checkbox" name="taoyuan_doc_type_10_opt8" value="8" /> 權利書狀，未能檢附權利書狀：
+					<label style="display:inline" for="taoyuan_doc_type_10_opt9"><input id="taoyuan_doc_type_10_opt9" type="checkbox" name="taoyuan_doc_type_10_opt9" value="9" /> 切結書</label>
+				</label>
+				<ul>
+					<li>
+						其他：
+						<label for="taoyuan_doc_type_10_opt10" style="display:inline">
+							<input id="taoyuan_doc_type_10_opt10" type="checkbox" name="taoyuan_doc_type_10_opt10" value="10" />
+							<span id="taoyuan_doc_type_10_opt11"></span>
+						</label>
+					</li>
+				</ul>
+			</div>
           </fieldset>
         </div>
       </div>
@@ -229,7 +377,11 @@ label {
       heir_reg_type["type_3_modify"] = "名義更正";
       heir_reg_type["type_4_will_heir"] = "遺囑繼承";
       heir_reg_type["type_5_judge_heir"] = "判決繼承";
-      heir_reg_type["type_6_nobody_heir"] = "無人承認繼承";
+      heir_reg_type["type_6_nobody_heir"] = "無人承認";
+	  heir_reg_type["type_7"] = "和解繼承";
+	  heir_reg_type["type_8"] = "調解繼承";
+	  heir_reg_type["type_9"] = "遺產管理人";
+	  heir_reg_type["type_10"] = "收歸國有";
       $("#heir_reg_type").html(heir_reg_type[url_params["heir_reg_type"]]);
       
       /*
@@ -520,64 +672,117 @@ label {
       /*
        * 應附文件
        */
-      if (url_params["heir_death_remove_cert"] == "yes") {
-        $("#heir_death_remove_cert").attr("checked", true);
-        $("#heir_death_remove_cert_label").show();
-      }
-      if (url_params["heir_now_cert"] == "yes") {
-        $("#heir_now_cert").attr("checked", true);
-        $("#heir_now_cert_label").show();
-      }
-      if (url_params["heir_sys_table"] == "yes") {
-        $("#heir_sys_table").attr("checked", true);
-        $("#heir_sys_table_label").show();
-      }
-      if (url_params["heir_drop_doc"] == "yes") {
-        $("#heir_drop_doc").attr("checked", true);
-        $("#heir_drop_doc_label").show();
-      }
-      if (url_params["heir_tax_doc"] == "yes") {
-        $("#heir_tax_doc").attr("checked", true);
-        $("#heir_tax_doc_label").show();
-      }
-      if (url_params["heir_affidavit_doc"] == "yes") {
-        $("#heir_affidavit_doc").attr("checked", true);
-        $("#heir_affidavit_doc_label").show();
-      }
-      if (url_params["heir_split_doc"] == "yes") {
-        $("#heir_split_doc").attr("checked", true);
-        $("#heir_split_doc_label").show();
-      }
-      if (url_params["heir_stamp_doc"] == "yes") {
-        $("#heir_stamp_doc").attr("checked", true);
-        $("#heir_stamp_doc_label").show();
-      }
-      if (url_params["heir_check_id"] == "yes") {
-        $("#heir_check_id").attr("checked", true);
-        $("#heir_check_id_label").show();
-      }
-      if (url_params["heir_oversea_doc"] == "yes") {
-        $("#heir_oversea_doc").attr("checked", true);
-        $("#heir_oversea_doc_label").show();
-      }
-      if (url_params["heir_court_doc"] == "yes") {
-        $("#heir_court_doc").attr("checked", true);
-        $("#heir_court_doc_label").show();
-      }
-      if (url_params["heir_will_doc"] == "yes") {
-        $("#heir_will_doc").attr("checked", true);
-        $("#heir_will_doc_label").show();
-      }
-      if (url_params["heir_other_doc"] == "yes") {
-        $("#heir_other_doc").attr("checked", true);
-        $("#heir_other_doc_label").show();
-      }
-      // 其他文字內容
-      if (url_params["heir_other_doc_text"] != undefined) {
-        $("#heir_other_doc_text").html(url_params["heir_other_doc_text"]);
-        $("#heir_other_doc").attr("checked", true);
-        $("#heir_other_doc_label").show();
-      }
+	  // 控制顯示區塊
+	  $(".taoyuan_doc_item").hide();
+	  var heir_type = url_params["heir_reg_type"];
+	  switch (heir_type) {
+		case "type_0_law_heir":
+		case "type_2_share_heir":
+			// 1 - 10
+			for (var i = 1; i <= 10; i++) {
+				if (url_params["taoyuan_doc_type_0_law_heir_type_2_share_heir_opt" + i]) {
+					$("#taoyuan_doc_type_0_law_heir_type_2_share_heir_opt" + i).attr("checked", true);
+				}
+			}
+			// 11 is text
+			if (url_params["taoyuan_doc_type_0_law_heir_type_2_share_heir_opt11"] != undefined) {
+				$("#taoyuan_doc_type_0_law_heir_type_2_share_heir_opt11").html(url_params["taoyuan_doc_type_0_law_heir_type_2_share_heir_opt11"]);
+			}
+	  
+			$("#taoyuan_doc_type_0_law_heir_type_2_share_heir").show();
+			break;
+		case "type_1_split_heir":
+			// 1 - 13
+			for (var i = 1; i <= 13; i++) {
+				if (url_params["taoyuan_doc_type_1_split_heir_opt" + i]) {
+					$("#taoyuan_doc_type_1_split_heir_opt" + i).attr("checked", true);
+				}
+			}
+			// 14 is text
+			if (url_params["taoyuan_doc_type_1_split_heir_opt14"] != undefined) {
+				$("#taoyuan_doc_type_1_split_heir_opt14").html(url_params["taoyuan_doc_type_1_split_heir_opt14"]);
+			}
+			
+			$("#taoyuan_doc_type_1_split_heir").show();
+			break;
+		case "type_3_modify":
+			// 1 - 8
+			for (var i = 1; i <= 8; i++) {
+				if (url_params["taoyuan_doc_type_3_modify_opt" + i]) {
+					$("#taoyuan_doc_type_3_modify_opt" + i).attr("checked", true);
+				}
+			}
+			// 9 is text
+			if (url_params["taoyuan_doc_type_3_modify_opt9"] != undefined) {
+				$("#taoyuan_doc_type_3_modify_opt9").html(url_params["taoyuan_doc_type_3_modify_opt9"]);
+			}
+			
+			$("#taoyuan_doc_type_3_modify").show();
+			break;
+		case "type_4_will_heir":
+			// 1 - 9
+			for (var i = 1; i <= 9; i++) {
+				if (url_params["taoyuan_doc_type_4_will_heir_opt" + i]) {
+					$("#taoyuan_doc_type_4_will_heir_opt" + i).attr("checked", true);
+				}
+			}
+			// 10 is text
+			if (url_params["taoyuan_doc_type_4_will_heir_opt10"] != undefined) {
+				$("#taoyuan_doc_type_4_will_heir_opt10").html(url_params["taoyuan_doc_type_4_will_heir_opt10"]);
+			}
+			
+			$("#taoyuan_doc_type_4_will_heir").show();
+			break;
+		case "type_5_judge_heir":
+		case "type_7":
+		case "type_8":
+			// 1 - 11
+			for (var i = 1; i <= 11; i++) {
+				if (url_params["taoyuan_doc_type_5_judge_heir_type_7_type_8_opt" + i]) {
+					$("#taoyuan_doc_type_5_judge_heir_type_7_type_8_opt" + i).attr("checked", true);
+				}
+			}
+			// 12 is text
+			if (url_params["taoyuan_doc_type_5_judge_heir_type_7_type_8_opt12"] != undefined) {
+				$("#taoyuan_doc_type_5_judge_heir_type_7_type_8_opt12").html(url_params["taoyuan_doc_type_5_judge_heir_type_7_type_8_opt12"]);
+			}
+			
+			$("#taoyuan_doc_type_5_judge_heir_type_7_type_8").show();
+			break;
+		case "type_9":
+			// 1 - 5
+			for (var i = 1; i <= 5; i++) {
+				if (url_params["taoyuan_doc_type_9_opt" + i]) {
+					$("#taoyuan_doc_type_9_opt" + i).attr("checked", true);
+				}
+			}
+			// 6 is text
+			if (url_params["taoyuan_doc_type_9_opt6"] != undefined) {
+				$("#taoyuan_doc_type_9_opt6").html(url_params["taoyuan_doc_type_9_opt6"]);
+			}
+			
+			$("#taoyuan_doc_type_9").show();
+			break;
+		case "type_10":
+			// 1 - 10
+			for (var i = 1; i <= 10; i++) {
+				if (url_params["taoyuan_doc_type_10_opt" + i]) {
+					$("#taoyuan_doc_type_10_opt" + i).attr("checked", true);
+				}
+			}
+			// 11 is text
+			if (url_params["taoyuan_doc_type_10_opt11"] != undefined) {
+				$("#taoyuan_doc_type_10_opt11").html(url_params["taoyuan_doc_type_10_opt11"]);
+			}
+			
+			$("#taoyuan_doc_type_10").show();
+			break;
+		default:
+			console.log("Not a valid type: " + heir_type);
+			break;
+			
+	  }
+	  
       window.print();
     });
   </script>
