@@ -156,3 +156,29 @@ legend {
 .luzhu-table-checkbox {
 	font-size: 8px;
 }
+
+.fl {
+	float: left;
+	margin-left: 15px;
+}
+
+.more-gap {
+	margin-top: 10px;
+}
+
+.heir_reg_type {
+	width: 755px;
+	margin:auto;
+}
+
+#taoyuan_doc label {
+	display: block;
+}
+
+#layer1_result ul {
+	margin-left: -20px;
+}
+
+#taoyuan_doc input[type="text"] {
+	width: 50%;
+}
