@@ -276,6 +276,8 @@ $(document).ready(function(e) {
                 break;
         }
     });
+	// 切換 蘆竹/桃園 應付文件顯示
+	$("#is_luzhu_table").on("click", switchResultDocs);
     /*
       結果區塊相關事件處理
     */
