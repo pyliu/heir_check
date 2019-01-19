@@ -171,6 +171,8 @@ $(document).ready(function(e) {
         // bring up step4 panel
         activateElement("#no4_btn_grp");
         activateElement("#layer1_result");
+		// switch docs display
+		switchResultDocs();
     });
 
     // step 4 buttons events
