@@ -16,7 +16,7 @@
 <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="body">
 
   <nav class="navbar navbar-expand-md navbar-dark bg-taoyuan fixed-top">
     <!--<img src="assets/img/tao.png" style="vertical-align: middle;" />　-->
@@ -502,7 +502,7 @@
     // other custom scripts start here
     var btype = getBrowserType();
     if (btype == "0" || (btype.indexOf('IE') !== -1 && btype != "IE11")) {
-      alert("抱歉，本網頁只支援IE11瀏覽器、Chrome或是Firefox。");
+      document.getElementById("body").innerHTML = "<h1 style='font-weight:bolder; color: red; text-align: center;'>抱歉，本網頁只支援IE11瀏覽器、Chrome或是Firefox。</h1>";
     }
   </script>
 </body>
